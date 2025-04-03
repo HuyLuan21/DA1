@@ -1,0 +1,608 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\Admin\\source\\repos\\BTL\\DA1\\MAIN\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{35709904-A665-40DB-BF11-D271AFB58207}|..\\DTO\\DTO.csproj|c:\\users\\admin\\source\\repos\\btl\\da1\\dto\\phim.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{35709904-A665-40DB-BF11-D271AFB58207}|..\\DTO\\DTO.csproj|c:\\users\\admin\\source\\repos\\btl\\da1\\dto\\class1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{10964D9B-BBD4-420F-BA3E-C297066A8D94}|GUI.csproj|C:\\Users\\Admin\\source\\repos\\BTL\\DA1\\MAIN\\login.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{10964D9B-BBD4-420F-BA3E-C297066A8D94}|GUI.csproj|solutionrelative:login.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{10964D9B-BBD4-420F-BA3E-C297066A8D94}|GUI.csproj|c:\\users\\admin\\source\\repos\\btl\\da1\\main\\booking.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{10964D9B-BBD4-420F-BA3E-C297066A8D94}|GUI.csproj|solutionrelative:booking.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{10964D9B-BBD4-420F-BA3E-C297066A8D94}|GUI.csproj|C:\\Users\\Admin\\source\\repos\\BTL\\DA1\\MAIN\\income.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{10964D9B-BBD4-420F-BA3E-C297066A8D94}|GUI.csproj|solutionrelative:income.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{10964D9B-BBD4-420F-BA3E-C297066A8D94}|GUI.csproj|C:\\Users\\Admin\\source\\repos\\BTL\\DA1\\MAIN\\customer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{10964D9B-BBD4-420F-BA3E-C297066A8D94}|GUI.csproj|solutionrelative:customer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{10964D9B-BBD4-420F-BA3E-C297066A8D94}|GUI.csproj|C:\\Users\\Admin\\source\\repos\\BTL\\DA1\\MAIN\\category.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{10964D9B-BBD4-420F-BA3E-C297066A8D94}|GUI.csproj|solutionrelative:category.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{10964D9B-BBD4-420F-BA3E-C297066A8D94}|GUI.csproj|C:\\Users\\Admin\\source\\repos\\BTL\\DA1\\MAIN\\staff.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{10964D9B-BBD4-420F-BA3E-C297066A8D94}|GUI.csproj|solutionrelative:staff.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{10964D9B-BBD4-420F-BA3E-C297066A8D94}|GUI.csproj|C:\\Users\\Admin\\source\\repos\\BTL\\DA1\\MAIN\\room.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{10964D9B-BBD4-420F-BA3E-C297066A8D94}|GUI.csproj|solutionrelative:room.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{10964D9B-BBD4-420F-BA3E-C297066A8D94}|GUI.csproj|C:\\Users\\Admin\\source\\repos\\BTL\\DA1\\MAIN\\ticket.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{10964D9B-BBD4-420F-BA3E-C297066A8D94}|GUI.csproj|solutionrelative:ticket.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{10964D9B-BBD4-420F-BA3E-C297066A8D94}|GUI.csproj|C:\\Users\\Admin\\source\\repos\\BTL\\DA1\\MAIN\\management.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{10964D9B-BBD4-420F-BA3E-C297066A8D94}|GUI.csproj|solutionrelative:management.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{10964D9B-BBD4-420F-BA3E-C297066A8D94}|GUI.csproj|C:\\Users\\Admin\\source\\repos\\BTL\\DA1\\MAIN\\movies time.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{10964D9B-BBD4-420F-BA3E-C297066A8D94}|GUI.csproj|solutionrelative:movies time.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{10964D9B-BBD4-420F-BA3E-C297066A8D94}|GUI.csproj|C:\\Users\\Admin\\source\\repos\\BTL\\DA1\\MAIN\\movies.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{10964D9B-BBD4-420F-BA3E-C297066A8D94}|GUI.csproj|solutionrelative:movies.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{10964D9B-BBD4-420F-BA3E-C297066A8D94}|GUI.csproj|C:\\Users\\Admin\\source\\repos\\BTL\\DA1\\MAIN\\account.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{10964D9B-BBD4-420F-BA3E-C297066A8D94}|GUI.csproj|solutionrelative:account.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{10964D9B-BBD4-420F-BA3E-C297066A8D94}|GUI.csproj|C:\\Users\\Admin\\source\\repos\\BTL\\DA1\\MAIN\\management.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{10964D9B-BBD4-420F-BA3E-C297066A8D94}|GUI.csproj|solutionrelative:management.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{10964D9B-BBD4-420F-BA3E-C297066A8D94}|GUI.csproj|C:\\Users\\Admin\\source\\repos\\BTL\\DA1\\MAIN\\movies.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{10964D9B-BBD4-420F-BA3E-C297066A8D94}|GUI.csproj|solutionrelative:movies.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4D7262EF-B154-4756-8029-063943F5E18A}|..\\DAL\\DAL.csproj|c:\\users\\admin\\source\\repos\\btl\\da1\\dal\\staff_dal.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F037F1CF-F11D-4CF3-B889-471C94D1C5D2}|..\\BLL\\BLL.csproj|c:\\users\\admin\\source\\repos\\btl\\da1\\bll\\staff_bll.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4D7262EF-B154-4756-8029-063943F5E18A}|..\\DAL\\DAL.csproj|c:\\users\\admin\\source\\repos\\btl\\da1\\dal\\dataprovider.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{10964D9B-BBD4-420F-BA3E-C297066A8D94}|GUI.csproj|C:\\Users\\Admin\\source\\repos\\BTL\\DA1\\MAIN\\staff.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{10964D9B-BBD4-420F-BA3E-C297066A8D94}|GUI.csproj|solutionrelative:staff.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{10964D9B-BBD4-420F-BA3E-C297066A8D94}|GUI.csproj|C:\\Users\\Admin\\source\\repos\\BTL\\DA1\\MAIN\\dal\\staffbll.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{10964D9B-BBD4-420F-BA3E-C297066A8D94}|GUI.csproj|solutionrelative:dal\\staffbll.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{10964D9B-BBD4-420F-BA3E-C297066A8D94}|GUI.csproj|C:\\Users\\Admin\\source\\repos\\BTL\\DA1\\MAIN\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{10964D9B-BBD4-420F-BA3E-C297066A8D94}|GUI.csproj|solutionrelative:program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Admin\\AppData\\Local\\Temp\\.vsdbgsrc\\bde0a37a2a8272add1534b253406eb49201f32e23c5920ac7ffcce0250ffdf84\\Bitmap.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{10964D9B-BBD4-420F-BA3E-C297066A8D94}|GUI.csproj|C:\\Users\\Admin\\source\\repos\\BTL\\DA1\\MAIN\\room.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{10964D9B-BBD4-420F-BA3E-C297066A8D94}|GUI.csproj|solutionrelative:room.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{10964D9B-BBD4-420F-BA3E-C297066A8D94}|GUI.csproj|C:\\Users\\Admin\\source\\repos\\BTL\\DA1\\MAIN\\ticket.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{10964D9B-BBD4-420F-BA3E-C297066A8D94}|GUI.csproj|solutionrelative:ticket.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{10964D9B-BBD4-420F-BA3E-C297066A8D94}|GUI.csproj|C:\\Users\\Admin\\source\\repos\\BTL\\DA1\\MAIN\\movies time.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{10964D9B-BBD4-420F-BA3E-C297066A8D94}|GUI.csproj|solutionrelative:movies time.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{10964D9B-BBD4-420F-BA3E-C297066A8D94}|GUI.csproj|C:\\Users\\Admin\\source\\repos\\BTL\\DA1\\MAIN\\category.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{10964D9B-BBD4-420F-BA3E-C297066A8D94}|GUI.csproj|solutionrelative:category.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{10964D9B-BBD4-420F-BA3E-C297066A8D94}|GUI.csproj|C:\\Users\\Admin\\source\\repos\\BTL\\DA1\\MAIN\\login.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{10964D9B-BBD4-420F-BA3E-C297066A8D94}|GUI.csproj|solutionrelative:login.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{10964D9B-BBD4-420F-BA3E-C297066A8D94}|GUI.csproj|C:\\Users\\Admin\\source\\repos\\BTL\\DA1\\MAIN\\staff.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{10964D9B-BBD4-420F-BA3E-C297066A8D94}|GUI.csproj|solutionrelative:staff.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{10964D9B-BBD4-420F-BA3E-C297066A8D94}|GUI.csproj|C:\\Users\\Admin\\source\\repos\\BTL\\DA1\\MAIN\\properties\\resources.resx||{81828910-B8B3-4D2B-99A3-067027C180C1}",
+      "RelativeMoniker": "D:0:0:{10964D9B-BBD4-420F-BA3E-C297066A8D94}|GUI.csproj|solutionrelative:properties\\resources.resx||{81828910-B8B3-4D2B-99A3-067027C180C1}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{10964D9B-BBD4-420F-BA3E-C297066A8D94}|GUI.csproj|C:\\Users\\Admin\\source\\repos\\BTL\\DA1\\MAIN\\resources\\hoa_don.png||{177559E0-D141-11D0-92DF-00A0C9138C45}",
+      "RelativeMoniker": "D:0:0:{10964D9B-BBD4-420F-BA3E-C297066A8D94}|GUI.csproj|solutionrelative:resources\\hoa_don.png||{177559E0-D141-11D0-92DF-00A0C9138C45}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{10964D9B-BBD4-420F-BA3E-C297066A8D94}|GUI.csproj|C:\\Users\\Admin\\source\\repos\\BTL\\DA1\\MAIN\\resources\\khach_hang.png||{177559E0-D141-11D0-92DF-00A0C9138C45}",
+      "RelativeMoniker": "D:0:0:{10964D9B-BBD4-420F-BA3E-C297066A8D94}|GUI.csproj|solutionrelative:resources\\khach_hang.png||{177559E0-D141-11D0-92DF-00A0C9138C45}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{10964D9B-BBD4-420F-BA3E-C297066A8D94}|GUI.csproj|C:\\Users\\Admin\\source\\repos\\BTL\\DA1\\MAIN\\resources\\nhan_vien.png||{177559E0-D141-11D0-92DF-00A0C9138C45}",
+      "RelativeMoniker": "D:0:0:{10964D9B-BBD4-420F-BA3E-C297066A8D94}|GUI.csproj|solutionrelative:resources\\nhan_vien.png||{177559E0-D141-11D0-92DF-00A0C9138C45}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{10964D9B-BBD4-420F-BA3E-C297066A8D94}|GUI.csproj|C:\\Users\\Admin\\source\\repos\\BTL\\DA1\\MAIN\\login.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{10964D9B-BBD4-420F-BA3E-C297066A8D94}|GUI.csproj|solutionrelative:login.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|c:\\users\\admin\\source\\repos\\btl\\da1\\gui\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 4,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{1c4feeaa-4718-4aa9-859d-94ce25d182ba}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{aa2115a1-9712-457b-9047-dbb71ca2cdd2}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:1:0:{3ae79031-e1bc-11d0-8f78-00a0c9110057}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{3ae79031-e1bc-11d0-8f78-00a0c9110057}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Phim.cs",
+              "DocumentMoniker": "C:\\Users\\Admin\\source\\repos\\BTL\\DA1\\DTO\\Phim.cs",
+              "RelativeDocumentMoniker": "..\\DTO\\Phim.cs",
+              "ToolTip": "C:\\Users\\Admin\\source\\repos\\BTL\\DA1\\DTO\\Phim.cs",
+              "RelativeToolTip": "..\\DTO\\Phim.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-03T15:04:06.378Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "Customer.cs [Design]",
+              "DocumentMoniker": "C:\\Users\\Admin\\source\\repos\\BTL\\DA1\\MAIN\\Customer.cs",
+              "RelativeDocumentMoniker": "Customer.cs",
+              "ToolTip": "C:\\Users\\Admin\\source\\repos\\BTL\\DA1\\MAIN\\Customer.cs [Design]",
+              "RelativeToolTip": "Customer.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-23T16:44:11.941Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "Category.cs [Design]",
+              "DocumentMoniker": "C:\\Users\\Admin\\source\\repos\\BTL\\DA1\\MAIN\\Category.cs",
+              "RelativeDocumentMoniker": "Category.cs",
+              "ToolTip": "C:\\Users\\Admin\\source\\repos\\BTL\\DA1\\MAIN\\Category.cs [Design]",
+              "RelativeToolTip": "Category.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-23T16:45:28.977Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "Income.cs [Design]",
+              "DocumentMoniker": "C:\\Users\\Admin\\source\\repos\\BTL\\DA1\\MAIN\\Income.cs",
+              "RelativeDocumentMoniker": "Income.cs",
+              "ToolTip": "C:\\Users\\Admin\\source\\repos\\BTL\\DA1\\MAIN\\Income.cs [Design]",
+              "RelativeToolTip": "Income.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-23T16:44:41.852Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "Booking.cs [Design]",
+              "DocumentMoniker": "C:\\Users\\Admin\\source\\repos\\BTL\\DA1\\MAIN\\Booking.cs",
+              "RelativeDocumentMoniker": "Booking.cs",
+              "ToolTip": "C:\\Users\\Admin\\source\\repos\\BTL\\DA1\\MAIN\\Booking.cs [Design]",
+              "RelativeToolTip": "Booking.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-23T16:43:09.78Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Login.cs [Design]",
+              "DocumentMoniker": "C:\\Users\\Admin\\source\\repos\\BTL\\DA1\\MAIN\\Login.cs",
+              "RelativeDocumentMoniker": "Login.cs",
+              "ToolTip": "C:\\Users\\Admin\\source\\repos\\BTL\\DA1\\MAIN\\Login.cs [Design]",
+              "RelativeToolTip": "Login.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-23T09:30:54.941Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Class1.cs",
+              "DocumentMoniker": "C:\\Users\\Admin\\source\\repos\\BTL\\DA1\\DTO\\Class1.cs",
+              "RelativeDocumentMoniker": "..\\DTO\\Class1.cs",
+              "ToolTip": "C:\\Users\\Admin\\source\\repos\\BTL\\DA1\\DTO\\Class1.cs",
+              "RelativeToolTip": "..\\DTO\\Class1.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-03T13:06:43.655Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "Staff.cs [Design]",
+              "DocumentMoniker": "C:\\Users\\Admin\\source\\repos\\BTL\\DA1\\MAIN\\Staff.cs",
+              "RelativeDocumentMoniker": "Staff.cs",
+              "ToolTip": "C:\\Users\\Admin\\source\\repos\\BTL\\DA1\\MAIN\\Staff.cs [Design]",
+              "RelativeToolTip": "Staff.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-23T15:42:25.872Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "Room.cs [Design]",
+              "DocumentMoniker": "C:\\Users\\Admin\\source\\repos\\BTL\\DA1\\MAIN\\Room.cs",
+              "RelativeDocumentMoniker": "Room.cs",
+              "ToolTip": "C:\\Users\\Admin\\source\\repos\\BTL\\DA1\\MAIN\\Room.cs [Design]",
+              "RelativeToolTip": "Room.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-23T16:45:19.254Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "Ticket.cs [Design]",
+              "DocumentMoniker": "C:\\Users\\Admin\\source\\repos\\BTL\\DA1\\MAIN\\Ticket.cs",
+              "RelativeDocumentMoniker": "Ticket.cs",
+              "ToolTip": "C:\\Users\\Admin\\source\\repos\\BTL\\DA1\\MAIN\\Ticket.cs [Design]",
+              "RelativeToolTip": "Ticket.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-23T16:46:02.332Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "Management.cs [Design]",
+              "DocumentMoniker": "C:\\Users\\Admin\\source\\repos\\BTL\\DA1\\MAIN\\Management.cs",
+              "RelativeDocumentMoniker": "Management.cs",
+              "ToolTip": "C:\\Users\\Admin\\source\\repos\\BTL\\DA1\\MAIN\\Management.cs [Design]",
+              "RelativeToolTip": "Management.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-03T13:31:24.515Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "Movies time.cs [Design]",
+              "DocumentMoniker": "C:\\Users\\Admin\\source\\repos\\BTL\\DA1\\MAIN\\Movies time.cs",
+              "RelativeDocumentMoniker": "Movies time.cs",
+              "ToolTip": "C:\\Users\\Admin\\source\\repos\\BTL\\DA1\\MAIN\\Movies time.cs [Design]",
+              "RelativeToolTip": "Movies time.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-23T16:45:38.937Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "Movies.cs [Design]",
+              "DocumentMoniker": "C:\\Users\\Admin\\source\\repos\\BTL\\DA1\\MAIN\\Movies.cs",
+              "RelativeDocumentMoniker": "Movies.cs",
+              "ToolTip": "C:\\Users\\Admin\\source\\repos\\BTL\\DA1\\MAIN\\Movies.cs [Design]",
+              "RelativeToolTip": "Movies.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-23T16:45:52.338Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "Account.cs [Design]",
+              "DocumentMoniker": "C:\\Users\\Admin\\source\\repos\\BTL\\DA1\\MAIN\\Account.cs",
+              "RelativeDocumentMoniker": "Account.cs",
+              "ToolTip": "C:\\Users\\Admin\\source\\repos\\BTL\\DA1\\MAIN\\Account.cs [Design]",
+              "RelativeToolTip": "Account.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-23T16:44:25.314Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
+              "Title": "Management.cs",
+              "DocumentMoniker": "C:\\Users\\Admin\\source\\repos\\BTL\\DA1\\MAIN\\Management.cs",
+              "RelativeDocumentMoniker": "Management.cs",
+              "ToolTip": "C:\\Users\\Admin\\source\\repos\\BTL\\DA1\\MAIN\\Management.cs",
+              "RelativeToolTip": "Management.cs",
+              "ViewState": "AgIAAC8AAAAAAAAAAAAgwDsAAAAkAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-21T18:26:47.172Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 15,
+              "Title": "Movies.cs",
+              "DocumentMoniker": "C:\\Users\\Admin\\source\\repos\\BTL\\DA1\\MAIN\\Movies.cs",
+              "RelativeDocumentMoniker": "Movies.cs",
+              "ToolTip": "C:\\Users\\Admin\\source\\repos\\BTL\\DA1\\MAIN\\Movies.cs",
+              "RelativeToolTip": "Movies.cs",
+              "ViewState": "AgIAABEAAAAAAAAAAAAYwB8AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-30T20:19:38.744Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 16,
+              "Title": "Staff_DAL.cs",
+              "DocumentMoniker": "C:\\Users\\Admin\\source\\repos\\BTL\\DA1\\DAL\\Staff_DAL.cs",
+              "RelativeDocumentMoniker": "..\\DAL\\Staff_DAL.cs",
+              "ToolTip": "C:\\Users\\Admin\\source\\repos\\BTL\\DA1\\DAL\\Staff_DAL.cs",
+              "RelativeToolTip": "..\\DAL\\Staff_DAL.cs",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAAAAoAAAAaAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-03T13:00:31.934Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 18,
+              "Title": "DataProvider.cs",
+              "DocumentMoniker": "C:\\Users\\Admin\\source\\repos\\BTL\\DA1\\DAL\\DataProvider.cs",
+              "RelativeDocumentMoniker": "..\\DAL\\DataProvider.cs",
+              "ToolTip": "C:\\Users\\Admin\\source\\repos\\BTL\\DA1\\DAL\\DataProvider.cs",
+              "RelativeToolTip": "..\\DAL\\DataProvider.cs",
+              "ViewState": "AgIAADgAAAAAAAAAAAAtwEYAAAAZAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-03T13:03:22.25Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 17,
+              "Title": "Staff_BLL.cs",
+              "DocumentMoniker": "C:\\Users\\Admin\\source\\repos\\BTL\\DA1\\BLL\\Staff_BLL.cs",
+              "RelativeDocumentMoniker": "..\\BLL\\Staff_BLL.cs",
+              "ToolTip": "C:\\Users\\Admin\\source\\repos\\BTL\\DA1\\BLL\\Staff_BLL.cs",
+              "RelativeToolTip": "..\\BLL\\Staff_BLL.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABIAAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-03T13:05:40.193Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 19,
+              "Title": "Staff.cs",
+              "DocumentMoniker": "C:\\Users\\Admin\\source\\repos\\BTL\\DA1\\MAIN\\Staff.cs",
+              "RelativeDocumentMoniker": "Staff.cs",
+              "ToolTip": "C:\\Users\\Admin\\source\\repos\\BTL\\DA1\\MAIN\\Staff.cs",
+              "RelativeToolTip": "Staff.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAADEAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-24T06:15:01.901Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 21,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\Admin\\source\\repos\\BTL\\DA1\\MAIN\\Program.cs",
+              "RelativeDocumentMoniker": "Program.cs",
+              "ToolTip": "C:\\Users\\Admin\\source\\repos\\BTL\\DA1\\MAIN\\Program.cs",
+              "RelativeToolTip": "Program.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABEAAABBAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-24T07:07:43.787Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 20,
+              "Title": "StaffBLL.cs",
+              "DocumentMoniker": "C:\\Users\\Admin\\source\\repos\\BTL\\DA1\\MAIN\\DAL\\StaffBLL.cs",
+              "RelativeDocumentMoniker": "DAL\\StaffBLL.cs",
+              "ToolTip": "C:\\Users\\Admin\\source\\repos\\BTL\\DA1\\MAIN\\DAL\\StaffBLL.cs",
+              "RelativeToolTip": "DAL\\StaffBLL.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAIAAAAbAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-24T07:21:41.001Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 22,
+              "Title": "Bitmap.cs",
+              "DocumentMoniker": "C:\\Users\\Admin\\AppData\\Local\\Temp\\.vsdbgsrc\\bde0a37a2a8272add1534b253406eb49201f32e23c5920ac7ffcce0250ffdf84\\Bitmap.cs",
+              "RelativeDocumentMoniker": "..\\..\\..\\..\\..\\AppData\\Local\\Temp\\.vsdbgsrc\\bde0a37a2a8272add1534b253406eb49201f32e23c5920ac7ffcce0250ffdf84\\Bitmap.cs",
+              "ToolTip": "C:\\Users\\Admin\\AppData\\Local\\Temp\\.vsdbgsrc\\bde0a37a2a8272add1534b253406eb49201f32e23c5920ac7ffcce0250ffdf84\\Bitmap.cs [Read Only]",
+              "RelativeToolTip": "..\\..\\..\\..\\..\\AppData\\Local\\Temp\\.vsdbgsrc\\bde0a37a2a8272add1534b253406eb49201f32e23c5920ac7ffcce0250ffdf84\\Bitmap.cs [Read Only]",
+              "ViewState": "AgIAAJUAAAAAAAAAAAAawK8AAAABAAAAAQAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-24T06:01:19.126Z",
+              "EditorCaption": " [Read Only]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 23,
+              "Title": "Room.cs",
+              "DocumentMoniker": "C:\\Users\\Admin\\source\\repos\\BTL\\DA1\\MAIN\\Room.cs",
+              "RelativeDocumentMoniker": "Room.cs",
+              "ToolTip": "C:\\Users\\Admin\\source\\repos\\BTL\\DA1\\MAIN\\Room.cs",
+              "RelativeToolTip": "Room.cs",
+              "ViewState": "AgIAAAUAAAAAAAAAAAAwwBUAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-29T17:13:22.208Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 24,
+              "Title": "Ticket.cs",
+              "DocumentMoniker": "C:\\Users\\Admin\\source\\repos\\BTL\\DA1\\MAIN\\Ticket.cs",
+              "RelativeDocumentMoniker": "Ticket.cs",
+              "ToolTip": "C:\\Users\\Admin\\source\\repos\\BTL\\DA1\\MAIN\\Ticket.cs",
+              "RelativeToolTip": "Ticket.cs",
+              "ViewState": "AgIAAAcAAAAAAAAAAAAowBUAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-31T01:56:20.17Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 25,
+              "Title": "Movies time.cs",
+              "DocumentMoniker": "C:\\Users\\Admin\\source\\repos\\BTL\\DA1\\MAIN\\Movies time.cs",
+              "RelativeDocumentMoniker": "Movies time.cs",
+              "ToolTip": "C:\\Users\\Admin\\source\\repos\\BTL\\DA1\\MAIN\\Movies time.cs",
+              "RelativeToolTip": "Movies time.cs",
+              "ViewState": "AgIAAAUAAAAAAAAAAAAwwBUAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-31T01:23:32.872Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 26,
+              "Title": "Category.cs",
+              "DocumentMoniker": "C:\\Users\\Admin\\source\\repos\\BTL\\DA1\\MAIN\\Category.cs",
+              "RelativeDocumentMoniker": "Category.cs",
+              "ToolTip": "C:\\Users\\Admin\\source\\repos\\BTL\\DA1\\MAIN\\Category.cs",
+              "RelativeToolTip": "Category.cs",
+              "ViewState": "AgIAAAUAAAAAAAAAAAAwwBUAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-30T19:56:28.794Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 27,
+              "Title": "Login.cs",
+              "DocumentMoniker": "C:\\Users\\Admin\\source\\repos\\BTL\\DA1\\MAIN\\Login.cs",
+              "RelativeDocumentMoniker": "Login.cs",
+              "ToolTip": "C:\\Users\\Admin\\source\\repos\\BTL\\DA1\\MAIN\\Login.cs",
+              "RelativeToolTip": "Login.cs",
+              "ViewState": "AgIAAGQAAAAAAAAAAAAawHMAAAAZAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-21T16:54:23.637Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 28,
+              "Title": "Staff.Designer.cs",
+              "DocumentMoniker": "C:\\Users\\Admin\\source\\repos\\BTL\\DA1\\MAIN\\Staff.Designer.cs",
+              "RelativeDocumentMoniker": "Staff.Designer.cs",
+              "ToolTip": "C:\\Users\\Admin\\source\\repos\\BTL\\DA1\\MAIN\\Staff.Designer.cs",
+              "RelativeToolTip": "Staff.Designer.cs",
+              "ViewState": "AgIAAFcAAAAAAAAAAAAAAJMAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-23T16:12:26.633Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 30,
+              "Title": "hoa_don.png -  [English (United States)] - PNG [64x64, 32 bit, PNG]",
+              "DocumentMoniker": "C:\\Users\\Admin\\source\\repos\\BTL\\DA1\\MAIN\\Resources\\hoa_don.png",
+              "RelativeDocumentMoniker": "Resources\\hoa_don.png",
+              "ToolTip": "C:\\Users\\Admin\\source\\repos\\BTL\\DA1\\DA1\\Resources\\hoa_don.png -  [English (United States)] - PNG [64x64, 32 bit, PNG]",
+              "RelativeToolTip": "..\\DA1\\Resources\\hoa_don.png -  [English (United States)] - PNG [64x64, 32 bit, PNG]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001533|",
+              "WhenOpened": "2025-03-23T09:31:14.104Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 29,
+              "Title": "Resources.resx",
+              "DocumentMoniker": "C:\\Users\\Admin\\source\\repos\\BTL\\DA1\\MAIN\\Properties\\Resources.resx",
+              "RelativeDocumentMoniker": "Properties\\Resources.resx",
+              "ToolTip": "C:\\Users\\Admin\\source\\repos\\BTL\\DA1\\MAIN\\Properties\\Resources.resx",
+              "RelativeToolTip": "Properties\\Resources.resx",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001005|",
+              "WhenOpened": "2025-03-23T10:18:22.342Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 31,
+              "Title": "khach_hang.png -  [English (United States)] - PNG [64x64, 32 bit, PNG]",
+              "DocumentMoniker": "C:\\Users\\Admin\\source\\repos\\BTL\\DA1\\MAIN\\Resources\\khach_hang.png",
+              "RelativeDocumentMoniker": "Resources\\khach_hang.png",
+              "ToolTip": "C:\\Users\\Admin\\source\\repos\\BTL\\DA1\\DA1\\Resources\\khach_hang.png -  [English (United States)] - PNG [64x64, 32 bit, PNG]",
+              "RelativeToolTip": "..\\DA1\\Resources\\khach_hang.png -  [English (United States)] - PNG [64x64, 32 bit, PNG]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001533|",
+              "WhenOpened": "2025-03-23T09:31:13.331Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 32,
+              "Title": "nhan_vien.png -  [English (United States)] - PNG [64x64, 32 bit, PNG]",
+              "DocumentMoniker": "C:\\Users\\Admin\\source\\repos\\BTL\\DA1\\MAIN\\Resources\\nhan_vien.png",
+              "RelativeDocumentMoniker": "Resources\\nhan_vien.png",
+              "ToolTip": "C:\\Users\\Admin\\source\\repos\\BTL\\DA1\\DA1\\Resources\\nhan_vien.png -  [English (United States)] - PNG [64x64, 32 bit, PNG]",
+              "RelativeToolTip": "..\\DA1\\Resources\\nhan_vien.png -  [English (United States)] - PNG [64x64, 32 bit, PNG]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001533|",
+              "WhenOpened": "2025-03-23T09:31:11.961Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 33,
+              "Title": "Login.Designer.cs",
+              "DocumentMoniker": "C:\\Users\\Admin\\source\\repos\\BTL\\DA1\\MAIN\\Login.Designer.cs",
+              "RelativeDocumentMoniker": "Login.Designer.cs",
+              "ToolTip": "C:\\Users\\Admin\\source\\repos\\BTL\\DA1\\MAIN\\Login.Designer.cs",
+              "RelativeToolTip": "Login.Designer.cs",
+              "ViewState": "AgIAABUAAAAAAAAAAAAQwBYAAAAIAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-23T08:28:49.029Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 34,
+              "Title": "Form1.cs [Design]",
+              "DocumentMoniker": "C:\\Users\\Admin\\source\\repos\\BTL\\DA1\\GUI\\Form1.cs",
+              "RelativeDocumentMoniker": "..\\GUI\\Form1.cs",
+              "ToolTip": "C:\\Users\\Admin\\source\\repos\\BTL\\DA1\\GUI\\Form1.cs [Design]",
+              "RelativeToolTip": "..\\GUI\\Form1.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-21T16:32:40.545Z"
+            }
+          ]
+        },
+        {
+          "DockedWidth": 614,
+          "SelectedChildIndex": -1,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{34e76e81-ee4a-11d0-ae2e-00a0c90fffc3}"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

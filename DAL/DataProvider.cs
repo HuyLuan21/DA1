@@ -1,6 +1,10 @@
-﻿using System.Data;
+﻿using System;
+using System.Collections.Generic;
 using System.Data.SqlClient;
-using System.Windows.Forms;
+using System.Data;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
 
 namespace DAL
 {
@@ -42,7 +46,7 @@ namespace DAL
             }
             catch (SqlException e)
             {
-                MessageBox.Show(e.Message);
+                
             }
 
             return data;
@@ -65,7 +69,6 @@ namespace DAL
                         }
                         catch (SqlException e)
                         {
-                            MessageBox.Show(e.Message);
                             transaction.Rollback();
                         }
                     }
@@ -73,7 +76,7 @@ namespace DAL
             }
             catch (SqlException e)
             {
-                MessageBox.Show($"Database error: {e.Message}");
+                
             }
             return Affected;
         }
