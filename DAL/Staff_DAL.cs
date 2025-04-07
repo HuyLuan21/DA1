@@ -5,23 +5,39 @@ using System.Data;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using DTO;
+using System.Xml.Linq;
 
 namespace DAL
 {
     public class Staff_DAL
     {
-
-        private string connectionString = "Data Source=MSI\\MSI;Initial Catalog=DA1;Integrated Security=True";
-        public DataTable GetAllStaff()
+        private static Staff_DAL instance;
+        public static Staff_DAL Instance
         {
-            using (SqlConnection conn = new SqlConnection(connectionString))
+            get
             {
-                string query = "SELECT * FROM NhanVien";
-                SqlDataAdapter adapter = new SqlDataAdapter(query, conn);
-                DataTable dt = new DataTable();
-                adapter.Fill(dt);
-                return dt;
+                if (instance == null)
+                {
+                    instance = new Staff_DAL();
+                }
+                return instance;
             }
+        }
+        private Staff_DAL() { }
+        public DataTable GetStaff()
+        {
+                string query = "SELECT * FROM NhanVien";
+                DataTable res = DataProvider.Instance.ExecuteQuery(query);
+                return res;
+        }
+        public int InsertStaff()
+        {
+            string query = $@"INSERT INTO NhanVien )";
+
+            int rowsAffected = DataProvider.Instance.ExecuteNonQuery(query);
+
+            return rowsAffected;
         }
     }
 }

@@ -4,3 +4,6 @@ C:\Users\Admin\source\repos\BTL\DA1\DAL\obj\Debug\DAL.csproj.AssemblyReference.c
 C:\Users\Admin\source\repos\BTL\DA1\DAL\obj\Debug\DAL.csproj.CoreCompileInputs.cache
 C:\Users\Admin\source\repos\BTL\DA1\DAL\obj\Debug\DAL.dll
 C:\Users\Admin\source\repos\BTL\DA1\DAL\obj\Debug\DAL.pdb
+C:\Users\Admin\source\repos\BTL\DA1\DAL\bin\Debug\DTO.dll
+C:\Users\Admin\source\repos\BTL\DA1\DAL\bin\Debug\DTO.pdb
+C:\Users\Admin\source\repos\BTL\DA1\DAL\obj\Debug\DAL.csproj.Up2Date

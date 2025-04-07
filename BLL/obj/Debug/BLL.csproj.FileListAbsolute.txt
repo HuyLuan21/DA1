@@ -7,3 +7,5 @@ C:\Users\Admin\source\repos\BTL\DA1\BLL\obj\Debug\BLL.csproj.CoreCompileInputs.c
 C:\Users\Admin\source\repos\BTL\DA1\BLL\obj\Debug\BLL.csproj.Up2Date
 C:\Users\Admin\source\repos\BTL\DA1\BLL\obj\Debug\BLL.dll
 C:\Users\Admin\source\repos\BTL\DA1\BLL\obj\Debug\BLL.pdb
+C:\Users\Admin\source\repos\BTL\DA1\BLL\bin\Debug\DTO.dll
+C:\Users\Admin\source\repos\BTL\DA1\BLL\bin\Debug\DTO.pdb

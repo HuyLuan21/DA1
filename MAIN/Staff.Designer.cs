@@ -28,10 +28,19 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle10 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle11 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle12 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             this.staff_info = new System.Windows.Forms.GroupBox();
+            this.Birth_tbx = new System.Windows.Forms.DateTimePicker();
+            this.remove_btn = new System.Windows.Forms.Button();
+            this.edit_btn = new System.Windows.Forms.Button();
+            this.add_btn = new System.Windows.Forms.Button();
+            this.ID_tbx = new System.Windows.Forms.TextBox();
+            this.Sdt_tbx = new System.Windows.Forms.TextBox();
+            this.Address_tbx = new System.Windows.Forms.TextBox();
+            this.Name_tbx = new System.Windows.Forms.TextBox();
+            this.staff_id_tbx = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
@@ -40,14 +49,6 @@
             this.staffid_lbl = new System.Windows.Forms.Label();
             this.Staff_grv = new Bunifu.UI.WinForms.BunifuDataGridView();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.staff_id_btn = new System.Windows.Forms.TextBox();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.textBox4 = new System.Windows.Forms.TextBox();
-            this.remove_btn = new System.Windows.Forms.Button();
-            this.edit_btn = new System.Windows.Forms.Button();
-            this.add_btn = new System.Windows.Forms.Button();
             this.staff_info.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.Staff_grv)).BeginInit();
             this.panel1.SuspendLayout();
@@ -57,14 +58,15 @@
             // 
             this.staff_info.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
+            this.staff_info.Controls.Add(this.Birth_tbx);
             this.staff_info.Controls.Add(this.remove_btn);
             this.staff_info.Controls.Add(this.edit_btn);
             this.staff_info.Controls.Add(this.add_btn);
-            this.staff_info.Controls.Add(this.textBox4);
-            this.staff_info.Controls.Add(this.textBox2);
-            this.staff_info.Controls.Add(this.textBox3);
-            this.staff_info.Controls.Add(this.textBox1);
-            this.staff_info.Controls.Add(this.staff_id_btn);
+            this.staff_info.Controls.Add(this.ID_tbx);
+            this.staff_info.Controls.Add(this.Sdt_tbx);
+            this.staff_info.Controls.Add(this.Address_tbx);
+            this.staff_info.Controls.Add(this.Name_tbx);
+            this.staff_info.Controls.Add(this.staff_id_tbx);
             this.staff_info.Controls.Add(this.label4);
             this.staff_info.Controls.Add(this.label3);
             this.staff_info.Controls.Add(this.label2);
@@ -78,6 +80,79 @@
             this.staff_info.TabIndex = 0;
             this.staff_info.TabStop = false;
             this.staff_info.Text = "Thông tin nhân viên";
+            // 
+            // Birth_tbx
+            // 
+            this.Birth_tbx.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.Birth_tbx.Location = new System.Drawing.Point(156, 136);
+            this.Birth_tbx.Name = "Birth_tbx";
+            this.Birth_tbx.Size = new System.Drawing.Size(220, 30);
+            this.Birth_tbx.TabIndex = 25;
+            // 
+            // remove_btn
+            // 
+            this.remove_btn.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.remove_btn.Location = new System.Drawing.Point(240, 200);
+            this.remove_btn.Name = "remove_btn";
+            this.remove_btn.Size = new System.Drawing.Size(93, 42);
+            this.remove_btn.TabIndex = 24;
+            this.remove_btn.Text = "Xóa";
+            this.remove_btn.UseVisualStyleBackColor = true;
+            // 
+            // edit_btn
+            // 
+            this.edit_btn.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.edit_btn.Location = new System.Drawing.Point(130, 200);
+            this.edit_btn.Name = "edit_btn";
+            this.edit_btn.Size = new System.Drawing.Size(93, 42);
+            this.edit_btn.TabIndex = 23;
+            this.edit_btn.Text = "Sửa ";
+            this.edit_btn.UseVisualStyleBackColor = true;
+            // 
+            // add_btn
+            // 
+            this.add_btn.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.add_btn.Location = new System.Drawing.Point(17, 200);
+            this.add_btn.Name = "add_btn";
+            this.add_btn.Size = new System.Drawing.Size(93, 42);
+            this.add_btn.TabIndex = 22;
+            this.add_btn.Text = "Thêm ";
+            this.add_btn.UseVisualStyleBackColor = true;
+            // 
+            // ID_tbx
+            // 
+            this.ID_tbx.Location = new System.Drawing.Point(603, 134);
+            this.ID_tbx.Name = "ID_tbx";
+            this.ID_tbx.Size = new System.Drawing.Size(220, 30);
+            this.ID_tbx.TabIndex = 20;
+            // 
+            // Sdt_tbx
+            // 
+            this.Sdt_tbx.Location = new System.Drawing.Point(603, 85);
+            this.Sdt_tbx.Name = "Sdt_tbx";
+            this.Sdt_tbx.Size = new System.Drawing.Size(220, 30);
+            this.Sdt_tbx.TabIndex = 19;
+            // 
+            // Address_tbx
+            // 
+            this.Address_tbx.Location = new System.Drawing.Point(603, 41);
+            this.Address_tbx.Name = "Address_tbx";
+            this.Address_tbx.Size = new System.Drawing.Size(220, 30);
+            this.Address_tbx.TabIndex = 18;
+            // 
+            // Name_tbx
+            // 
+            this.Name_tbx.Location = new System.Drawing.Point(156, 85);
+            this.Name_tbx.Name = "Name_tbx";
+            this.Name_tbx.Size = new System.Drawing.Size(220, 30);
+            this.Name_tbx.TabIndex = 17;
+            // 
+            // staff_id_tbx
+            // 
+            this.staff_id_tbx.Location = new System.Drawing.Point(156, 45);
+            this.staff_id_tbx.Name = "staff_id_tbx";
+            this.staff_id_tbx.Size = new System.Drawing.Size(220, 30);
+            this.staff_id_tbx.TabIndex = 16;
             // 
             // label4
             // 
@@ -141,23 +216,26 @@
             this.Staff_grv.AllowCustomTheming = false;
             this.Staff_grv.AllowUserToAddRows = false;
             this.Staff_grv.AllowUserToDeleteRows = false;
-            dataGridViewCellStyle10.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(251)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle10.ForeColor = System.Drawing.Color.Black;
-            this.Staff_grv.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle10;
+            this.Staff_grv.AllowUserToResizeColumns = false;
+            this.Staff_grv.AllowUserToResizeRows = false;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(251)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.LightGray;
+            this.Staff_grv.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
             this.Staff_grv.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.Staff_grv.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.Staff_grv.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.Staff_grv.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
             this.Staff_grv.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle11.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle11.BackColor = System.Drawing.Color.DodgerBlue;
-            dataGridViewCellStyle11.Font = new System.Drawing.Font("Segoe UI Semibold", 11.75F, System.Drawing.FontStyle.Bold);
-            dataGridViewCellStyle11.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle11.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(115)))), ((int)(((byte)(204)))));
-            dataGridViewCellStyle11.SelectionForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle11.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.Staff_grv.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle11;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Segoe UI Semibold", 11.75F, System.Drawing.FontStyle.Bold);
+            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.Silver;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.Staff_grv.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
             this.Staff_grv.ColumnHeadersHeight = 40;
             this.Staff_grv.CurrentTheme.AlternatingRowsStyle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(251)))), ((int)(((byte)(255)))));
             this.Staff_grv.CurrentTheme.AlternatingRowsStyle.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold);
@@ -166,10 +244,10 @@
             this.Staff_grv.CurrentTheme.AlternatingRowsStyle.SelectionForeColor = System.Drawing.Color.Black;
             this.Staff_grv.CurrentTheme.BackColor = System.Drawing.Color.White;
             this.Staff_grv.CurrentTheme.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(221)))), ((int)(((byte)(238)))), ((int)(((byte)(255)))));
-            this.Staff_grv.CurrentTheme.HeaderStyle.BackColor = System.Drawing.Color.DodgerBlue;
+            this.Staff_grv.CurrentTheme.HeaderStyle.BackColor = System.Drawing.Color.Transparent;
             this.Staff_grv.CurrentTheme.HeaderStyle.Font = new System.Drawing.Font("Segoe UI Semibold", 11.75F, System.Drawing.FontStyle.Bold);
             this.Staff_grv.CurrentTheme.HeaderStyle.ForeColor = System.Drawing.Color.White;
-            this.Staff_grv.CurrentTheme.HeaderStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(115)))), ((int)(((byte)(204)))));
+            this.Staff_grv.CurrentTheme.HeaderStyle.SelectionBackColor = System.Drawing.Color.LightGray;
             this.Staff_grv.CurrentTheme.HeaderStyle.SelectionForeColor = System.Drawing.Color.White;
             this.Staff_grv.CurrentTheme.Name = null;
             this.Staff_grv.CurrentTheme.RowsStyle.BackColor = System.Drawing.Color.White;
@@ -177,14 +255,14 @@
             this.Staff_grv.CurrentTheme.RowsStyle.ForeColor = System.Drawing.Color.Black;
             this.Staff_grv.CurrentTheme.RowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(210)))), ((int)(((byte)(232)))), ((int)(((byte)(255)))));
             this.Staff_grv.CurrentTheme.RowsStyle.SelectionForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle12.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle12.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle12.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold);
-            dataGridViewCellStyle12.ForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle12.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(210)))), ((int)(((byte)(232)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle12.SelectionForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle12.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.Staff_grv.DefaultCellStyle = dataGridViewCellStyle12;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle3.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold);
+            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(210)))), ((int)(((byte)(232)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.Staff_grv.DefaultCellStyle = dataGridViewCellStyle3;
             this.Staff_grv.EnableHeadersVisualStyles = false;
             this.Staff_grv.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(221)))), ((int)(((byte)(238)))), ((int)(((byte)(255)))));
             this.Staff_grv.HeaderBackColor = System.Drawing.Color.DodgerBlue;
@@ -201,6 +279,7 @@
             this.Staff_grv.TabIndex = 3;
             this.Staff_grv.Theme = Bunifu.UI.WinForms.BunifuDataGridView.PresetThemes.Light;
             this.Staff_grv.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.Staff_grv_CellClick);
+            this.Staff_grv.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.Staff_grv_CellContentClick);
             // 
             // panel1
             // 
@@ -212,71 +291,6 @@
             this.panel1.Size = new System.Drawing.Size(1043, 591);
             this.panel1.TabIndex = 0;
             // 
-            // staff_id_btn
-            // 
-            this.staff_id_btn.Location = new System.Drawing.Point(156, 45);
-            this.staff_id_btn.Name = "staff_id_btn";
-            this.staff_id_btn.Size = new System.Drawing.Size(220, 30);
-            this.staff_id_btn.TabIndex = 16;
-            // 
-            // textBox1
-            // 
-            this.textBox1.Location = new System.Drawing.Point(156, 85);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(220, 30);
-            this.textBox1.TabIndex = 17;
-            // 
-            // textBox2
-            // 
-            this.textBox2.Location = new System.Drawing.Point(603, 85);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(220, 30);
-            this.textBox2.TabIndex = 19;
-            // 
-            // textBox3
-            // 
-            this.textBox3.Location = new System.Drawing.Point(603, 41);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(220, 30);
-            this.textBox3.TabIndex = 18;
-            // 
-            // textBox4
-            // 
-            this.textBox4.Location = new System.Drawing.Point(603, 134);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(220, 30);
-            this.textBox4.TabIndex = 20;
-            // 
-            // remove_btn
-            // 
-            this.remove_btn.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.remove_btn.Location = new System.Drawing.Point(240, 200);
-            this.remove_btn.Name = "remove_btn";
-            this.remove_btn.Size = new System.Drawing.Size(93, 42);
-            this.remove_btn.TabIndex = 24;
-            this.remove_btn.Text = "Xóa";
-            this.remove_btn.UseVisualStyleBackColor = true;
-            // 
-            // edit_btn
-            // 
-            this.edit_btn.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.edit_btn.Location = new System.Drawing.Point(130, 200);
-            this.edit_btn.Name = "edit_btn";
-            this.edit_btn.Size = new System.Drawing.Size(93, 42);
-            this.edit_btn.TabIndex = 23;
-            this.edit_btn.Text = "Sửa ";
-            this.edit_btn.UseVisualStyleBackColor = true;
-            // 
-            // add_btn
-            // 
-            this.add_btn.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.add_btn.Location = new System.Drawing.Point(17, 200);
-            this.add_btn.Name = "add_btn";
-            this.add_btn.Size = new System.Drawing.Size(93, 42);
-            this.add_btn.TabIndex = 22;
-            this.add_btn.Text = "Thêm ";
-            this.add_btn.UseVisualStyleBackColor = true;
-            // 
             // Staff
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -287,7 +301,7 @@
             this.Name = "Staff";
             this.Text = "Database";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
-            this.Load += new System.EventHandler(this.Staff_Load_1);
+            this.Load += new System.EventHandler(this.Staff_Load);
             this.staff_info.ResumeLayout(false);
             this.staff_info.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.Staff_grv)).EndInit();
@@ -306,13 +320,14 @@
         private System.Windows.Forms.Label Name_lbl;
         private System.Windows.Forms.Label staffid_lbl;
         private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.TextBox staff_id_btn;
-        private System.Windows.Forms.TextBox textBox4;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.TextBox textBox3;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox staff_id_tbx;
+        private System.Windows.Forms.TextBox ID_tbx;
+        private System.Windows.Forms.TextBox Sdt_tbx;
+        private System.Windows.Forms.TextBox Address_tbx;
+        private System.Windows.Forms.TextBox Name_tbx;
         private System.Windows.Forms.Button remove_btn;
         private System.Windows.Forms.Button edit_btn;
         private System.Windows.Forms.Button add_btn;
+        private System.Windows.Forms.DateTimePicker Birth_tbx;
     }
 }

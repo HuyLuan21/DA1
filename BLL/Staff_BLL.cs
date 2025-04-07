@@ -10,12 +10,22 @@ namespace BLL
 {
     public class Staff_BLL
     {
-
-        private Staff_DAL staffDAL = new Staff_DAL();
-
-        public DataTable GetNhanVienList()
+        private static Staff_BLL instance;
+        public static Staff_BLL Instance
         {
-            return staffDAL.GetAllStaff(); // Lấy dữ liệu từ DAL
+            get
+            {
+                if (instance == null)
+                {
+                    instance = new Staff_BLL();
+                }
+                return instance;
+            }
+        }
+       private Staff_BLL() { }
+        public DataTable GetStaff()
+        {
+            return Staff_DAL.Instance.GetStaff();
         }
     }
 }

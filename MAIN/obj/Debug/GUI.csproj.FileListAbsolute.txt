@@ -65,3 +65,5 @@ C:\Users\Admin\source\repos\BTL\DA1\MAIN\obj\Debug\DA1.Account.resources
 C:\Users\Admin\source\repos\BTL\DA1\MAIN\obj\Debug\DA1.Booking.resources
 C:\Users\Admin\source\repos\BTL\DA1\MAIN\bin\Debug\BLL.dll
 C:\Users\Admin\source\repos\BTL\DA1\MAIN\bin\Debug\DAL.dll
+C:\Users\Admin\source\repos\BTL\DA1\MAIN\bin\Debug\DTO.dll
+C:\Users\Admin\source\repos\BTL\DA1\MAIN\bin\Debug\DTO.pdb

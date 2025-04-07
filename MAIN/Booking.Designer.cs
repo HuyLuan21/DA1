@@ -32,6 +32,7 @@
             this.background = new Bunifu.UI.WinForms.BunifuGradientPanel();
             this.panel1 = new System.Windows.Forms.Panel();
             this.content = new Bunifu.UI.WinForms.BunifuPanel();
+            this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.sidebar = new Bunifu.UI.WinForms.BunifuPanel();
             this.Detail = new System.Windows.Forms.GroupBox();
             this.comboBox1 = new System.Windows.Forms.ComboBox();
@@ -40,8 +41,11 @@
             this.label1 = new System.Windows.Forms.Label();
             this.Nav = new System.Windows.Forms.Panel();
             this.label3 = new System.Windows.Forms.Label();
+            this.button1 = new System.Windows.Forms.Button();
             this.background.SuspendLayout();
             this.panel1.SuspendLayout();
+            this.content.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.sidebar.SuspendLayout();
             this.Detail.SuspendLayout();
             this.Nav.SuspendLayout();
@@ -49,23 +53,21 @@
             // 
             // background
             // 
-            this.background.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
             this.background.BackColor = System.Drawing.Color.Transparent;
             this.background.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("background.BackgroundImage")));
             this.background.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.background.BorderRadius = 1;
             this.background.Controls.Add(this.panel1);
             this.background.Controls.Add(this.Nav);
+            this.background.Dock = System.Windows.Forms.DockStyle.Fill;
             this.background.GradientBottomLeft = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(62)))), ((int)(((byte)(80)))));
             this.background.GradientBottomRight = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(62)))), ((int)(((byte)(80)))));
             this.background.GradientTopLeft = System.Drawing.Color.FromArgb(((int)(((byte)(47)))), ((int)(((byte)(54)))), ((int)(((byte)(64)))));
             this.background.GradientTopRight = System.Drawing.Color.FromArgb(((int)(((byte)(47)))), ((int)(((byte)(54)))), ((int)(((byte)(64)))));
-            this.background.Location = new System.Drawing.Point(8, 8);
+            this.background.Location = new System.Drawing.Point(0, 0);
             this.background.Name = "background";
             this.background.Quality = 10;
-            this.background.Size = new System.Drawing.Size(1212, 813);
+            this.background.Size = new System.Drawing.Size(1249, 614);
             this.background.TabIndex = 2;
             // 
             // panel1
@@ -75,7 +77,7 @@
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 106);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1212, 501);
+            this.panel1.Size = new System.Drawing.Size(1249, 501);
             this.panel1.TabIndex = 2;
             // 
             // content
@@ -86,12 +88,24 @@
             this.content.BorderColor = System.Drawing.Color.Transparent;
             this.content.BorderRadius = 3;
             this.content.BorderThickness = 1;
+            this.content.Controls.Add(this.dataGridView1);
             this.content.Dock = System.Windows.Forms.DockStyle.Fill;
             this.content.Location = new System.Drawing.Point(329, 0);
             this.content.Name = "content";
             this.content.ShowBorders = false;
-            this.content.Size = new System.Drawing.Size(883, 501);
+            this.content.Size = new System.Drawing.Size(920, 501);
             this.content.TabIndex = 2;
+            // 
+            // dataGridView1
+            // 
+            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.dataGridView1.Location = new System.Drawing.Point(0, 0);
+            this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.RowHeadersWidth = 51;
+            this.dataGridView1.RowTemplate.Height = 24;
+            this.dataGridView1.Size = new System.Drawing.Size(920, 501);
+            this.dataGridView1.TabIndex = 0;
             // 
             // sidebar
             // 
@@ -111,6 +125,7 @@
             // 
             // Detail
             // 
+            this.Detail.Controls.Add(this.button1);
             this.Detail.Controls.Add(this.comboBox1);
             this.Detail.Controls.Add(this.label2);
             this.Detail.Controls.Add(this.dateTimePicker1);
@@ -168,7 +183,7 @@
             this.Nav.Dock = System.Windows.Forms.DockStyle.Top;
             this.Nav.Location = new System.Drawing.Point(0, 0);
             this.Nav.Name = "Nav";
-            this.Nav.Size = new System.Drawing.Size(1212, 106);
+            this.Nav.Size = new System.Drawing.Size(1249, 106);
             this.Nav.TabIndex = 1;
             // 
             // label3
@@ -182,9 +197,19 @@
             this.label3.Location = new System.Drawing.Point(416, 32);
             this.label3.Margin = new System.Windows.Forms.Padding(20, 0, 20, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(313, 39);
+            this.label3.Size = new System.Drawing.Size(300, 37);
             this.label3.TabIndex = 0;
             this.label3.Text = "LỊCH CHIẾU PHIM ";
+            // 
+            // button1
+            // 
+            this.button1.ForeColor = System.Drawing.Color.Black;
+            this.button1.Location = new System.Drawing.Point(218, 461);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(105, 34);
+            this.button1.TabIndex = 1;
+            this.button1.Text = "Chọn vé";
+            this.button1.UseVisualStyleBackColor = true;
             // 
             // Booking
             // 
@@ -196,6 +221,8 @@
             this.Text = "Booking";
             this.background.ResumeLayout(false);
             this.panel1.ResumeLayout(false);
+            this.content.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.sidebar.ResumeLayout(false);
             this.Detail.ResumeLayout(false);
             this.Detail.PerformLayout();
@@ -218,5 +245,7 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.ComboBox comboBox1;
         private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.Button button1;
     }
 }
