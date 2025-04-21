@@ -3,18 +3,18 @@
   "WorkspaceRootPath": "C:\\Users\\Admin\\source\\repos\\BTL\\DA1\\MAIN\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{4D7262EF-B154-4756-8029-063943F5E18A}|..\\DAL\\DAL.csproj|c:\\users\\admin\\source\\repos\\btl\\da1\\dal\\staff_dal.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F037F1CF-F11D-4CF3-B889-471C94D1C5D2}|..\\BLL\\BLL.csproj|c:\\users\\admin\\source\\repos\\btl\\da1\\bll\\staff_bll.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{10964D9B-BBD4-420F-BA3E-C297066A8D94}|GUI.csproj|C:\\Users\\Admin\\source\\repos\\BTL\\DA1\\MAIN\\staff.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{10964D9B-BBD4-420F-BA3E-C297066A8D94}|GUI.csproj|solutionrelative:staff.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{10964D9B-BBD4-420F-BA3E-C297066A8D94}|GUI.csproj|C:\\Users\\Admin\\source\\repos\\BTL\\DA1\\MAIN\\staff.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
       "RelativeMoniker": "D:0:0:{10964D9B-BBD4-420F-BA3E-C297066A8D94}|GUI.csproj|solutionrelative:staff.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{F037F1CF-F11D-4CF3-B889-471C94D1C5D2}|..\\BLL\\BLL.csproj|c:\\users\\admin\\source\\repos\\btl\\da1\\bll\\staff_bll.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{4D7262EF-B154-4756-8029-063943F5E18A}|..\\DAL\\DAL.csproj|c:\\users\\admin\\source\\repos\\btl\\da1\\dal\\staff_dal.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{4D7262EF-B154-4756-8029-063943F5E18A}|..\\DAL\\DAL.csproj|c:\\users\\admin\\source\\repos\\btl\\da1\\dal\\dataprovider.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
@@ -149,24 +149,8 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 10,
+          "SelectedChildIndex": 1,
           "Children": [
-            {
-              "$type": "Bookmark",
-              "Name": "ST:0:0:{1c4feeaa-4718-4aa9-859d-94ce25d182ba}"
-            },
-            {
-              "$type": "Bookmark",
-              "Name": "ST:0:0:{aa2115a1-9712-457b-9047-dbb71ca2cdd2}"
-            },
-            {
-              "$type": "Bookmark",
-              "Name": "ST:1:0:{3ae79031-e1bc-11d0-8f78-00a0c9110057}"
-            },
-            {
-              "$type": "Bookmark",
-              "Name": "ST:0:0:{3ae79031-e1bc-11d0-8f78-00a0c9110057}"
-            },
             {
               "$type": "Document",
               "DocumentIndex": 5,
@@ -177,18 +161,17 @@
               "RelativeToolTip": "..\\DTO\\Staff.cs",
               "ViewState": "AgIAAAYAAAAAAAAAAAAAABAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-07T06:28:02.021Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-04-07T06:28:02.021Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 0,
               "Title": "Staff_DAL.cs",
               "DocumentMoniker": "C:\\Users\\Admin\\source\\repos\\BTL\\DA1\\DAL\\Staff_DAL.cs",
               "RelativeDocumentMoniker": "..\\DAL\\Staff_DAL.cs",
-              "ToolTip": "C:\\Users\\Admin\\source\\repos\\BTL\\DA1\\DAL\\Staff_DAL.cs*",
-              "RelativeToolTip": "..\\DAL\\Staff_DAL.cs*",
-              "ViewState": "AgIAAAMAAAAAAAAAAAAAAA8AAAAxAAAAAAAAAA==",
+              "ToolTip": "C:\\Users\\Admin\\source\\repos\\BTL\\DA1\\DAL\\Staff_DAL.cs",
+              "RelativeToolTip": "..\\DAL\\Staff_DAL.cs",
+              "ViewState": "AgIAAAwAAAAAAAAAAAAuwB0AAAAxAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-04-07T06:27:51.013Z",
               "EditorCaption": ""
@@ -201,10 +184,9 @@
               "RelativeDocumentMoniker": "..\\DAL\\DataProvider.cs",
               "ToolTip": "C:\\Users\\Admin\\source\\repos\\BTL\\DA1\\DAL\\DataProvider.cs",
               "RelativeToolTip": "..\\DAL\\DataProvider.cs",
-              "ViewState": "AgIAACAAAAAAAAAAAADwvzEAAAAYAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAMAAAASAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-03T13:03:22.25Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-04-03T13:03:22.25Z"
             },
             {
               "$type": "Document",
@@ -212,49 +194,45 @@
               "Title": "Customer.cs [Design]",
               "DocumentMoniker": "C:\\Users\\Admin\\source\\repos\\BTL\\DA1\\MAIN\\Customer.cs",
               "RelativeDocumentMoniker": "Customer.cs",
-              "ToolTip": "C:\\Users\\Admin\\source\\repos\\BTL\\DA1\\MAIN\\Customer.cs [Design]*",
-              "RelativeToolTip": "Customer.cs [Design]*",
+              "ToolTip": "C:\\Users\\Admin\\source\\repos\\BTL\\DA1\\MAIN\\Customer.cs [Design]",
+              "RelativeToolTip": "Customer.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-23T16:44:11.941Z",
-              "EditorCaption": " [Design]"
+              "WhenOpened": "2025-03-23T16:44:11.941Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 1,
               "Title": "Staff_BLL.cs",
               "DocumentMoniker": "C:\\Users\\Admin\\source\\repos\\BTL\\DA1\\BLL\\Staff_BLL.cs",
               "RelativeDocumentMoniker": "..\\BLL\\Staff_BLL.cs",
               "ToolTip": "C:\\Users\\Admin\\source\\repos\\BTL\\DA1\\BLL\\Staff_BLL.cs",
               "RelativeToolTip": "..\\BLL\\Staff_BLL.cs",
-              "ViewState": "AgIAAAUAAAAAAAAAAAAAwBAAAAAJAAAAAAAAAA==",
+              "ViewState": "AgIAAA8AAAAAAAAAAAAYwBsAAAAuAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-03T13:05:40.193Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-04-03T13:05:40.193Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 3,
               "Title": "Staff.cs [Design]",
               "DocumentMoniker": "C:\\Users\\Admin\\source\\repos\\BTL\\DA1\\MAIN\\Staff.cs",
               "RelativeDocumentMoniker": "Staff.cs",
               "ToolTip": "C:\\Users\\Admin\\source\\repos\\BTL\\DA1\\MAIN\\Staff.cs [Design]",
               "RelativeToolTip": "Staff.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-23T15:42:25.872Z",
-              "EditorCaption": " [Design]"
+              "WhenOpened": "2025-03-23T15:42:25.872Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 2,
               "Title": "Staff.cs",
               "DocumentMoniker": "C:\\Users\\Admin\\source\\repos\\BTL\\DA1\\MAIN\\Staff.cs",
               "RelativeDocumentMoniker": "Staff.cs",
               "ToolTip": "C:\\Users\\Admin\\source\\repos\\BTL\\DA1\\MAIN\\Staff.cs",
               "RelativeToolTip": "Staff.cs",
-              "ViewState": "AgIAAB8AAAAAAAAAAAAYwDAAAAAsAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAACoAAABQAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-24T06:15:01.901Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-03-24T06:15:01.901Z"
             },
             {
               "$type": "Document",
@@ -265,8 +243,7 @@
               "ToolTip": "C:\\Users\\Admin\\source\\repos\\BTL\\DA1\\MAIN\\Category.cs [Design]",
               "RelativeToolTip": "Category.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-23T16:45:28.977Z",
-              "EditorCaption": " [Design]"
+              "WhenOpened": "2025-03-23T16:45:28.977Z"
             },
             {
               "$type": "Document",
@@ -277,8 +254,7 @@
               "ToolTip": "C:\\Users\\Admin\\source\\repos\\BTL\\DA1\\MAIN\\Booking.cs [Design]",
               "RelativeToolTip": "Booking.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-23T16:43:09.78Z",
-              "EditorCaption": " [Design]"
+              "WhenOpened": "2025-03-23T16:43:09.78Z"
             },
             {
               "$type": "Document",
@@ -301,8 +277,7 @@
               "ToolTip": "C:\\Users\\Admin\\source\\repos\\BTL\\DA1\\MAIN\\Account.cs [Design]",
               "RelativeToolTip": "Account.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-23T16:44:25.314Z",
-              "EditorCaption": " [Design]"
+              "WhenOpened": "2025-03-23T16:44:25.314Z"
             },
             {
               "$type": "Document",
@@ -512,8 +487,7 @@
               "RelativeToolTip": "Category.cs",
               "ViewState": "AgIAAAUAAAAAAAAAAAAwwBUAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-30T19:56:28.794Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-03-30T19:56:28.794Z"
             },
             {
               "$type": "Document",
@@ -537,8 +511,7 @@
               "RelativeToolTip": "Staff.Designer.cs",
               "ViewState": "AgIAAFcAAAAAAAAAAAAAAJMAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-23T16:12:26.633Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-03-23T16:12:26.633Z"
             },
             {
               "$type": "Document",
@@ -560,8 +533,7 @@
               "ToolTip": "C:\\Users\\Admin\\source\\repos\\BTL\\DA1\\MAIN\\Properties\\Resources.resx",
               "RelativeToolTip": "Properties\\Resources.resx",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001005|",
-              "WhenOpened": "2025-03-23T10:18:22.342Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-03-23T10:18:22.342Z"
             },
             {
               "$type": "Document",
@@ -607,16 +579,6 @@
               "RelativeToolTip": "..\\GUI\\Form1.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-03-21T16:32:40.545Z"
-            }
-          ]
-        },
-        {
-          "DockedWidth": 614,
-          "SelectedChildIndex": -1,
-          "Children": [
-            {
-              "$type": "Bookmark",
-              "Name": "ST:0:0:{34e76e81-ee4a-11d0-ae2e-00a0c90fffc3}"
             }
           ]
         }

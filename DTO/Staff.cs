@@ -77,15 +77,7 @@ namespace DTO
         /// </summary>
         public Staff() { }
 
-        /// <summary>
-        /// Parameterized constructor
-        /// </summary>
-        /// <param name="maNV">Staff ID</param>
-        /// <param name="tenNV">Staff name</param>
-        /// <param name="ngaySinh">Date of birth</param>
-        /// <param name="diaChi">Address</param>
-        /// <param name="sDT">Phone number</param>
-        /// <param name="cCCD">Citizen ID</param>
+    
         public Staff(int maNV, string tenNV, DateTime ngaySinh, string diaChi, string sDT, string cCCD)
         {
             MaNV = maNV;

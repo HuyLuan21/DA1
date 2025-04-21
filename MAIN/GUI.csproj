@@ -97,6 +97,12 @@
     <Compile Include="Category.Designer.cs">
       <DependentUpon>Category.cs</DependentUpon>
     </Compile>
+    <Compile Include="Controlselect.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Controlselect.Designer.cs">
+      <DependentUpon>Controlselect.cs</DependentUpon>
+    </Compile>
     <Compile Include="Customer.cs">
       <SubType>Form</SubType>
     </Compile>
