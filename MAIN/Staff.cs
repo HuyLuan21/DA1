@@ -1,9 +1,7 @@
 ﻿using BLL;
 using DTO;
 using System;
-using System.Data;
 using System.Windows.Forms;
-using System.Threading.Tasks;
 
 namespace DA1
 {
@@ -16,14 +14,6 @@ namespace DA1
             InitializeComponent();
         }
 
-        private void bunifuTextBox1_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-     
-
-       
         private void Staff_Load(object sender, EventArgs e)
         {
             Staff_grv.DataSource = staff_bll.GetStaff();
@@ -31,17 +21,97 @@ namespace DA1
 
         private void Staff_grv_CellClick(object sender, DataGridViewCellEventArgs e)
         {
-            
-        }
-
-        private void Staff_grv_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
             staff_id_tbx.Text = Staff_grv.Rows[e.RowIndex].Cells[0].Value.ToString();
             Name_tbx.Text = Staff_grv.Rows[e.RowIndex].Cells[1].Value.ToString();
             Birth_tbx.Text = Staff_grv.Rows[e.RowIndex].Cells[2].Value.ToString();
             Address_tbx.Text = Staff_grv.Rows[e.RowIndex].Cells[3].Value.ToString();
             Sdt_tbx.Text = Staff_grv.Rows[e.RowIndex].Cells[4].Value.ToString();
             ID_tbx.Text = Staff_grv.Rows[e.RowIndex].Cells[5].Value.ToString();
+        }
+
+        private void add_btn_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                Staff_DTO staff = new Staff_DTO
+                {
+                    TenNV = Name_tbx.Text.Trim(),
+                    NgaySinh = DateTime.Parse(Birth_tbx.Text),
+                    DiaChi = Address_tbx.Text.Trim(),
+                    SDT = Sdt_tbx.Text.Trim(),
+                    CCCD = ID_tbx.Text.Trim()
+                };
+
+                string result = staff_bll.InsertStaff(staff);
+                if (result == "Success")
+                {
+                    MessageBox.Show("Thêm nhân viên thành công!");
+                    Staff_grv.DataSource = staff_bll.GetStaff();
+                }
+                else
+                {
+                    MessageBox.Show(result);
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error: " + ex.Message);
+            }
+        }
+
+        private void edit_btn_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                Staff_DTO staff = new Staff_DTO
+                {
+                    MaNV = int.Parse(staff_id_tbx.Text),
+                    TenNV = Name_tbx.Text.Trim(),
+                    NgaySinh = DateTime.Parse(Birth_tbx.Text),
+                    DiaChi = Address_tbx.Text.Trim(),
+                    SDT = Sdt_tbx.Text.Trim(),
+                    CCCD = ID_tbx.Text.Trim()
+                };
+
+                string result = staff_bll.UpdateStaff(staff);
+                if (result == "Success")
+                {
+                    MessageBox.Show("Cập nhật nhân viên thành công!");
+                    Staff_grv.DataSource = staff_bll.GetStaff();
+                }
+                else
+                {
+                    MessageBox.Show(result);
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error: " + ex.Message);
+            }
+
+
+        }
+
+        private void remove_btn_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                int maNV = int.Parse(staff_id_tbx.Text);
+                string result = staff_bll.DeleteStaff(maNV);
+                if (result == "Success")
+                {
+                    MessageBox.Show("Xóa nhân viên thành công!");
+                    Staff_grv.DataSource = staff_bll.GetStaff();
+                }
+                else
+                {
+                    MessageBox.Show(result);
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error: " + ex.Message);
+            }
         }
     }
 

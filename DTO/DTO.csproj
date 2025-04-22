@@ -49,7 +49,7 @@
     <Compile Include="LichChieu.cs" />
     <Compile Include="Phim.cs" />
     <Compile Include="Phongchieu.cs" />
-    <Compile Include="Staff.cs" />
+    <Compile Include="Staff_DTO.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Ticket.cs" />
   </ItemGroup>

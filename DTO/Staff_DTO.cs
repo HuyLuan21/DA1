@@ -9,7 +9,7 @@ namespace DTO
     /// <summary>
     /// Represents a staff member in the system
     /// </summary>
-    public class Staff
+    public class Staff_DTO
     {
 		private int _MaNV;
         private string _TenNV;
@@ -75,10 +75,10 @@ namespace DTO
         /// <summary>
         /// Default constructor
         /// </summary>
-        public Staff() { }
+        public Staff_DTO() { }
 
     
-        public Staff(int maNV, string tenNV, DateTime ngaySinh, string diaChi, string sDT, string cCCD)
+        public Staff_DTO(int maNV, string tenNV, DateTime ngaySinh, string diaChi, string sDT, string cCCD)
         {
             MaNV = maNV;
             TenNV = tenNV;
