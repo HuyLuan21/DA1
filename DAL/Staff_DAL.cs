@@ -51,14 +51,12 @@ namespace DAL
             return DataProvider.Instance.ExecuteNonQuery(query);
         }
 
-        public int DeleteStaff(int maNV)
+        public int DeleteStaff(int makh)
         {
-            // Kiểm tra và xóa tài khoản trước (nếu có)
-            string deleteAccountQuery = $"DELETE FROM TaiKhoan WHERE MaNV = {maNV}";
-            DataProvider.Instance.ExecuteNonQuery(deleteAccountQuery);
 
-            // Xóa nhân viên
-            string query = $"DELETE FROM NhanVien WHERE MaNV = {maNV}";
+
+            // Xóa 
+            string query = $"DELETE FROM NhanVien WHERE MaNV = {makh}";
             return DataProvider.Instance.ExecuteNonQuery(query);
         }
 

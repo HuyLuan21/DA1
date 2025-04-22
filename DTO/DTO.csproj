@@ -45,7 +45,7 @@
     <Compile Include="BangPhu.cs" />
     <Compile Include="CaChieu.cs" />
     <Compile Include="Cage.cs" />
-    <Compile Include="Customer.cs" />
+    <Compile Include="Customer_DTO.cs" />
     <Compile Include="LichChieu.cs" />
     <Compile Include="Phim.cs" />
     <Compile Include="Phongchieu.cs" />
