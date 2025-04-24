@@ -94,6 +94,7 @@ namespace DA1
 
         private void remove_btn_Click(object sender, EventArgs e)
         {
+
             try
             {
                 int maNV = int.Parse(staff_id_tbx.Text);

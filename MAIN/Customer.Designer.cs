@@ -49,6 +49,8 @@
             this.Customer_id = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
             this.khachhang = new Bunifu.UI.WinForms.BunifuDataGridView();
+            this.button1 = new System.Windows.Forms.Button();
+            this.textBox1 = new System.Windows.Forms.TextBox();
             this.staff_info.SuspendLayout();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.khachhang)).BeginInit();
@@ -95,7 +97,9 @@
             // 
             // staff_info
             // 
+            this.staff_info.Controls.Add(this.button1);
             this.staff_info.Controls.Add(this.CCCD);
+            this.staff_info.Controls.Add(this.textBox1);
             this.staff_info.Controls.Add(this.sdt);
             this.staff_info.Controls.Add(this.diemtichluy);
             this.staff_info.Controls.Add(this.tenkh);
@@ -293,6 +297,22 @@
             this.khachhang.Theme = Bunifu.UI.WinForms.BunifuDataGridView.PresetThemes.Light;
             this.khachhang.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.khachhang_CellClick);
             // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(636, 207);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(89, 30);
+            this.button1.TabIndex = 29;
+            this.button1.Text = "Tìm";
+            this.button1.UseVisualStyleBackColor = true;
+            // 
+            // textBox1
+            // 
+            this.textBox1.Location = new System.Drawing.Point(418, 207);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(196, 30);
+            this.textBox1.TabIndex = 28;
+            // 
             // Customer
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -330,5 +350,7 @@
         private System.Windows.Forms.TextBox tenkh;
         private System.Windows.Forms.TextBox Makh;
         private Bunifu.UI.WinForms.BunifuDataGridView khachhang;
+        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.TextBox textBox1;
     }
 }

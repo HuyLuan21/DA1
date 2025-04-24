@@ -51,15 +51,20 @@ namespace DAL
             return DataProvider.Instance.ExecuteNonQuery(query);
         }
 
-        public int DeleteStaff(int makh)
+        public int DeleteStaff(int manv)
         {
 
 
             // Xóa 
-            string query = $"DELETE FROM NhanVien WHERE MaNV = {makh}";
+            string query = $"DELETE FROM NhanVien WHERE MaNV = {manv}";
             return DataProvider.Instance.ExecuteNonQuery(query);
         }
-
+      //public bool checkkey()
+      //  {
+      //      Staff_DTO  staff = new Staff_DTO();
+      //      string query = $"SELECT COUNT(*) FROM Ve WHERE MaNV = {staff.MaNV}";
+      //      int count = (int)DataProvider.Instance.ExecuteScalar(query);
+      //  }
        
     }
 }
