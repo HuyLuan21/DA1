@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Data;
 using System.Linq;
+using System.Net.Http;
 using System.Text;
 using System.Threading.Tasks;
 using DAL;
@@ -64,12 +65,22 @@ namespace BLL
             try
             {
                 int result = Staff_DAL.Instance.DeleteStaff(maNV);
-                return result > 0 ? "Success" : "Xóa nhân viên thất bại!";
+                if (result == -1)
+                {
+                    return "Không thể xóa nhân viên này vì bảng vé đang tham chiếu";
+                }
+                return result > 0 ? "Success" : "Xóa khách hàng thất bại!";
             }
             catch (Exception ex)
             {
                 return $"Lỗi: {ex.Message}";
             }
+           
+        }
+
+        public DataTable SearchStaff(string searchValue)
+        {
+            return Staff_DAL.Instance.SearchStaff(searchValue);
         }
     }
 }

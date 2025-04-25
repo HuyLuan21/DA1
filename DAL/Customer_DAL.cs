@@ -24,7 +24,8 @@ namespace DAL
 
         public DataTable GetCustomer()
         {
-            string query = "select * from KhachHang";
+            
+            string query = "SELECT MaKH AS \"Mã khách hàng\", Tenkh AS \"Tên khách hàng\", NamSinh AS \"Năm sinh\", SoDienThoai AS \"Số điện thoại\", DiemTichLuy AS \"Điểm tích lũy\", CCCD\r\nFROM KhachHang";
             return DataProvider.Instance.ExecuteQuery(query);
         }
 
@@ -55,11 +56,20 @@ namespace DAL
             return DataProvider.Instance.ExecuteNonQuery(query);
         }
 
-        public int DeleteCustomer(int maNV)
+        public int DeleteCustomer(int maKH)
         {
-            // Xóa khách hàng
-            string query = $"DELETE FROM KhachHang WHERE MaKH = {maNV}";
-            return DataProvider.Instance.ExecuteNonQuery(query);
+            // Kiểm tra xem khách hàng có vé không
+            string checkQuery = $"SELECT COUNT(*) FROM Ve WHERE MaKhachHang = {maKH}";
+            int ticketCount = Convert.ToInt32(DataProvider.Instance.ExecuteScalar(checkQuery));
+            
+            if (ticketCount > 0)
+            {
+                return -1; // Trả về -1 nếu khách hàng đã có vé
+            }
+            
+            // Nếu không có vé, tiến hành xóa khách hàng
+            string deleteQuery = $"DELETE FROM KhachHang WHERE MaKH = {maKH}";
+            return DataProvider.Instance.ExecuteNonQuery(deleteQuery);
         }
 
 

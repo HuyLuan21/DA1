@@ -59,12 +59,16 @@ namespace BLL
             }
         }
 
-        public string DeleteCustomer(int maNV)
+        public string DeleteCustomer(int maKH)
         {
             try
             {
-                int result = Customer_DAL.Instance.DeleteCustomer(maNV);
-                return result > 0 ? "Success" : "Xóa nhân viên thất bại!";
+                int result = Customer_DAL.Instance.DeleteCustomer(maKH);
+                if (result == -1)
+                {
+                    return "Không thể xóa khách hàng này vì đã có lịch sử mua vé!";
+                }
+                return result > 0 ? "Success" : "Xóa khách hàng thất bại!";
             }
             catch (Exception ex)
             {

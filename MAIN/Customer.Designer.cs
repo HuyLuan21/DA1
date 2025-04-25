@@ -28,32 +28,34 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.Name_lbl = new System.Windows.Forms.Label();
             this.staff_info = new System.Windows.Forms.GroupBox();
+            this.button1 = new System.Windows.Forms.Button();
             this.CCCD = new System.Windows.Forms.TextBox();
+            this.textBox1 = new System.Windows.Forms.TextBox();
             this.sdt = new System.Windows.Forms.TextBox();
-            this.diemtichluy = new System.Windows.Forms.DomainUpDown();
             this.tenkh = new System.Windows.Forms.TextBox();
             this.Makh = new System.Windows.Forms.TextBox();
             this.remove_btn = new System.Windows.Forms.Button();
             this.edit_btn = new System.Windows.Forms.Button();
             this.add_btn = new System.Windows.Forms.Button();
-            this.namsinh = new System.Windows.Forms.DomainUpDown();
             this.label5 = new System.Windows.Forms.Label();
             this.Customer_id = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
             this.khachhang = new Bunifu.UI.WinForms.BunifuDataGridView();
-            this.button1 = new System.Windows.Forms.Button();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.namsinh = new System.Windows.Forms.NumericUpDown();
+            this.diemtichluy = new System.Windows.Forms.NumericUpDown();
             this.staff_info.SuspendLayout();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.khachhang)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.namsinh)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.diemtichluy)).BeginInit();
             this.SuspendLayout();
             // 
             // label4
@@ -97,17 +99,17 @@
             // 
             // staff_info
             // 
+            this.staff_info.Controls.Add(this.diemtichluy);
+            this.staff_info.Controls.Add(this.namsinh);
             this.staff_info.Controls.Add(this.button1);
             this.staff_info.Controls.Add(this.CCCD);
             this.staff_info.Controls.Add(this.textBox1);
             this.staff_info.Controls.Add(this.sdt);
-            this.staff_info.Controls.Add(this.diemtichluy);
             this.staff_info.Controls.Add(this.tenkh);
             this.staff_info.Controls.Add(this.Makh);
             this.staff_info.Controls.Add(this.remove_btn);
             this.staff_info.Controls.Add(this.edit_btn);
             this.staff_info.Controls.Add(this.add_btn);
-            this.staff_info.Controls.Add(this.namsinh);
             this.staff_info.Controls.Add(this.label5);
             this.staff_info.Controls.Add(this.label4);
             this.staff_info.Controls.Add(this.label3);
@@ -122,6 +124,15 @@
             this.staff_info.TabStop = false;
             this.staff_info.Text = "Thông tin khách hàng";
             // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(636, 207);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(89, 30);
+            this.button1.TabIndex = 29;
+            this.button1.Text = "Tìm";
+            this.button1.UseVisualStyleBackColor = true;
+            // 
             // CCCD
             // 
             this.CCCD.Location = new System.Drawing.Point(620, 85);
@@ -129,20 +140,19 @@
             this.CCCD.Size = new System.Drawing.Size(188, 30);
             this.CCCD.TabIndex = 26;
             // 
+            // textBox1
+            // 
+            this.textBox1.Location = new System.Drawing.Point(418, 207);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(196, 30);
+            this.textBox1.TabIndex = 28;
+            // 
             // sdt
             // 
             this.sdt.Location = new System.Drawing.Point(620, 41);
             this.sdt.Name = "sdt";
             this.sdt.Size = new System.Drawing.Size(188, 30);
             this.sdt.TabIndex = 25;
-            // 
-            // diemtichluy
-            // 
-            this.diemtichluy.Location = new System.Drawing.Point(620, 134);
-            this.diemtichluy.Name = "diemtichluy";
-            this.diemtichluy.Size = new System.Drawing.Size(120, 30);
-            this.diemtichluy.TabIndex = 24;
-            this.diemtichluy.Text = "0";
             // 
             // tenkh
             // 
@@ -153,8 +163,10 @@
             // 
             // Makh
             // 
+            this.Makh.Enabled = false;
             this.Makh.Location = new System.Drawing.Point(134, 41);
             this.Makh.Name = "Makh";
+            this.Makh.ReadOnly = true;
             this.Makh.Size = new System.Drawing.Size(188, 30);
             this.Makh.TabIndex = 22;
             // 
@@ -190,14 +202,6 @@
             this.add_btn.Text = "Thêm ";
             this.add_btn.UseVisualStyleBackColor = true;
             this.add_btn.Click += new System.EventHandler(this.add_btn_Click);
-            // 
-            // namsinh
-            // 
-            this.namsinh.Location = new System.Drawing.Point(134, 134);
-            this.namsinh.Name = "namsinh";
-            this.namsinh.Size = new System.Drawing.Size(120, 30);
-            this.namsinh.TabIndex = 18;
-            this.namsinh.Text = "0";
             // 
             // label5
             // 
@@ -235,24 +239,24 @@
             this.khachhang.AllowUserToDeleteRows = false;
             this.khachhang.AllowUserToResizeColumns = false;
             this.khachhang.AllowUserToResizeRows = false;
-            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(251)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.LightGray;
-            this.khachhang.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(251)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle4.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.Color.LightGray;
+            this.khachhang.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle4;
             this.khachhang.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.khachhang.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.khachhang.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.khachhang.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
             this.khachhang.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = System.Drawing.Color.DodgerBlue;
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Segoe UI Semibold", 11.75F, System.Drawing.FontStyle.Bold);
-            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(115)))), ((int)(((byte)(204)))));
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.khachhang.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle5.BackColor = System.Drawing.Color.DodgerBlue;
+            dataGridViewCellStyle5.Font = new System.Drawing.Font("Segoe UI Semibold", 11.75F, System.Drawing.FontStyle.Bold);
+            dataGridViewCellStyle5.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(115)))), ((int)(((byte)(204)))));
+            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.khachhang.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle5;
             this.khachhang.ColumnHeadersHeight = 40;
             this.khachhang.CurrentTheme.AlternatingRowsStyle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(251)))), ((int)(((byte)(255)))));
             this.khachhang.CurrentTheme.AlternatingRowsStyle.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold);
@@ -272,14 +276,14 @@
             this.khachhang.CurrentTheme.RowsStyle.ForeColor = System.Drawing.Color.Black;
             this.khachhang.CurrentTheme.RowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(210)))), ((int)(((byte)(232)))), ((int)(((byte)(255)))));
             this.khachhang.CurrentTheme.RowsStyle.SelectionForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle3.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold);
-            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(210)))), ((int)(((byte)(232)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.khachhang.DefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle6.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle6.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold);
+            dataGridViewCellStyle6.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(210)))), ((int)(((byte)(232)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.khachhang.DefaultCellStyle = dataGridViewCellStyle6;
             this.khachhang.EnableHeadersVisualStyles = false;
             this.khachhang.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(221)))), ((int)(((byte)(238)))), ((int)(((byte)(255)))));
             this.khachhang.HeaderBackColor = System.Drawing.Color.DodgerBlue;
@@ -297,21 +301,19 @@
             this.khachhang.Theme = Bunifu.UI.WinForms.BunifuDataGridView.PresetThemes.Light;
             this.khachhang.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.khachhang_CellClick);
             // 
-            // button1
+            // namsinh
             // 
-            this.button1.Location = new System.Drawing.Point(636, 207);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(89, 30);
-            this.button1.TabIndex = 29;
-            this.button1.Text = "Tìm";
-            this.button1.UseVisualStyleBackColor = true;
+            this.namsinh.Location = new System.Drawing.Point(134, 134);
+            this.namsinh.Name = "namsinh";
+            this.namsinh.Size = new System.Drawing.Size(120, 30);
+            this.namsinh.TabIndex = 30;
             // 
-            // textBox1
+            // diemtichluy
             // 
-            this.textBox1.Location = new System.Drawing.Point(418, 207);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(196, 30);
-            this.textBox1.TabIndex = 28;
+            this.diemtichluy.Location = new System.Drawing.Point(620, 134);
+            this.diemtichluy.Name = "diemtichluy";
+            this.diemtichluy.Size = new System.Drawing.Size(120, 30);
+            this.diemtichluy.TabIndex = 31;
             // 
             // Customer
             // 
@@ -327,6 +329,8 @@
             this.staff_info.PerformLayout();
             this.panel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.khachhang)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.namsinh)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.diemtichluy)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -340,17 +344,17 @@
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Label Customer_id;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.DomainUpDown namsinh;
         private System.Windows.Forms.Button remove_btn;
         private System.Windows.Forms.Button edit_btn;
         private System.Windows.Forms.Button add_btn;
         private System.Windows.Forms.TextBox CCCD;
         private System.Windows.Forms.TextBox sdt;
-        private System.Windows.Forms.DomainUpDown diemtichluy;
         private System.Windows.Forms.TextBox tenkh;
         private System.Windows.Forms.TextBox Makh;
         private Bunifu.UI.WinForms.BunifuDataGridView khachhang;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.NumericUpDown diemtichluy;
+        private System.Windows.Forms.NumericUpDown namsinh;
     }
 }

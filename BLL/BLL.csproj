@@ -42,6 +42,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Customer_BLL.cs" />
+    <Compile Include="Lichchieu_BLL.cs" />
     <Compile Include="Staff_BLL.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

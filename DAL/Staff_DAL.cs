@@ -20,7 +20,7 @@ namespace DAL
 
         public DataTable GetStaff()
         {
-            string query = "SELECT * FROM NhanVien";
+            string query = "SELECT MaNV AS \"Mã nhân viên\",HoTen AS \"Họ tên\",NgaySinh AS\"Ngày sinh\",DiaChi AS\"Địa chỉ\",SoDienThoai AS\"Số điện thoại\",CMND_CCCD AS \"CCCD\" FROM NhanVien";
             return DataProvider.Instance.ExecuteQuery(query);
         }
 
@@ -53,18 +53,32 @@ namespace DAL
 
         public int DeleteStaff(int manv)
         {
+            // Kiểm tra xem khách hàng có vé không
+            string checkQuery = $"SELECT COUNT(*) FROM Ve WHERE Manv = {manv}";
+            int ticketCount = Convert.ToInt32(DataProvider.Instance.ExecuteScalar(checkQuery));
 
+            if (ticketCount > 0)
+            {
+                return -1; // Trả về -1 nếu khách hàng đã có vé
+            }
 
             // Xóa 
             string query = $"DELETE FROM NhanVien WHERE MaNV = {manv}";
             return DataProvider.Instance.ExecuteNonQuery(query);
         }
-      //public bool checkkey()
-      //  {
-      //      Staff_DTO  staff = new Staff_DTO();
-      //      string query = $"SELECT COUNT(*) FROM Ve WHERE MaNV = {staff.MaNV}";
-      //      int count = (int)DataProvider.Instance.ExecuteScalar(query);
-      //  }
-       
+
+        public DataTable SearchStaff(string searchValue)
+        {
+            string query = $@"SELECT MaNV AS ""Mã nhân viên"", 
+                                  HoTen AS ""Họ tên"", 
+                                  NgaySinh AS ""Ngày sinh"", 
+                                  DiaChi AS ""Địa chỉ"", 
+                                  SoDienThoai AS ""Số điện thoại"", 
+                                  CMND_CCCD AS ""CCCD""
+                           FROM NhanVien 
+                           WHERE HoTen LIKE N'%{searchValue}%' 
+                           OR SoDienThoai LIKE '%{searchValue}%'";
+            return DataProvider.Instance.ExecuteQuery(query);
+        }
     }
 }

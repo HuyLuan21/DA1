@@ -97,12 +97,6 @@
     <Compile Include="Category.Designer.cs">
       <DependentUpon>Category.cs</DependentUpon>
     </Compile>
-    <Compile Include="Controlselect.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Controlselect.Designer.cs">
-      <DependentUpon>Controlselect.cs</DependentUpon>
-    </Compile>
     <Compile Include="Customer.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -140,11 +134,11 @@
     <Compile Include="Staff.Designer.cs">
       <DependentUpon>Staff.cs</DependentUpon>
     </Compile>
-    <Compile Include="Login.cs">
+    <Compile Include="Controlselect.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Login.Designer.cs">
-      <DependentUpon>Login.cs</DependentUpon>
+    <Compile Include="Controlselect.Designer.cs">
+      <DependentUpon>Controlselect.cs</DependentUpon>
     </Compile>
     <Compile Include="Management.cs">
       <SubType>Form</SubType>
@@ -187,8 +181,8 @@
     <EmbeddedResource Include="Staff.resx">
       <DependentUpon>Staff.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Login.resx">
-      <DependentUpon>Login.cs</DependentUpon>
+    <EmbeddedResource Include="Controlselect.resx">
+      <DependentUpon>Controlselect.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Management.resx">
       <DependentUpon>Management.cs</DependentUpon>

@@ -94,24 +94,32 @@ namespace DA1
 
         private void remove_btn_Click(object sender, EventArgs e)
         {
-
-            try
+            DialogResult comfirm = MessageBox.Show("Bạn có chắc chắn muốn xóa nhân viên này không?", "Xác nhận",
+                MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+            if (comfirm == DialogResult.Yes)
             {
-                int maNV = int.Parse(staff_id_tbx.Text);
-                string result = staff_bll.DeleteStaff(maNV);
-                if (result == "Success")
+                try
                 {
-                    MessageBox.Show("Xóa nhân viên thành công!");
-                    Staff_grv.DataSource = staff_bll.GetStaff();
+                    int maNV = int.Parse(staff_id_tbx.Text);
+                    string result = staff_bll.DeleteStaff(maNV);
+                    if (result == "Success")
+                    {
+                        MessageBox.Show("Xóa nhân viên thành công!");
+                        Staff_grv.DataSource = staff_bll.GetStaff();
+                    }
+                    else
+                    {
+                        MessageBox.Show(result);
+                    }
                 }
-                else
+                catch (Exception ex)
                 {
-                    MessageBox.Show(result);
+                    MessageBox.Show("Error: " + ex.Message);
                 }
             }
-            catch (Exception ex)
+            else
             {
-                MessageBox.Show("Error: " + ex.Message);
+                return;
             }
         }
     }

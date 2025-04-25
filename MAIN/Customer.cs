@@ -46,25 +46,36 @@ namespace DA1
 
         private void remove_btn_Click(object sender, EventArgs e)
         {
-            try
+            DialogResult comfirm = MessageBox.Show("Bạn có chắc chắn muốn xóa khách hàng này không?", "Xác nhận",
+                MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+            if (comfirm == DialogResult.Yes)
             {
-                int maKH = int.Parse(Makh.Text);
-                string result = customer_bll.DeleteCustomer(maKH);
-                if (result == "Success")
-                {
-                    MessageBox.Show("Xóa khách hàng thành công!");
-                    khachhang.DataSource = customer_bll.GetCustomer();
-                }
-                else
-                {
-                    MessageBox.Show(result);
-                }
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show("Error: " + ex.Message);
-            }
 
+
+                try
+                {
+                    int maKH = int.Parse(Makh.Text);
+                    string result = customer_bll.DeleteCustomer(maKH);
+                    if (result == "Success")
+                    {
+                        MessageBox.Show("Xóa khách hàng thành công!");
+                        khachhang.DataSource = customer_bll.GetCustomer();
+                    }
+                    else
+                    {
+                        MessageBox.Show(result);
+                    }
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("Error: " + ex.Message);
+                }
+
+            }
+            else
+            {
+                return;
+            }
         }
 
         private void add_btn_Click(object sender, EventArgs e)
@@ -111,6 +122,11 @@ namespace DA1
             sdt.Text = khachhang.Rows[e.RowIndex].Cells[3].Value.ToString();
             diemtichluy.Text = khachhang.Rows[e.RowIndex].Cells[4].Value.ToString();
             CCCD.Text = khachhang.Rows[e.RowIndex].Cells[5].Value.ToString();
+        }
+
+        private void diemtichluy_MouseClick(object sender, MouseEventArgs e)
+        {
+
         }
     }
 }
