@@ -61,6 +61,9 @@
     <Reference Include="Bunifu.UI.WinForms.BunifuShadowPanel">
       <HintPath>..\..\..\..\..\Downloads\Bunifu\Bunifu.UI.WinForms.BunifuShadowPanel.dll</HintPath>
     </Reference>
+    <Reference Include="Bunifu.UI.WinForms.BunifuSlider">
+      <HintPath>..\..\..\..\..\..\Downloads\Bunifu\Bunifu.UI.WinForms.BunifuSlider.dll</HintPath>
+    </Reference>
     <Reference Include="Bunifu.UI.WinForms.BunifuTextbox">
       <HintPath>..\..\..\..\..\Downloads\Bunifu\Bunifu.UI.WinForms.BunifuTextbox.dll</HintPath>
     </Reference>
@@ -79,122 +82,130 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Account.cs">
+    <Compile Include="Chonghe.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Account.Designer.cs">
-      <DependentUpon>Account.cs</DependentUpon>
+    <Compile Include="Chonghe.Designer.cs">
+      <DependentUpon>Chonghe.cs</DependentUpon>
     </Compile>
-    <Compile Include="Booking.cs">
+    <Compile Include="KhachHang.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Booking.Designer.cs">
-      <DependentUpon>Booking.cs</DependentUpon>
+    <Compile Include="KhachHang.Designer.cs">
+      <DependentUpon>KhachHang.cs</DependentUpon>
     </Compile>
-    <Compile Include="Category.cs">
+    <Compile Include="Taikhoan.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Category.Designer.cs">
-      <DependentUpon>Category.cs</DependentUpon>
+    <Compile Include="Taikhoan.Designer.cs">
+      <DependentUpon>Taikhoan.cs</DependentUpon>
     </Compile>
-    <Compile Include="Customer.cs">
+    <Compile Include="Datve.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Customer.Designer.cs">
-      <DependentUpon>Customer.cs</DependentUpon>
+    <Compile Include="Datve.Designer.cs">
+      <DependentUpon>Datve.cs</DependentUpon>
     </Compile>
-    <Compile Include="DAL\StaffBLL.cs" />
-    <Compile Include="Income.cs">
+    <Compile Include="TheLoai.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Income.Designer.cs">
-      <DependentUpon>Income.cs</DependentUpon>
+    <Compile Include="TheLoai.Designer.cs">
+      <DependentUpon>TheLoai.cs</DependentUpon>
     </Compile>
-    <Compile Include="Movies time.cs">
+    <Compile Include="DangNhap.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Movies time.Designer.cs">
-      <DependentUpon>Movies time.cs</DependentUpon>
+    <Compile Include="DangNhap.Designer.cs">
+      <DependentUpon>DangNhap.cs</DependentUpon>
     </Compile>
-    <Compile Include="Movies.cs">
+    <Compile Include="Thongke.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Movies.Designer.cs">
-      <DependentUpon>Movies.cs</DependentUpon>
+    <Compile Include="Thongke.Designer.cs">
+      <DependentUpon>Thongke.cs</DependentUpon>
     </Compile>
-    <Compile Include="Room.cs">
+    <Compile Include="Cachieu.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Room.Designer.cs">
-      <DependentUpon>Room.cs</DependentUpon>
+    <Compile Include="Cachieu.Designer.cs">
+      <DependentUpon>Cachieu.cs</DependentUpon>
     </Compile>
-    <Compile Include="Staff.cs">
+    <Compile Include="Phim.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Staff.Designer.cs">
-      <DependentUpon>Staff.cs</DependentUpon>
+    <Compile Include="Phim.Designer.cs">
+      <DependentUpon>Phim.cs</DependentUpon>
     </Compile>
-    <Compile Include="Controlselect.cs">
+    <Compile Include="Phongchieu.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Controlselect.Designer.cs">
-      <DependentUpon>Controlselect.cs</DependentUpon>
+    <Compile Include="Phongchieu.Designer.cs">
+      <DependentUpon>Phongchieu.cs</DependentUpon>
     </Compile>
-    <Compile Include="Management.cs">
+    <Compile Include="NhanVien.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Management.Designer.cs">
-      <DependentUpon>Management.cs</DependentUpon>
+    <Compile Include="NhanVien.Designer.cs">
+      <DependentUpon>NhanVien.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Chonchucnang.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Chonchucnang.Designer.cs">
+      <DependentUpon>Chonchucnang.cs</DependentUpon>
+    </Compile>
+    <Compile Include="QuanLy.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="QuanLy.Designer.cs">
+      <DependentUpon>QuanLy.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Ticket.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Ticket.Designer.cs">
-      <DependentUpon>Ticket.cs</DependentUpon>
-    </Compile>
-    <EmbeddedResource Include="Account.resx">
-      <DependentUpon>Account.cs</DependentUpon>
+    <EmbeddedResource Include="Chonghe.resx">
+      <DependentUpon>Chonghe.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Booking.resx">
-      <DependentUpon>Booking.cs</DependentUpon>
+    <EmbeddedResource Include="DangNhap.resx">
+      <DependentUpon>DangNhap.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Category.resx">
-      <DependentUpon>Category.cs</DependentUpon>
+    <EmbeddedResource Include="KhachHang.resx">
+      <DependentUpon>KhachHang.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Customer.resx">
-      <DependentUpon>Customer.cs</DependentUpon>
+    <EmbeddedResource Include="Taikhoan.resx">
+      <DependentUpon>Taikhoan.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Income.resx">
-      <DependentUpon>Income.cs</DependentUpon>
+    <EmbeddedResource Include="Datve.resx">
+      <DependentUpon>Datve.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Movies time.resx">
-      <DependentUpon>Movies time.cs</DependentUpon>
+    <EmbeddedResource Include="TheLoai.resx">
+      <DependentUpon>TheLoai.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Movies.resx">
-      <DependentUpon>Movies.cs</DependentUpon>
+    <EmbeddedResource Include="Thongke.resx">
+      <DependentUpon>Thongke.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Room.resx">
-      <DependentUpon>Room.cs</DependentUpon>
+    <EmbeddedResource Include="Cachieu.resx">
+      <DependentUpon>Cachieu.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Staff.resx">
-      <DependentUpon>Staff.cs</DependentUpon>
+    <EmbeddedResource Include="Phim.resx">
+      <DependentUpon>Phim.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Controlselect.resx">
-      <DependentUpon>Controlselect.cs</DependentUpon>
+    <EmbeddedResource Include="Phongchieu.resx">
+      <DependentUpon>Phongchieu.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Management.resx">
-      <DependentUpon>Management.cs</DependentUpon>
+    <EmbeddedResource Include="NhanVien.resx">
+      <DependentUpon>NhanVien.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Chonchucnang.resx">
+      <DependentUpon>Chonchucnang.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="QuanLy.resx">
+      <DependentUpon>QuanLy.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\licenses.licx" />
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <SubType>Designer</SubType>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Ticket.resx">
-      <DependentUpon>Ticket.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -271,6 +282,9 @@
       <Project>{35709904-a665-40db-bf11-d271afb58207}</Project>
       <Name>DTO</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="DAL\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

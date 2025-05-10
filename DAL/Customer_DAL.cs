@@ -29,7 +29,7 @@ namespace DAL
             return DataProvider.Instance.ExecuteQuery(query);
         }
 
-        public int InsertCustomer(Customer_DTO Customer)
+        public int InsertCustomer(Khachhang_DTO Customer)
         {
             string query = $@"INSERT INTO KhachHang (TenKH, NamSinh, SoDienThoai, DiemTichLuy, CCCD)
                          VALUES (N'{Customer.TenKh}', 
@@ -43,7 +43,7 @@ namespace DAL
             return (result != null) ? Convert.ToInt32(result) : -1;
         }
 
-        public int UpdateCustomer(Customer_DTO Customer)
+        public int UpdateCustomer(Khachhang_DTO Customer)
         {
             string query = $@"UPDATE KhachHang
                          SET TenKH = N'{Customer.TenKh}', 
