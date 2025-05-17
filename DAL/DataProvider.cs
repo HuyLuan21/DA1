@@ -57,9 +57,8 @@ namespace DAL
                     connection.Close();
                 }
             }
-            catch (SqlException e)
+            catch (SqlException )
             {
-                Console.WriteLine(e.ToString());
             }
 
             return data;
@@ -84,17 +83,17 @@ namespace DAL
 
                             transaction.Commit();
                         }
-                        catch (SqlException e)
+                        catch (SqlException)
                         {
                             transaction.Rollback();
-                            Console.WriteLine(e.ToString());
+
                         }
                     }
                 }
             }
-            catch (SqlException e)
+            catch (SqlException)
             {
-               Console.WriteLine(e.ToString());
+
             }
 
             return rowsAffected;
@@ -118,9 +117,9 @@ namespace DAL
                     connection.Close();
                 }
             }
-            catch (SqlException e)
+            catch (SqlException)
             {
-                Console.WriteLine(e.ToString());
+                
             }
 
             if (result == null)

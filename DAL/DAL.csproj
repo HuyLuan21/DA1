@@ -41,20 +41,16 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Customer_DAL.cs" />
-    <Compile Include="Dangnhap_DAL.cs" />
-    <Compile Include="LichChieu_DAL.cs" />
-    <Compile Include="Nhanvien_DAL.cs" />
+    <Compile Include="KhachHang_DAL.cs" />
+    <Compile Include="DangNhap_DAL.cs" />
+    <Compile Include="Datve_DAL.cs" />
+    <Compile Include="CaChieu_DAL.cs" />
+    <Compile Include="NhanVien_DAL.cs" />
     <Compile Include="DataProvider.cs" />
+    <Compile Include="Phim_DAL.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="TheLoai_DAL.cs" />
     <Compile Include="Ticker_DAL.cs" />
-  </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\DTO\DTO.csproj">
-      <Project>{35709904-a665-40db-bf11-d271afb58207}</Project>
-      <Name>DTO</Name>
-    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

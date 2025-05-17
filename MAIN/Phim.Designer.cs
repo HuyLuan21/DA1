@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.panel1 = new System.Windows.Forms.Panel();
+            this.button1 = new System.Windows.Forms.Button();
             this.remove_btn = new System.Windows.Forms.Button();
             this.edit_btn = new System.Windows.Forms.Button();
             this.add_btn = new System.Windows.Forms.Button();
@@ -54,13 +55,14 @@
             this.Movie_id = new System.Windows.Forms.Label();
             this.Id_tbx = new System.Windows.Forms.TextBox();
             this.checkedListBox1 = new System.Windows.Forms.CheckedListBox();
-            this.Movies_grid_view = new System.Windows.Forms.DataGridView();
+            this.Movies_grv = new System.Windows.Forms.DataGridView();
             this.panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.Movies_grid_view)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Movies_grv)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
             // 
+            this.panel1.Controls.Add(this.button1);
             this.panel1.Controls.Add(this.remove_btn);
             this.panel1.Controls.Add(this.edit_btn);
             this.panel1.Controls.Add(this.add_btn);
@@ -86,12 +88,23 @@
             this.panel1.Controls.Add(this.Movie_id);
             this.panel1.Controls.Add(this.Id_tbx);
             this.panel1.Controls.Add(this.checkedListBox1);
-            this.panel1.Controls.Add(this.Movies_grid_view);
+            this.panel1.Controls.Add(this.Movies_grv);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel1.Font = new System.Drawing.Font("Times New Roman", 12F);
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(1249, 614);
             this.panel1.TabIndex = 0;
+            // 
+            // button1
+            // 
+            this.button1.Font = new System.Drawing.Font("Times New Roman", 12F);
+            this.button1.Location = new System.Drawing.Point(329, 300);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(91, 48);
+            this.button1.TabIndex = 45;
+            this.button1.Text = "Tìm";
+            this.button1.UseVisualStyleBackColor = true;
             // 
             // remove_btn
             // 
@@ -135,51 +148,53 @@
             // 
             // dateTimePicker2
             // 
-            this.dateTimePicker2.Location = new System.Drawing.Point(693, 96);
+            this.dateTimePicker2.Font = new System.Drawing.Font("Times New Roman", 12F);
+            this.dateTimePicker2.Location = new System.Drawing.Point(693, 101);
             this.dateTimePicker2.Name = "dateTimePicker2";
-            this.dateTimePicker2.Size = new System.Drawing.Size(218, 22);
+            this.dateTimePicker2.Size = new System.Drawing.Size(231, 30);
             this.dateTimePicker2.TabIndex = 40;
             // 
             // dateTimePicker1
             // 
+            this.dateTimePicker1.Font = new System.Drawing.Font("Times New Roman", 12F);
             this.dateTimePicker1.Location = new System.Drawing.Point(693, 57);
             this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(218, 22);
+            this.dateTimePicker1.Size = new System.Drawing.Size(231, 30);
             this.dateTimePicker1.TabIndex = 39;
             // 
             // proc_tbx
             // 
             this.proc_tbx.Location = new System.Drawing.Point(693, 264);
             this.proc_tbx.Name = "proc_tbx";
-            this.proc_tbx.Size = new System.Drawing.Size(218, 22);
+            this.proc_tbx.Size = new System.Drawing.Size(231, 30);
             this.proc_tbx.TabIndex = 38;
             // 
             // age_tbx
             // 
-            this.age_tbx.Location = new System.Drawing.Point(693, 221);
+            this.age_tbx.Location = new System.Drawing.Point(693, 219);
             this.age_tbx.Name = "age_tbx";
-            this.age_tbx.Size = new System.Drawing.Size(218, 22);
+            this.age_tbx.Size = new System.Drawing.Size(231, 30);
             this.age_tbx.TabIndex = 37;
             // 
             // director_tbx
             // 
             this.director_tbx.Location = new System.Drawing.Point(693, 180);
             this.director_tbx.Name = "director_tbx";
-            this.director_tbx.Size = new System.Drawing.Size(218, 22);
+            this.director_tbx.Size = new System.Drawing.Size(231, 30);
             this.director_tbx.TabIndex = 36;
             // 
             // nation_tbx
             // 
             this.nation_tbx.Location = new System.Drawing.Point(693, 137);
             this.nation_tbx.Name = "nation_tbx";
-            this.nation_tbx.Size = new System.Drawing.Size(218, 22);
+            this.nation_tbx.Size = new System.Drawing.Size(231, 30);
             this.nation_tbx.TabIndex = 35;
             // 
             // proc_year
             // 
             this.proc_year.AutoSize = true;
             this.proc_year.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold);
-            this.proc_year.Location = new System.Drawing.Point(519, 262);
+            this.proc_year.Location = new System.Drawing.Point(519, 271);
             this.proc_year.Name = "proc_year";
             this.proc_year.Size = new System.Drawing.Size(85, 23);
             this.proc_year.TabIndex = 34;
@@ -189,7 +204,7 @@
             // 
             this.Age.AutoSize = true;
             this.Age.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold);
-            this.Age.Location = new System.Drawing.Point(519, 219);
+            this.Age.Location = new System.Drawing.Point(519, 226);
             this.Age.Name = "Age";
             this.Age.Size = new System.Drawing.Size(135, 23);
             this.Age.TabIndex = 33;
@@ -199,7 +214,7 @@
             // 
             this.Director.AutoSize = true;
             this.Director.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold);
-            this.Director.Location = new System.Drawing.Point(519, 179);
+            this.Director.Location = new System.Drawing.Point(519, 187);
             this.Director.Name = "Director";
             this.Director.Size = new System.Drawing.Size(95, 23);
             this.Director.TabIndex = 32;
@@ -209,7 +224,7 @@
             // 
             this.Nation.AutoSize = true;
             this.Nation.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold);
-            this.Nation.Location = new System.Drawing.Point(519, 133);
+            this.Nation.Location = new System.Drawing.Point(519, 144);
             this.Nation.Name = "Nation";
             this.Nation.Size = new System.Drawing.Size(98, 23);
             this.Nation.TabIndex = 31;
@@ -220,14 +235,14 @@
             // 
             this.lenght_tbx.Location = new System.Drawing.Point(693, 22);
             this.lenght_tbx.Name = "lenght_tbx";
-            this.lenght_tbx.Size = new System.Drawing.Size(218, 22);
+            this.lenght_tbx.Size = new System.Drawing.Size(231, 30);
             this.lenght_tbx.TabIndex = 30;
             // 
             // label2
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold);
-            this.label2.Location = new System.Drawing.Point(519, 97);
+            this.label2.Location = new System.Drawing.Point(522, 108);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(92, 23);
             this.label2.TabIndex = 28;
@@ -238,7 +253,7 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold);
-            this.label1.Location = new System.Drawing.Point(519, 56);
+            this.label1.Location = new System.Drawing.Point(523, 64);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(94, 23);
             this.label1.TabIndex = 27;
@@ -248,7 +263,7 @@
             // 
             this.Lenght.AutoSize = true;
             this.Lenght.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold);
-            this.Lenght.Location = new System.Drawing.Point(519, 21);
+            this.Lenght.Location = new System.Drawing.Point(523, 29);
             this.Lenght.Name = "Lenght";
             this.Lenght.Size = new System.Drawing.Size(109, 23);
             this.Lenght.TabIndex = 26;
@@ -266,9 +281,10 @@
             // 
             // textBox1
             // 
-            this.textBox1.Location = new System.Drawing.Point(140, 111);
+            this.textBox1.Location = new System.Drawing.Point(141, 107);
+            this.textBox1.Multiline = true;
             this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(218, 22);
+            this.textBox1.Size = new System.Drawing.Size(218, 30);
             this.textBox1.TabIndex = 23;
             // 
             // Name_of_movie
@@ -285,7 +301,7 @@
             // 
             this.Name_tbx.Location = new System.Drawing.Point(141, 64);
             this.Name_tbx.Name = "Name_tbx";
-            this.Name_tbx.Size = new System.Drawing.Size(218, 22);
+            this.Name_tbx.Size = new System.Drawing.Size(218, 30);
             this.Name_tbx.TabIndex = 21;
             // 
             // Movie_id
@@ -303,27 +319,40 @@
             // 
             this.Id_tbx.Location = new System.Drawing.Point(141, 21);
             this.Id_tbx.Name = "Id_tbx";
-            this.Id_tbx.Size = new System.Drawing.Size(218, 22);
+            this.Id_tbx.Size = new System.Drawing.Size(218, 30);
             this.Id_tbx.TabIndex = 19;
             // 
             // checkedListBox1
             // 
             this.checkedListBox1.BackColor = System.Drawing.SystemColors.Window;
             this.checkedListBox1.FormattingEnabled = true;
-            this.checkedListBox1.Location = new System.Drawing.Point(17, 179);
+            this.checkedListBox1.Location = new System.Drawing.Point(12, 176);
+            this.checkedListBox1.MultiColumn = true;
             this.checkedListBox1.Name = "checkedListBox1";
-            this.checkedListBox1.Size = new System.Drawing.Size(346, 106);
+            this.checkedListBox1.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.checkedListBox1.Size = new System.Drawing.Size(346, 104);
             this.checkedListBox1.TabIndex = 1;
             // 
-            // Movies_grid_view
+            // Movies_grv
             // 
-            this.Movies_grid_view.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.Movies_grid_view.Location = new System.Drawing.Point(12, 353);
-            this.Movies_grid_view.Name = "Movies_grid_view";
-            this.Movies_grid_view.RowHeadersWidth = 51;
-            this.Movies_grid_view.RowTemplate.Height = 24;
-            this.Movies_grid_view.Size = new System.Drawing.Size(1225, 249);
-            this.Movies_grid_view.TabIndex = 0;
+            this.Movies_grv.AllowUserToAddRows = false;
+            this.Movies_grv.AllowUserToDeleteRows = false;
+            this.Movies_grv.AllowUserToResizeColumns = false;
+            this.Movies_grv.AllowUserToResizeRows = false;
+            this.Movies_grv.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.Movies_grv.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.Movies_grv.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.Movies_grv.Location = new System.Drawing.Point(12, 353);
+            this.Movies_grv.Name = "Movies_grv";
+            this.Movies_grv.ReadOnly = true;
+            this.Movies_grv.RowHeadersVisible = false;
+            this.Movies_grv.RowHeadersWidth = 51;
+            this.Movies_grv.RowTemplate.Height = 24;
+            this.Movies_grv.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.Movies_grv.Size = new System.Drawing.Size(1225, 249);
+            this.Movies_grv.TabIndex = 0;
+            this.Movies_grv.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.Movies_grv_CellClick);
             // 
             // Phim
             // 
@@ -337,7 +366,7 @@
             this.Load += new System.EventHandler(this.Phim_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.Movies_grid_view)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Movies_grv)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -345,7 +374,7 @@
         #endregion
 
         private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.DataGridView Movies_grid_view;
+        private System.Windows.Forms.DataGridView Movies_grv;
         private System.Windows.Forms.CheckedListBox checkedListBox1;
         private System.Windows.Forms.Label Description;
         private System.Windows.Forms.TextBox textBox1;
@@ -371,5 +400,6 @@
         private System.Windows.Forms.Button remove_btn;
         private System.Windows.Forms.Button edit_btn;
         private System.Windows.Forms.Button add_btn;
+        private System.Windows.Forms.Button button1;
     }
 }

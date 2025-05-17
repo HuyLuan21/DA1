@@ -92,7 +92,8 @@ CREATE TABLE NhanVien (
     SoDienThoai VARCHAR(15),
     CMND_CCCD CHAR(12)
 );
-
+ALTER TABLE NhanVien ADD TrangThai bit DEFAULT 1;
+UPDATE NhanVien SET TrangThai = 1;
 -- Tạo bảng TaiKhoan (cần tham chiếu đến NhanVien)
 CREATE TABLE TaiKhoan (
     TenDangNhap VARCHAR(50) PRIMARY KEY,
@@ -134,10 +135,10 @@ VALUES
 
 INSERT INTO Phim (MaPhim, TenPhim, MoTa, ThoiLuong, NgayKhoiChieu, NgayKetThuc, QuocGia, DaoDien, GioiHanTuoi, NamSX, MaTLP) 
 VALUES 
-(1, 'Avengers: Endgame', 'Cuộc chiến cuối cùng của các Avengers chống lại Thanos', 181, '2019-04-26', '2019-04-26', 'Mỹ', 'Anthony Russo, Joe Russo', 13, 2019, 1),
-(2, 'Spider-Man: No Way Home', 'Peter Parker phải đối mặt với những rắc rối khi các nhân vật từ các vũ trụ khác xuất hiện', 148, '2021-12-17', '2021-12-17', 'Mỹ', 'Jon Watts', 13, 2021, 1),
-(3, 'A Quiet Place', 'Một gia đình sống trong im lặng để tránh khỏi quái vật', 95, '2018-04-06', '2018-04-06', 'Mỹ', 'John Krasinski', 18, 2018, 3),
-(4, 'The Notebook', 'Một câu chuyện tình yêu giữa Noah và Allie', 123, '2004-06-25', '2004-06-25', 'Mỹ', 'Nick Cassavetes', 13, 2004, 4);
+(1, N'Avengers: Endgame', N'Cuộc chiến cuối cùng của các Avengers chống lại Thanos', 181, '2019-04-26', '2019-04-26', N'Mỹ', 'Anthony Russo, Joe Russo', 13, 2019, 1),
+(2, N'Spider-Man: No Way Home', N'Peter Parker phải đối mặt với những rắc rối khi các nhân vật từ các vũ trụ khác xuất hiện', 148, '2021-12-17', '2021-12-17', N'Mỹ', 'Jon Watts', 13, 2021, 1),
+(3, N'A Quiet Place', N'Một gia đình sống trong im lặng để tránh khỏi quái vật', 95, '2018-04-06', '2018-04-06', N'Mỹ', 'John Krasinski', 18, 2018, 3),
+(4, N'The Notebook', N'Một câu chuyện tình yêu giữa Noah và Allie', 123, '2004-06-25', '2004-06-25', N'Mỹ', 'Nick Cassavetes', 13, 2004, 4);
 
 INSERT INTO Phim_theloai (MaTLP, MaPhim)
 VALUES
@@ -199,3 +200,60 @@ VALUES
 (3, 2, 3),
 (4, 2, 4);
 SELECT MaNhanVien AS "Mã nhân viên",HoTen AS "Họ tên",NgaySinh AS"Ngày sinh",DiaChi AS"Địa chỉ",SoDienThoai AS"Số điện thoại",CMND_CCCD AS "CCCD" FROM NhanVien
+
+SELECT MaPhim AS "Mã phim",TenPhim AS "Tên phim",Mota AS" Mô tả" ,ThoiLuong AS"Thời lượng", NgayKhoiChieu AS "Ngày khởi chiếu",NgayKetThuc AS "Ngày kết thúc",QuocGia AS"Quốc gia",NamSX AS"Năm sản xuất" from phim
+go  
+CREATE TRIGGER insert_nv
+ON NhanVien
+INSTEAD OF INSERT
+AS
+BEGIN
+    SET NOCOUNT ON;
+
+    DECLARE @MaxMa INT;
+    SELECT @MaxMa = ISNULL(MAX(MaNhanVien), 0) FROM NhanVien;
+
+    DECLARE @Temp TABLE (
+        MaNhanVien INT,
+        HoTen NVARCHAR(100),
+        NgaySinh DATE,
+        DiaChi NVARCHAR(200),
+        SoDienThoai VARCHAR(15),
+        CMND_CCCD NVARCHAR(12)
+    );
+
+    INSERT INTO @Temp (MaNhanVien, HoTen, NgaySinh, DiaChi, SoDienThoai, CMND_CCCD)
+    SELECT
+        ROW_NUMBER() OVER (ORDER BY (SELECT NULL)) + @MaxMa AS MaNhanVien,
+        HoTen,
+        NgaySinh,
+        DiaChi,
+        SoDienThoai,
+        CMND_CCCD
+    FROM inserted;
+
+    INSERT INTO NhanVien (MaNhanVien, HoTen, NgaySinh, DiaChi, SoDienThoai, CMND_CCCD)
+    SELECT MaNhanVien, HoTen, NgaySinh, DiaChi, SoDienThoai, CMND_CCCD FROM @Temp;
+END;
+INSERT INTO NhanVien (MaNhanVien,HoTen, NgaySinh, DiaChi, SoDienThoai, CMND_CCCD)
+                         VALUES (1,
+                                N'Lê Minh C', 
+                                '1980-05-20', 
+                                N'Hà Nội', 
+                                '0912345679', 
+                                '987654321012');
+
+                                INSERT INTO NhanVien (MaNhanVien, HoTen, NgaySinh, DiaChi, SoDienThoai, CMND_CCCD)
+VALUES 
+(1, N'Lê Minh C', '1980-05-20', N'Hà Nội', '0912345679', '987654321012'),
+(2, N'Phạm Thị D', '1990-07-15', N'Hồ Chí Minh', '0931234567', '876543210123');
+
+-- truy van phim theo ca chieu
+SELECT * from CaChieu
+SELECT * FROM Phim
+SELECT MaCaChieu,p.TenPhim,ThoiGianChieu,MaPhongChieu FROM CaChieu cc JOIN Phim p 
+on cc.MaPhim = p.MaPhim
+SELECT MaCaChieu,p.TenPhim,ThoiGianChieu,MaPhongChieu FROM CaChieu cc JOIN Phim p on cc.MaPhim = p.MaPhim WHERE p.TenPhim = 'Avengers: Endgame'
+SELECT tlp.TenTLP FROM Phim p INNER JOIN Phim_theloai pt ON p.MaPhim = pt.MaPhim 
+INNER JOIN TheLoaiPhim tlp ON pt.MaTLP = tlp.MaTLP WHERE p.MaPhim = 2
+SELECT MaPhim AS "Mã phim", TenPhim AS "Tên phim", Mota AS "Mô tả", ThoiLuong AS "Thời lượng", NgayKhoiChieu AS "Ngày khởi chiếu", NgayKetThuc AS "Ngày kết thúc", QuocGia AS "Quốc gia",DaoDien AS"Đạo diễn",GioiHanTuoi AS"Giới hạn tuổi", NamSX AS "Năm sản xuất" FROM phim;

@@ -82,11 +82,11 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Chonghe.cs">
+    <Compile Include="BanVe.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Chonghe.Designer.cs">
-      <DependentUpon>Chonghe.cs</DependentUpon>
+    <Compile Include="BanVe.Designer.cs">
+      <DependentUpon>BanVe.cs</DependentUpon>
     </Compile>
     <Compile Include="KhachHang.cs">
       <SubType>Form</SubType>
@@ -100,11 +100,11 @@
     <Compile Include="Taikhoan.Designer.cs">
       <DependentUpon>Taikhoan.cs</DependentUpon>
     </Compile>
-    <Compile Include="Datve.cs">
+    <Compile Include="LichChieuPhim.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Datve.Designer.cs">
-      <DependentUpon>Datve.cs</DependentUpon>
+    <Compile Include="LichChieuPhim.Designer.cs">
+      <DependentUpon>LichChieuPhim.cs</DependentUpon>
     </Compile>
     <Compile Include="TheLoai.cs">
       <SubType>Form</SubType>
@@ -162,8 +162,8 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="Chonghe.resx">
-      <DependentUpon>Chonghe.cs</DependentUpon>
+    <EmbeddedResource Include="BanVe.resx">
+      <DependentUpon>BanVe.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="DangNhap.resx">
       <DependentUpon>DangNhap.cs</DependentUpon>
@@ -174,8 +174,8 @@
     <EmbeddedResource Include="Taikhoan.resx">
       <DependentUpon>Taikhoan.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Datve.resx">
-      <DependentUpon>Datve.cs</DependentUpon>
+    <EmbeddedResource Include="LichChieuPhim.resx">
+      <DependentUpon>LichChieuPhim.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="TheLoai.resx">
       <DependentUpon>TheLoai.cs</DependentUpon>
@@ -277,10 +277,6 @@
     <ProjectReference Include="..\BLL\BLL.csproj">
       <Project>{f037f1cf-f11d-4cf3-b889-471c94d1c5d2}</Project>
       <Name>BLL</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\DTO\DTO.csproj">
-      <Project>{35709904-a665-40db-bf11-d271afb58207}</Project>
-      <Name>DTO</Name>
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>

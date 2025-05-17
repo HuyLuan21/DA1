@@ -40,7 +40,7 @@ namespace DA1
                 }
                 else
                 {
-                    Datve bkg = new Datve();
+                    LichChieuPhim bkg = new LichChieuPhim();
                     bkg.ShowDialog();
                 }
               

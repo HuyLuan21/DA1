@@ -23,11 +23,11 @@ namespace BLL
         private Dangnhap_BLL() { }
         public bool CheckLogin(string username, string password)
         {
-            return DAL.Dangnhap_DAL.Instance.CheckLogin(username, password);
+            return DAL.DangNhap_DAL.Instance.CheckLogin(username, password);
         }
         public bool ismanager(string username)
         {
-            return DAL.Dangnhap_DAL.Instance.ismanager(username);
+            return DAL.DangNhap_DAL.Instance.ismanager(username);
         }
     }
 }

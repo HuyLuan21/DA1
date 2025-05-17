@@ -6,19 +6,19 @@ using System.Threading.Tasks;
 
 namespace DAL
 {
-    public class Dangnhap_DAL
+    public class DangNhap_DAL
     {
-        private static Dangnhap_DAL instance;
-        public static Dangnhap_DAL Instance
+        private static DangNhap_DAL instance;
+        public static DangNhap_DAL Instance
         {
             get
             {
                 if (instance == null)
-                    instance = new Dangnhap_DAL();
+                    instance = new DangNhap_DAL();
                 return instance;
             }
         }
-        private Dangnhap_DAL() { }
+        private DangNhap_DAL() { }
         public bool CheckLogin(string username, string password)
         {
             string query = $"SELECT COUNT(*) FROM TaiKhoan WHERE TenDangNhap = '{username}' AND MatKhau = '{password}'";

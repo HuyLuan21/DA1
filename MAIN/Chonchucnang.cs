@@ -49,7 +49,7 @@ namespace DA1
 
         private void button2_Click(object sender, EventArgs e)
         {
-            Datve bkg = new Datve();
+            LichChieuPhim bkg = new LichChieuPhim();
             bkg.ShowDialog();
         }
     }
