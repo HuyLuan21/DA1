@@ -12,11 +12,13 @@ namespace DA1
 {
     public partial class Chonchucnang : Form
     {
-        public Chonchucnang()
+        private string username;
+        public Chonchucnang(string username)
         {
             InitializeComponent();
+            this.username = username;
+            label2.Text = "Tên tài khoản: " + username;
         }
-        private Point origiCapsPos;
 
         private void Form1_Load(object sender, EventArgs e)
         {
@@ -25,18 +27,7 @@ namespace DA1
 
         private void Form1_FormClosing(object sender, FormClosingEventArgs e)
         {
-            if (e.CloseReason == CloseReason.UserClosing)
-            {
-                // Hiển thị hộp thoại xác nhận
-                DialogResult result = MessageBox.Show("Bạn thực sự muốn thoát?", "Xác nhận",
-                    MessageBoxButtons.YesNo,
-                    MessageBoxIcon.Question);
-                // Nếu người dùng chọn "No", hủy việc đóng form
-                if (result == DialogResult.No)
-                {
-                    e.Cancel = true;
-                }
-            }
+          
 
         }
 

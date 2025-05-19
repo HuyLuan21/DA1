@@ -17,25 +17,18 @@ namespace DA1
         {
             InitializeComponent();
         }
-        Dangnhap_BLL dn_bll = Dangnhap_BLL.Instance;
-
-        private void textBox1_TextChanged(object sender, EventArgs e)
-        {
-          
-
-        }
 
         private void button1_Click(object sender, EventArgs e)
         {
             string username = Username_tbx.Text;
             string password = Pass_tbx.Text;
-            bool isAdmin = dn_bll.ismanager(username);
-            bool result = dn_bll.CheckLogin(username, password);
+            bool result = Dangnhap_BLL.Instance.CheckLogin(username, password);
+            bool isAdmin = Dangnhap_BLL.Instance.ismanager(username);
             if (result)
             {
                 if(isAdmin)
                 {
-                    Chonchucnang control = new Chonchucnang();
+                    Chonchucnang control = new Chonchucnang(username);
                     control.ShowDialog();
                 }
                 else
@@ -48,6 +41,22 @@ namespace DA1
             else
             {
                 MessageBox.Show("Tên đăng nhập hoặc mật khẩu không đúng!");
+            }
+        }
+
+        private void DangNhap_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            if (e.CloseReason == CloseReason.UserClosing)
+            {
+                // Hiển thị hộp thoại xác nhận
+                DialogResult result = MessageBox.Show("Bạn thực sự muốn thoát?", "Xác nhận",
+                    MessageBoxButtons.YesNo,
+                    MessageBoxIcon.Question);
+                // Nếu người dùng chọn "No", hủy việc đóng form
+                if (result == DialogResult.No)
+                {
+                    e.Cancel = true;
+                }
             }
         }
     }

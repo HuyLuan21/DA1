@@ -626,7 +626,7 @@
             this.income_btn.onHoverState.BorderRadius = 1;
             this.income_btn.onHoverState.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderStyles.Solid;
             this.income_btn.onHoverState.BorderThickness = 1;
-            this.income_btn.onHoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(105)))), ((int)(((byte)(181)))), ((int)(((byte)(255)))));
+            this.income_btn.onHoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(252)))), ((int)(((byte)(204)))), ((int)(((byte)(26)))));
             this.income_btn.onHoverState.ForeColor = System.Drawing.Color.White;
             this.income_btn.onHoverState.IconLeftImage = null;
             this.income_btn.onHoverState.IconRightImage = null;
@@ -716,7 +716,7 @@
             this.Account_btn.onHoverState.BorderRadius = 1;
             this.Account_btn.onHoverState.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderStyles.Solid;
             this.Account_btn.onHoverState.BorderThickness = 1;
-            this.Account_btn.onHoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(105)))), ((int)(((byte)(181)))), ((int)(((byte)(255)))));
+            this.Account_btn.onHoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(113)))), ((int)(((byte)(178)))));
             this.Account_btn.onHoverState.ForeColor = System.Drawing.Color.White;
             this.Account_btn.onHoverState.IconLeftImage = null;
             this.Account_btn.onHoverState.IconRightImage = null;
@@ -806,7 +806,7 @@
             this.Customer_btn.onHoverState.BorderRadius = 1;
             this.Customer_btn.onHoverState.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderStyles.Solid;
             this.Customer_btn.onHoverState.BorderThickness = 1;
-            this.Customer_btn.onHoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(105)))), ((int)(((byte)(181)))), ((int)(((byte)(255)))));
+            this.Customer_btn.onHoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(227)))), ((int)(((byte)(35)))), ((int)(((byte)(34)))));
             this.Customer_btn.onHoverState.ForeColor = System.Drawing.Color.White;
             this.Customer_btn.onHoverState.IconLeftImage = null;
             this.Customer_btn.onHoverState.IconRightImage = null;
@@ -896,7 +896,7 @@
             this.Staff_btn.onHoverState.BorderRadius = 1;
             this.Staff_btn.onHoverState.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderStyles.Solid;
             this.Staff_btn.onHoverState.BorderThickness = 1;
-            this.Staff_btn.onHoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(105)))), ((int)(((byte)(181)))), ((int)(((byte)(255)))));
+            this.Staff_btn.onHoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(241)))), ((int)(((byte)(144)))), ((int)(((byte)(1)))));
             this.Staff_btn.onHoverState.ForeColor = System.Drawing.Color.White;
             this.Staff_btn.onHoverState.IconLeftImage = null;
             this.Staff_btn.onHoverState.IconRightImage = null;
@@ -986,7 +986,7 @@
             this.Database_btn.onHoverState.BorderRadius = 1;
             this.Database_btn.onHoverState.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderStyles.Solid;
             this.Database_btn.onHoverState.BorderThickness = 1;
-            this.Database_btn.onHoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(105)))), ((int)(((byte)(181)))), ((int)(((byte)(255)))));
+            this.Database_btn.onHoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(143)))), ((int)(((byte)(90)))));
             this.Database_btn.onHoverState.ForeColor = System.Drawing.Color.White;
             this.Database_btn.onHoverState.IconLeftImage = null;
             this.Database_btn.onHoverState.IconRightImage = null;
@@ -1033,13 +1033,13 @@
             this.content.TabIndex = 2;
             this.content.Click += new System.EventHandler(this.content_Click);
             // 
-            // Management
+            // QuanLy
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1212, 813);
             this.Controls.Add(this.background);
-            this.Name = "Management";
+            this.Name = "QuanLy";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Management ";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;

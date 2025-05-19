@@ -256,9 +256,6 @@
     <None Include="Resources\accont_icon.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\accont_icon1.png" />
-  </ItemGroup>
-  <ItemGroup>
     <None Include="Resources\income_icon.png" />
   </ItemGroup>
   <ItemGroup>
