@@ -1,4 +1,5 @@
-﻿using System;
+﻿using BLL;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -15,6 +16,18 @@ namespace DA1
         public Thongke()
         {
             InitializeComponent();
+        }
+
+        private void Thongke_Load(object sender, EventArgs e)
+        {
+            comboBox1.Items.Clear();
+            var movieList = Phim_BLL.Instance.GetMovieListName();
+            foreach (var movie in movieList)
+            {
+                comboBox1.Items.Add(movie);
+            }
+            comboBox1.Sorted = true;
+            comboBox1.SelectedIndex = 0;
         }
     }
 }

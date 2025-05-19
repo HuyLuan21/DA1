@@ -31,5 +31,10 @@ namespace DAL
             }
             return theloaiList;
         }
+        public DataTable GetTheLoai()
+        {
+            string query = "SELECT MaTLP AS N'Mã thể loại', TenTLP AS N'Tên thể loại' FROM TheLoaiPhim";
+            return DataProvider.Instance.ExecuteQuery(query);
+        }
     }
-    }
+}

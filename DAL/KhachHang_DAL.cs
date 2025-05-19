@@ -1,5 +1,4 @@
-﻿
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Data;
 using System.Linq;
@@ -24,54 +23,95 @@ namespace DAL
 
         public DataTable GetCustomer()
         {
-            
-            string query = "SELECT MaKH AS \"Mã khách hàng\", Tenkh AS \"Tên khách hàng\", NamSinh AS \"Năm sinh\", SoDienThoai AS \"Số điện thoại\", DiemTichLuy AS \"Điểm tích lũy\", CCCD\r\nFROM KhachHang";
+            string query = @"SELECT MaKhachHang AS ""Mã KH"",
+                                  HoTen AS ""Họ tên"",
+                                  NamSinh AS ""Năm sinh"",
+                                  SoDienThoai AS ""Số điện thoại"",
+                                  DiemTichLuy AS ""Điểm tích lũy"",
+                                  CCCD 
+                           FROM KhachHang 
+                           WHERE TrangThai = 1";
             return DataProvider.Instance.ExecuteQuery(query);
         }
 
-        //public int InsertCustomer( Customer)
-        //{
-        //    string query = $@"INSERT INTO KhachHang (TenKH, NamSinh, SoDienThoai, DiemTichLuy, CCCD)
-        //                 VALUES (N'{Customer.TenKh}', 
-        //                        '{Customer.Namsinh}', 
-        //                        '{Customer.SDT}', 
-        //                        '{Customer.Diemtichluy}',
-        //                        '{Customer.CCCD}');
-        //                 SELECT SCOPE_IDENTITY()";
+        public int InsertCustomer(string hoTen, int namSinh, string soDienThoai, string cccd, int diemTichLuy)
+        {
+           
 
-        //    object result = DataProvider.Instance.ExecuteScalar(query);
-        //    return (result != null) ? Convert.ToInt32(result) : -1;
-        //}
+            string query = $@"INSERT INTO KhachHang (HoTen, NamSinh, SoDienThoai, CCCD, DiemTichLuy, TrangThai)
+                             VALUES (N'{hoTen}', 
+                                    {namSinh}, 
+                                    '{soDienThoai}', 
+                                    '{cccd}',
+                                    {diemTichLuy},
+                                    1)";
+            int rowAffected = DataProvider.Instance.ExecuteNonQuery(query);
 
-        //public int UpdateCustomer( Customer)
-        //{
-        //    string query = $@"UPDATE KhachHang
-        //                 SET TenKH = N'{Customer.TenKh}', 
-        //                     NamSinh = '{Customer.Namsinh}',
-        //                     SoDienThoai = '{Customer.SDT}',
-        //                     DiemTichLuy = '{Customer.Diemtichluy}',
-        //                     CCCD = '{Customer.CCCD}'
-        //                 WHERE MaKH = {Customer.MaKh}";
+            return rowAffected;
+        }
 
-        //    return DataProvider.Instance.ExecuteNonQuery(query);
-        //}
+        public int UpdateCustomer(int maKH, string hoTen, int namSinh, string soDienThoai, string cccd, int diemTichLuy)
+        {
+            string query = $@"UPDATE KhachHang
+                         SET HoTen = N'{hoTen}', 
+                             NamSinh = {namSinh},
+                             SoDienThoai = '{soDienThoai}',
+                             CCCD = '{cccd}',
+                             DiemTichLuy = {diemTichLuy}
+                         WHERE MaKhachHang = {maKH}";
 
-        //public int DeleteCustomer(int maKH)
-        //{
-        //    // Kiểm tra xem khách hàng có vé không
-        //    string checkQuery = $"SELECT COUNT(*) FROM Ve WHERE MaKhachHang = {maKH}";
-        //    int ticketCount = Convert.ToInt32(DataProvider.Instance.ExecuteScalar(checkQuery));
-            
-        //    if (ticketCount > 0)
-        //    {
-        //        return -1; // Trả về -1 nếu khách hàng đã có vé
-        //    }
-            
-        //    // Nếu không có vé, tiến hành xóa khách hàng
-        //    string deleteQuery = $"DELETE FROM KhachHang WHERE MaKH = {maKH}";
-        //    return DataProvider.Instance.ExecuteNonQuery(deleteQuery);
-        //}
+            return DataProvider.Instance.ExecuteNonQuery(query);
+        }
 
+        public int SoftDeleteCustomer(int maKH)
+        {
+            string query = $"UPDATE KhachHang SET TrangThai = 0 WHERE MaKhachHang = {maKH}";
+            return DataProvider.Instance.ExecuteNonQuery(query);
+        }
 
+        public DataTable SearchCustomer(string searchValue)
+        {
+            string query = $@"SELECT MaKhachHang AS ""Mã KH"",
+                                  HoTen AS ""Họ tên"",
+                                  NamSinh AS ""Năm sinh"",
+                                  SoDienThoai AS ""Số điện thoại"",
+                                  DiemTichLuy AS ""Điểm tích lũy"",
+                                  CCCD
+                           FROM KhachHang 
+                           WHERE TrangThai = 1 
+                           AND (
+                               CAST(MaKhachHang AS NVARCHAR) LIKE N'%{searchValue}%'
+                               OR HoTen LIKE N'%{searchValue}%'
+                               OR CAST(NamSinh AS NVARCHAR) LIKE N'%{searchValue}%'
+                               OR SoDienThoai LIKE N'%{searchValue}%'
+                               OR CCCD LIKE N'%{searchValue}%'
+                               OR CAST(DiemTichLuy AS NVARCHAR) LIKE N'%{searchValue}%'
+                           )";
+            return DataProvider.Instance.ExecuteQuery(query);
+        }
+
+        public List<string> GetAllPhoneNumbers()
+        {
+            string query = "SELECT SoDienThoai FROM KhachHang";
+            DataTable dt = DataProvider.Instance.ExecuteQuery(query);
+            List<string> phoneNumbers = new List<string>();
+            foreach (DataRow row in dt.Rows)
+            {
+                phoneNumbers.Add(row["SoDienThoai"].ToString());
+            }
+            return phoneNumbers;
+        }
+
+        public List<string> GetAllCCCDs()
+        {
+            string query = "SELECT CCCD FROM KhachHang";
+            DataTable dt = DataProvider.Instance.ExecuteQuery(query);
+            List<string> ccNumbers = new List<string>();
+            foreach (DataRow row in dt.Rows)
+            {
+                ccNumbers.Add(row["CCCD"].ToString());
+            }
+            return ccNumbers;
+        }
     }
 }

@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using DAL;
+using System.Data;
 
 namespace BLL
 {
@@ -24,6 +25,10 @@ namespace BLL
         public List<string> GetTheLoaiList()
         {
             return DAL.TheLoai_DAL.Instance.GetTheLoaiList();
+        }
+        public DataTable GetTheLoai()
+        {
+            return TheLoai_DAL.Instance.GetTheLoai();
         }
     }
 }

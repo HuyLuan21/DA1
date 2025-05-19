@@ -59,6 +59,42 @@ namespace BLL
             }
         }
 
+        public string ValidateInput(string soDienThoai, string cccd)
+        {
+            try
+            {
+                // Kiểm tra số điện thoại và CCCD có phải là số không
+                if (!soDienThoai.All(char.IsDigit))
+                {
+                    return "Số điện thoại phải chỉ chứa các ký tự số!";
+                }
+                if (!cccd.All(char.IsDigit))
+                {
+                    return "CCCD phải chỉ chứa các ký tự số!";
+                }
+
+                // Kiểm tra số điện thoại trùng với nhân viên khác
+                var staffPhones = GetAllPhoneNumbers();
+                if (staffPhones.Contains(soDienThoai))
+                {
+                    return "Số điện thoại này đã được đăng ký cho nhân viên khác!";
+                }
+
+                // Kiểm tra CCCD trùng với nhân viên khác
+                var staffCCCDs = GetAllCCCDs();
+                if (staffCCCDs.Contains(cccd))
+                {
+                    return "CCCD này đã được đăng ký cho nhân viên khác!";
+                }
+
+                return "Success";
+            }
+            catch (Exception ex)
+            {
+                return $"Lỗi: {ex.Message}";
+            }
+        }
+
         public string InsertStaff(string hoTen, DateTime ngaySinh, string diaChi, string soDienThoai, string cccd)
         {
             try
@@ -67,18 +103,11 @@ namespace BLL
                     string.IsNullOrEmpty(soDienThoai) || string.IsNullOrEmpty(cccd))
                     return "Vui lòng nhập đầy đủ thông tin!";
 
-                // Kiểm tra số điện thoại đã tồn tại
-                var existingPhones = GetAllPhoneNumbers();
-                if (existingPhones.Contains(soDienThoai))
+                // Kiểm tra trùng lặp và định dạng
+                string validateResult = ValidateInput(soDienThoai, cccd);
+                if (validateResult != "Success")
                 {
-                    return "Số điện thoại này đã được đăng ký cho nhân viên khác!";
-                }
-
-                // Kiểm tra CCCD đã tồn tại
-                var existingCCCDs = GetAllCCCDs();
-                if (existingCCCDs.Contains(cccd))
-                {
-                    return "Số CCCD này đã được đăng ký cho nhân viên khác!";
+                    return validateResult;
                 }
 
                 int newId = NhanVien_DAL.Instance.InsertStaff(hoTen, ngaySinh, diaChi, soDienThoai, cccd);
@@ -98,31 +127,26 @@ namespace BLL
                     string.IsNullOrEmpty(soDienThoai) || string.IsNullOrEmpty(cccd))
                     return "Vui lòng nhập đầy đủ thông tin!";
 
-                // Lấy danh sách số điện thoại và CCCD hiện có (trừ nhân viên đang cập nhật)
-                var currentPhones = GetAllPhoneNumbers();
-                var currentCCCDs = GetAllCCCDs();
-                
-                // Kiểm tra số điện thoại trùng (ngoại trừ của chính nhân viên này)
+                // Lấy thông tin nhân viên hiện tại
                 DataTable staffData = GetStaff();
                 string currentPhone = staffData.AsEnumerable()
                     .Where(row => Convert.ToInt32(row["Mã nhân viên"]) == maNV)
                     .Select(row => row["Số điện thoại"].ToString())
                     .FirstOrDefault();
 
-                if (currentPhone != soDienThoai && currentPhones.Contains(soDienThoai))
-                {
-                    return "Số điện thoại này đã được đăng ký cho nhân viên khác!";
-                }
-
-                // Kiểm tra CCCD trùng (ngoại trừ của chính nhân viên này)
                 string currentCCCD = staffData.AsEnumerable()
                     .Where(row => Convert.ToInt32(row["Mã nhân viên"]) == maNV)
                     .Select(row => row["CCCD"].ToString())
                     .FirstOrDefault();
 
-                if (currentCCCD != cccd && currentCCCDs.Contains(cccd))
+                // Nếu số điện thoại hoặc CCCD thay đổi, kiểm tra trùng lặp
+                if (currentPhone != soDienThoai || currentCCCD != cccd)
                 {
-                    return "Số CCCD này đã được đăng ký cho nhân viên khác!";
+                    string validateResult = ValidateInput(soDienThoai, cccd);
+                    if (validateResult != "Success")
+                    {
+                        return validateResult;
+                    }
                 }
 
                 int result = NhanVien_DAL.Instance.UpdateStaff(maNV, hoTen, ngaySinh, diaChi, soDienThoai, cccd);

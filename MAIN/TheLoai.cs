@@ -17,14 +17,9 @@ namespace DA1
             InitializeComponent();
         }
 
-        private void panel3_Paint(object sender, PaintEventArgs e)
+        private void TheLoai_Load(object sender, EventArgs e)
         {
-
-        }
-
-        private void Cate_id_Click(object sender, EventArgs e)
-        {
-
+            Theloai_grv.DataSource = BLL.TheLoai_BLL.Instance.GetTheLoai();
         }
     }
 }

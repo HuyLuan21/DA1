@@ -49,19 +49,22 @@
             this.label1 = new System.Windows.Forms.Label();
             this.Lenght = new System.Windows.Forms.Label();
             this.Description = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
             this.Name_of_movie = new System.Windows.Forms.Label();
             this.Name_tbx = new System.Windows.Forms.TextBox();
             this.Movie_id = new System.Windows.Forms.Label();
             this.Id_tbx = new System.Windows.Forms.TextBox();
             this.checkedListBox1 = new System.Windows.Forms.CheckedListBox();
             this.Movies_grv = new System.Windows.Forms.DataGridView();
+            this.search_tbx = new System.Windows.Forms.TextBox();
+            this.richTextBox1 = new System.Windows.Forms.RichTextBox();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.Movies_grv)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
             // 
+            this.panel1.Controls.Add(this.richTextBox1);
+            this.panel1.Controls.Add(this.search_tbx);
             this.panel1.Controls.Add(this.button1);
             this.panel1.Controls.Add(this.remove_btn);
             this.panel1.Controls.Add(this.edit_btn);
@@ -82,7 +85,6 @@
             this.panel1.Controls.Add(this.label1);
             this.panel1.Controls.Add(this.Lenght);
             this.panel1.Controls.Add(this.Description);
-            this.panel1.Controls.Add(this.textBox1);
             this.panel1.Controls.Add(this.Name_of_movie);
             this.panel1.Controls.Add(this.Name_tbx);
             this.panel1.Controls.Add(this.Movie_id);
@@ -99,42 +101,46 @@
             // button1
             // 
             this.button1.Font = new System.Drawing.Font("Times New Roman", 12F);
-            this.button1.Location = new System.Drawing.Point(329, 300);
+            this.button1.Location = new System.Drawing.Point(1083, 299);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(91, 48);
+            this.button1.Size = new System.Drawing.Size(98, 46);
             this.button1.TabIndex = 45;
-            this.button1.Text = "Tìm";
+            this.button1.Text = "Tìm kiếm";
             this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // remove_btn
             // 
             this.remove_btn.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.remove_btn.Location = new System.Drawing.Point(227, 299);
+            this.remove_btn.Location = new System.Drawing.Point(209, 299);
             this.remove_btn.Name = "remove_btn";
             this.remove_btn.Size = new System.Drawing.Size(96, 48);
             this.remove_btn.TabIndex = 44;
             this.remove_btn.Text = "Xóa";
             this.remove_btn.UseVisualStyleBackColor = true;
+            this.remove_btn.Click += new System.EventHandler(this.remove_btn_Click);
             // 
             // edit_btn
             // 
             this.edit_btn.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.edit_btn.Location = new System.Drawing.Point(123, 299);
+            this.edit_btn.Location = new System.Drawing.Point(109, 300);
             this.edit_btn.Name = "edit_btn";
-            this.edit_btn.Size = new System.Drawing.Size(98, 48);
+            this.edit_btn.Size = new System.Drawing.Size(94, 47);
             this.edit_btn.TabIndex = 43;
             this.edit_btn.Text = "Sửa ";
             this.edit_btn.UseVisualStyleBackColor = true;
+            this.edit_btn.Click += new System.EventHandler(this.edit_btn_Click);
             // 
             // add_btn
             // 
             this.add_btn.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.add_btn.Location = new System.Drawing.Point(12, 299);
             this.add_btn.Name = "add_btn";
-            this.add_btn.Size = new System.Drawing.Size(105, 48);
+            this.add_btn.Size = new System.Drawing.Size(91, 48);
             this.add_btn.TabIndex = 42;
             this.add_btn.Text = "Thêm ";
             this.add_btn.UseVisualStyleBackColor = true;
+            this.add_btn.Click += new System.EventHandler(this.add_btn_Click);
             // 
             // label3
             // 
@@ -149,7 +155,7 @@
             // dateTimePicker2
             // 
             this.dateTimePicker2.Font = new System.Drawing.Font("Times New Roman", 12F);
-            this.dateTimePicker2.Location = new System.Drawing.Point(693, 101);
+            this.dateTimePicker2.Location = new System.Drawing.Point(532, 104);
             this.dateTimePicker2.Name = "dateTimePicker2";
             this.dateTimePicker2.Size = new System.Drawing.Size(231, 30);
             this.dateTimePicker2.TabIndex = 40;
@@ -157,35 +163,35 @@
             // dateTimePicker1
             // 
             this.dateTimePicker1.Font = new System.Drawing.Font("Times New Roman", 12F);
-            this.dateTimePicker1.Location = new System.Drawing.Point(693, 57);
+            this.dateTimePicker1.Location = new System.Drawing.Point(532, 58);
             this.dateTimePicker1.Name = "dateTimePicker1";
             this.dateTimePicker1.Size = new System.Drawing.Size(231, 30);
             this.dateTimePicker1.TabIndex = 39;
             // 
             // proc_tbx
             // 
-            this.proc_tbx.Location = new System.Drawing.Point(693, 264);
+            this.proc_tbx.Location = new System.Drawing.Point(950, 102);
             this.proc_tbx.Name = "proc_tbx";
             this.proc_tbx.Size = new System.Drawing.Size(231, 30);
             this.proc_tbx.TabIndex = 38;
             // 
             // age_tbx
             // 
-            this.age_tbx.Location = new System.Drawing.Point(693, 219);
+            this.age_tbx.Location = new System.Drawing.Point(950, 58);
             this.age_tbx.Name = "age_tbx";
             this.age_tbx.Size = new System.Drawing.Size(231, 30);
             this.age_tbx.TabIndex = 37;
             // 
             // director_tbx
             // 
-            this.director_tbx.Location = new System.Drawing.Point(693, 180);
+            this.director_tbx.Location = new System.Drawing.Point(140, 107);
             this.director_tbx.Name = "director_tbx";
-            this.director_tbx.Size = new System.Drawing.Size(231, 30);
+            this.director_tbx.Size = new System.Drawing.Size(218, 30);
             this.director_tbx.TabIndex = 36;
             // 
             // nation_tbx
             // 
-            this.nation_tbx.Location = new System.Drawing.Point(693, 137);
+            this.nation_tbx.Location = new System.Drawing.Point(950, 13);
             this.nation_tbx.Name = "nation_tbx";
             this.nation_tbx.Size = new System.Drawing.Size(231, 30);
             this.nation_tbx.TabIndex = 35;
@@ -194,7 +200,7 @@
             // 
             this.proc_year.AutoSize = true;
             this.proc_year.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold);
-            this.proc_year.Location = new System.Drawing.Point(519, 271);
+            this.proc_year.Location = new System.Drawing.Point(806, 104);
             this.proc_year.Name = "proc_year";
             this.proc_year.Size = new System.Drawing.Size(85, 23);
             this.proc_year.TabIndex = 34;
@@ -204,7 +210,7 @@
             // 
             this.Age.AutoSize = true;
             this.Age.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold);
-            this.Age.Location = new System.Drawing.Point(519, 226);
+            this.Age.Location = new System.Drawing.Point(806, 63);
             this.Age.Name = "Age";
             this.Age.Size = new System.Drawing.Size(135, 23);
             this.Age.TabIndex = 33;
@@ -214,7 +220,7 @@
             // 
             this.Director.AutoSize = true;
             this.Director.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold);
-            this.Director.Location = new System.Drawing.Point(519, 187);
+            this.Director.Location = new System.Drawing.Point(14, 111);
             this.Director.Name = "Director";
             this.Director.Size = new System.Drawing.Size(95, 23);
             this.Director.TabIndex = 32;
@@ -224,16 +230,15 @@
             // 
             this.Nation.AutoSize = true;
             this.Nation.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold);
-            this.Nation.Location = new System.Drawing.Point(519, 144);
+            this.Nation.Location = new System.Drawing.Point(806, 20);
             this.Nation.Name = "Nation";
             this.Nation.Size = new System.Drawing.Size(98, 23);
             this.Nation.TabIndex = 31;
             this.Nation.Text = "Quốc Gia:";
-            this.Nation.Click += new System.EventHandler(this.label3_Click);
             // 
             // lenght_tbx
             // 
-            this.lenght_tbx.Location = new System.Drawing.Point(693, 22);
+            this.lenght_tbx.Location = new System.Drawing.Point(532, 13);
             this.lenght_tbx.Name = "lenght_tbx";
             this.lenght_tbx.Size = new System.Drawing.Size(231, 30);
             this.lenght_tbx.TabIndex = 30;
@@ -242,18 +247,17 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold);
-            this.label2.Location = new System.Drawing.Point(522, 108);
+            this.label2.Location = new System.Drawing.Point(400, 107);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(92, 23);
             this.label2.TabIndex = 28;
             this.label2.Text = "Ngày KT:";
-            this.label2.Click += new System.EventHandler(this.label2_Click);
             // 
             // label1
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold);
-            this.label1.Location = new System.Drawing.Point(523, 64);
+            this.label1.Location = new System.Drawing.Point(400, 65);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(94, 23);
             this.label1.TabIndex = 27;
@@ -263,7 +267,7 @@
             // 
             this.Lenght.AutoSize = true;
             this.Lenght.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold);
-            this.Lenght.Location = new System.Drawing.Point(523, 29);
+            this.Lenght.Location = new System.Drawing.Point(400, 20);
             this.Lenght.Name = "Lenght";
             this.Lenght.Size = new System.Drawing.Size(109, 23);
             this.Lenght.TabIndex = 26;
@@ -273,19 +277,11 @@
             // 
             this.Description.AutoSize = true;
             this.Description.Font = new System.Drawing.Font("Times New Roman", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Description.Location = new System.Drawing.Point(12, 107);
+            this.Description.Location = new System.Drawing.Point(399, 148);
             this.Description.Name = "Description";
             this.Description.Size = new System.Drawing.Size(81, 25);
             this.Description.TabIndex = 24;
             this.Description.Text = "Mô tả:";
-            // 
-            // textBox1
-            // 
-            this.textBox1.Location = new System.Drawing.Point(141, 107);
-            this.textBox1.Multiline = true;
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(218, 30);
-            this.textBox1.TabIndex = 23;
             // 
             // Name_of_movie
             // 
@@ -299,7 +295,7 @@
             // 
             // Name_tbx
             // 
-            this.Name_tbx.Location = new System.Drawing.Point(141, 64);
+            this.Name_tbx.Location = new System.Drawing.Point(140, 56);
             this.Name_tbx.Name = "Name_tbx";
             this.Name_tbx.Size = new System.Drawing.Size(218, 30);
             this.Name_tbx.TabIndex = 21;
@@ -313,11 +309,10 @@
             this.Movie_id.Size = new System.Drawing.Size(111, 25);
             this.Movie_id.TabIndex = 20;
             this.Movie_id.Text = "Mã phim:";
-            this.Movie_id.Click += new System.EventHandler(this.Movie_id_Click);
             // 
             // Id_tbx
             // 
-            this.Id_tbx.Location = new System.Drawing.Point(141, 21);
+            this.Id_tbx.Location = new System.Drawing.Point(140, 11);
             this.Id_tbx.Name = "Id_tbx";
             this.Id_tbx.Size = new System.Drawing.Size(218, 30);
             this.Id_tbx.TabIndex = 19;
@@ -354,6 +349,21 @@
             this.Movies_grv.TabIndex = 0;
             this.Movies_grv.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.Movies_grv_CellClick);
             // 
+            // search_tbx
+            // 
+            this.search_tbx.Location = new System.Drawing.Point(846, 309);
+            this.search_tbx.Name = "search_tbx";
+            this.search_tbx.Size = new System.Drawing.Size(231, 30);
+            this.search_tbx.TabIndex = 46;
+            // 
+            // richTextBox1
+            // 
+            this.richTextBox1.Location = new System.Drawing.Point(504, 148);
+            this.richTextBox1.Name = "richTextBox1";
+            this.richTextBox1.Size = new System.Drawing.Size(259, 132);
+            this.richTextBox1.TabIndex = 48;
+            this.richTextBox1.Text = "";
+            // 
             // Phim
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -377,7 +387,6 @@
         private System.Windows.Forms.DataGridView Movies_grv;
         private System.Windows.Forms.CheckedListBox checkedListBox1;
         private System.Windows.Forms.Label Description;
-        private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.Label Name_of_movie;
         private System.Windows.Forms.TextBox Name_tbx;
         private System.Windows.Forms.Label Movie_id;
@@ -401,5 +410,7 @@
         private System.Windows.Forms.Button edit_btn;
         private System.Windows.Forms.Button add_btn;
         private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.TextBox search_tbx;
+        private System.Windows.Forms.RichTextBox richTextBox1;
     }
 }
