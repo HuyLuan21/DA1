@@ -1,4 +1,5 @@
-﻿using System;
+﻿using BLL;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -34,6 +35,28 @@ namespace DA1
 
         private void Id_tbx_TextChanged(object sender, EventArgs e)
         {
+
+        }
+
+        private void Movies_time_Load(object sender, EventArgs e)
+        {
+            Time_grv.DataSource = CaChieu_BLL.Instance.GetCaChieuTable();
+            Movies_id_cbx.DataSource = Phim_BLL.Instance.GetPhimId();
+            Phongchieu_cbx.DataSource = PhongChieu_BLL.Instance.GetPhongChieuNames();
+        }
+
+     
+
+        private void Movies_id_cbx_SelectedValueChanged(object sender, EventArgs e)
+        {
+            Name_tbx.Text = Phim_BLL.Instance.GetPhimbyId(int.Parse(Movies_id_cbx.SelectedValue.ToString()));
+        }
+
+        private void Time_grv_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            if(e.RowIndex <0) return;
+            Cachieu_tbx.Text = Time_grv.Rows[e.RowIndex].Cells[0].Value.ToString();
+            Movies_id_cbx.Text = Time_grv.Rows[e.RowIndex].Cells[0].Value.ToString();
 
         }
     }

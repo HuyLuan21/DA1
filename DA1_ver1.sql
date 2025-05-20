@@ -219,3 +219,6 @@ INNER JOIN TheLoaiPhim tlp ON pt.MaTLP = tlp.MaTLP WHERE p.MaPhim = 2
 SELECT MaPhim AS "Mã phim", TenPhim AS "Tên phim", Mota AS "Mô tả", ThoiLuong AS "Thời lượng", NgayKhoiChieu AS "Ngày khởi chiếu", NgayKetThuc AS "Ngày kết thúc", QuocGia AS "Quốc gia",DaoDien AS"Đạo diễn",GioiHanTuoi AS"Giới hạn tuổi", NamSX AS "Năm sản xuất" FROM phim;
 SELECT * FROM TaiKhoan
 SELECT TenDangNhap AS " Tên đăng nhập",MatKhau AS "Mật khẩu",LoaiTK AS "Loại TK",MaNV AS "Mã nhân viên" FROM TaiKhoan
+
+SELECT * from PhongChieu
+SELECT MaPhongChieu AS "Mã phòng chiếu",TenPhong AS "Tên phòng",TongSoGhe AS "Tổng số ghế" ,SoHangGhe AS "Số hàng ghế",SoGhe1Hang AS "Số ghế 1 hàng" FROM PhongChieu

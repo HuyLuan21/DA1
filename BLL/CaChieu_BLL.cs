@@ -29,5 +29,9 @@ namespace BLL
         {
             return CaChieu_DAL.Instance.GetCaChieuByMovie(movieName);
         }
+        public DataTable GetCaChieuTable()
+        {
+            return CaChieu_DAL.Instance.GetCaChieuTable();
+        }
     }
 }

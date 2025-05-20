@@ -29,6 +29,8 @@
         private void InitializeComponent()
         {
             this.panel1 = new System.Windows.Forms.Panel();
+            this.richTextBox1 = new System.Windows.Forms.RichTextBox();
+            this.search_tbx = new System.Windows.Forms.TextBox();
             this.button1 = new System.Windows.Forms.Button();
             this.remove_btn = new System.Windows.Forms.Button();
             this.edit_btn = new System.Windows.Forms.Button();
@@ -55,8 +57,6 @@
             this.Id_tbx = new System.Windows.Forms.TextBox();
             this.checkedListBox1 = new System.Windows.Forms.CheckedListBox();
             this.Movies_grv = new System.Windows.Forms.DataGridView();
-            this.search_tbx = new System.Windows.Forms.TextBox();
-            this.richTextBox1 = new System.Windows.Forms.RichTextBox();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.Movies_grv)).BeginInit();
             this.SuspendLayout();
@@ -97,6 +97,21 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(1249, 614);
             this.panel1.TabIndex = 0;
+            // 
+            // richTextBox1
+            // 
+            this.richTextBox1.Location = new System.Drawing.Point(504, 148);
+            this.richTextBox1.Name = "richTextBox1";
+            this.richTextBox1.Size = new System.Drawing.Size(259, 132);
+            this.richTextBox1.TabIndex = 48;
+            this.richTextBox1.Text = "";
+            // 
+            // search_tbx
+            // 
+            this.search_tbx.Location = new System.Drawing.Point(846, 309);
+            this.search_tbx.Name = "search_tbx";
+            this.search_tbx.Size = new System.Drawing.Size(231, 30);
+            this.search_tbx.TabIndex = 46;
             // 
             // button1
             // 
@@ -339,6 +354,7 @@
             this.Movies_grv.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.Movies_grv.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.Movies_grv.Location = new System.Drawing.Point(12, 353);
+            this.Movies_grv.MultiSelect = false;
             this.Movies_grv.Name = "Movies_grv";
             this.Movies_grv.ReadOnly = true;
             this.Movies_grv.RowHeadersVisible = false;
@@ -348,21 +364,6 @@
             this.Movies_grv.Size = new System.Drawing.Size(1225, 249);
             this.Movies_grv.TabIndex = 0;
             this.Movies_grv.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.Movies_grv_CellClick);
-            // 
-            // search_tbx
-            // 
-            this.search_tbx.Location = new System.Drawing.Point(846, 309);
-            this.search_tbx.Name = "search_tbx";
-            this.search_tbx.Size = new System.Drawing.Size(231, 30);
-            this.search_tbx.TabIndex = 46;
-            // 
-            // richTextBox1
-            // 
-            this.richTextBox1.Location = new System.Drawing.Point(504, 148);
-            this.richTextBox1.Name = "richTextBox1";
-            this.richTextBox1.Size = new System.Drawing.Size(259, 132);
-            this.richTextBox1.TabIndex = 48;
-            this.richTextBox1.Text = "";
             // 
             // Phim
             // 

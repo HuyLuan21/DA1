@@ -32,6 +32,11 @@ namespace DAL
             return DataProvider.Instance.ExecuteQuery(query);
         }
 
+        public DataTable GetCaChieuTable()
+        {
+            string query = "SELECT\r\n    cc.MaCaChieu AS \"Mã ca chiếu\",\r\n    p.MaPhim AS \"Mã Phim\",\r\n    p.TenPhim AS \"Tên Phim\",\r\n    pc.TenPhong AS \"Phòng chiếu\",\r\n    cc.ThoiGianChieu AS \"Thời gian chiếu\",\r\n    cc.ThoiGianKetThuc AS \"Thời gian kết thúc\",\r\n    cc.GiaVe AS \"Giá\"\r\nFROM\r\n    CaChieu cc\r\nJOIN\r\n    Phim p ON cc.MaPhim = p.MaPhim\r\nJOIN\r\n    PhongChieu pc ON cc.MaPhongChieu = pc.MaPhongChieu;";
+            return DataProvider.Instance.ExecuteQuery(query);
+        }
 
     }
 }

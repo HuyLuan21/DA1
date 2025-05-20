@@ -95,5 +95,23 @@ namespace DAL
             string query = $"DELETE FROM phim WHERE MaPhim = {maphim}";
             return DataProvider.Instance.ExecuteNonQuery(query);
         }
+        public string GetPhimbyID(int maphim)
+        {
+            string query = $"SELECT TenPhim FROM Phim WHERE MaPhim = {maphim}";
+            DataTable dt = DataProvider.Instance.ExecuteQuery(query);
+            if (dt.Rows.Count > 0)
+                return dt.Rows[0]["TenPhim"].ToString();
+            return string.Empty;
+        }
+        public List<string> GetPhimId()
+        {
+            string query = "SELECT MaPhim FROM Phim";
+            List<string> result = new List<string>();
+            foreach (DataRow row in DataProvider.Instance.ExecuteQuery(query).Rows)
+            {
+                result.Add(row["MaPhim"].ToString());
+            }
+            return result;
+        }
     }
 }

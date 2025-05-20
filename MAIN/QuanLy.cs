@@ -84,7 +84,7 @@ namespace DA1
         private void Room_btn_Click(object sender, EventArgs e)
         {
             content.Visible = true;
-            load_into_panel(new Phongchieu());
+            load_into_panel(new PhongChieu());
         }
 
    

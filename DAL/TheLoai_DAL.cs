@@ -36,5 +36,30 @@ namespace DAL
             string query = "SELECT MaTLP AS 'Mã thể loại', TenTLP AS 'Tên thể loại' FROM TheLoaiPhim";
             return DataProvider.Instance.ExecuteQuery(query);
         }
+     
+
+        // Thêm thể loại mới
+        public bool InsertTheLoai(string tenTheLoai)
+        {
+            string query = "INSERT INTO TheLoaiPhim (TenTLP) VALUES (N'" + tenTheLoai + "')";
+            int result = DataProvider.Instance.ExecuteNonQuery(query);
+            return result > 0;
+        }
+
+        // Sửa thể loại
+        public bool UpdateTheLoai(int maTheLoai, string tenTheLoaiMoi)
+        {
+            string query = "UPDATE TheLoaiPhim SET TenTLP = N'" + tenTheLoaiMoi + "' WHERE MaTLP = " + maTheLoai;
+            int result = DataProvider.Instance.ExecuteNonQuery(query);
+            return result > 0;
+        }
+
+        // Xóa thể loại
+        public bool DeleteTheLoai(int maTheLoai)
+        {
+            string query = "DELETE FROM TheLoaiPhim WHERE MaTLP = " + maTheLoai;
+            int result = DataProvider.Instance.ExecuteNonQuery(query);
+            return result > 0;
+        }
     }
-    }
+}

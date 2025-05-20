@@ -1,4 +1,5 @@
-﻿using System;
+﻿using DAL;
+using System;
 using System.Collections.Generic;
 using System.Data;
 using System.Linq;
@@ -99,6 +100,15 @@ namespace BLL
         {
             int result = DAL.Phim_DAL.Instance.DeletePhim(maphim);
             return result > 0 ? "Success" : "Xóa phim không thành công";
+        }
+
+        public List<string> GetPhimId()
+        {
+            return DAL.Phim_DAL.Instance.GetPhimId();
+        }
+        public string GetPhimbyId(int maphim)
+        {
+            return DAL.Phim_DAL.Instance.GetPhimbyID(maphim);
         }
     }
 }
