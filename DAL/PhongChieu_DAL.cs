@@ -54,5 +54,11 @@ namespace DAL
             }
             return result;
         }
+        public int GetMaPhongByTen(string tenPhong)
+        {
+            string query = $"SELECT MaPhongChieu FROM PhongChieu WHERE TenPhong = N'{tenPhong}'";
+            var result = DataProvider.Instance.ExecuteScalar(query);
+            return int.Parse(result);
+        }
     }
 }

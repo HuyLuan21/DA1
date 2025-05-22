@@ -222,3 +222,25 @@ SELECT TenDangNhap AS " Tên đăng nhập",MatKhau AS "Mật khẩu",LoaiTK AS 
 
 SELECT * from PhongChieu
 SELECT MaPhongChieu AS "Mã phòng chiếu",TenPhong AS "Tên phòng",TongSoGhe AS "Tổng số ghế" ,SoHangGhe AS "Số hàng ghế",SoGhe1Hang AS "Số ghế 1 hàng" FROM PhongChieu
+SELECT * FROM CaChieu 
+SELECT
+    cc.MaCaChieu AS "Mã ca chiếu",
+    p.MaPhim AS "Mã Phim",
+    p.TenPhim AS "Tên Phim",
+    pc.TenPhong AS "Phòng chiếu",
+    cc.ThoiGianChieu AS "Thời gian chiếu",
+    cc.ThoiGianKetThuc AS "Thời gian kết thúc",
+    cc.GiaVe AS "Giá"
+FROM
+    CaChieu cc
+JOIN
+    Phim p ON cc.MaPhim = p.MaPhim
+JOIN
+    PhongChieu pc ON cc.MaPhongChieu = pc.MaPhongChieu;
+
+
+    SELECT TenPhim FROM Phim
+    SELECT TenPhong FROM PhongChieu
+
+    INSERT Into CaChieu (MaCaChieu,ThoiGianChieu,ThoiGianKetThuc,GiaVe,MaPhongChieu,MaPhim)
+    VALUES (1,'2023-05-10 18:00:00','2023-05-10 20:30:00',120000,1,1)

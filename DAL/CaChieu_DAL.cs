@@ -38,5 +38,20 @@ namespace DAL
             return DataProvider.Instance.ExecuteQuery(query);
         }
 
+        public int InsertCaChieu(int maPhim, int maPhongChieu, string thoiGianChieu, string thoiGianKetThuc, int giaVe)
+        {
+            string query = $"INSERT INTO CaChieu (MaPhim, MaPhongChieu, ThoiGianChieu, ThoiGianKetThuc, GiaVe) VALUES ('{maPhim}', '{maPhongChieu}', '{thoiGianChieu}', '{thoiGianKetThuc}', '{giaVe}')";
+            return DataProvider.Instance.ExecuteNonQuery(query);
+        }
+        public int UpdateCaChieu(int maCaChieu, int maPhim, int maPhongChieu, string thoiGianChieu, string thoiGianKetThuc, int giaVe)
+        {
+            string query = $"UPDATE CaChieu SET MaPhim = '{maPhim}', MaPhongChieu = '{maPhongChieu}', ThoiGianChieu = '{thoiGianChieu:yyyy-MM-dd HH:mm:ss}', ThoiGianKetThuc = '{thoiGianKetThuc:yyyy-MM-dd HH:mm:ss}', GiaVe = '{giaVe}' WHERE MaCaChieu = '{maCaChieu}'";
+            return DataProvider.Instance.ExecuteNonQuery(query);
+        }
+        public int DeleteCaChieu(int maCaChieu)
+        {
+            string query = $"DELETE FROM CaChieu WHERE MaCaChieu = '{maCaChieu}'";
+            return DataProvider.Instance.ExecuteNonQuery(query);
+        }
     }
 }

@@ -282,6 +282,7 @@
             this.Ngaychieu.Name = "Ngaychieu";
             this.Ngaychieu.Size = new System.Drawing.Size(220, 32);
             this.Ngaychieu.TabIndex = 26;
+            this.Ngaychieu.ValueChanged += new System.EventHandler(this.Ngaychieu_ValueChanged);
             // 
             // Room
             // 
@@ -353,6 +354,7 @@
             this.remove_btn.TabIndex = 20;
             this.remove_btn.Text = "Xóa";
             this.remove_btn.UseVisualStyleBackColor = true;
+            this.remove_btn.Click += new System.EventHandler(this.remove_btn_Click);
             // 
             // edit_btn
             // 
@@ -363,6 +365,7 @@
             this.edit_btn.TabIndex = 19;
             this.edit_btn.Text = "Sửa ";
             this.edit_btn.UseVisualStyleBackColor = true;
+            this.edit_btn.Click += new System.EventHandler(this.edit_btn_Click);
             // 
             // add_btn
             // 
@@ -373,6 +376,7 @@
             this.add_btn.TabIndex = 18;
             this.add_btn.Text = "Thêm ";
             this.add_btn.UseVisualStyleBackColor = true;
+            this.add_btn.Click += new System.EventHandler(this.add_btn_Click);
             // 
             // Movies_time
             // 

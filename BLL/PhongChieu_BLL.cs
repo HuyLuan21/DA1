@@ -57,6 +57,10 @@ namespace BLL
         {
             return PhongChieu_DAL.Instance.GetPhongchieuName();
         }
-       
+        public int GetMaPhongByTen(string tenPhong)
+        {
+            return PhongChieu_DAL.Instance.GetMaPhongByTen(tenPhong);
+        }
+
     }
 }
