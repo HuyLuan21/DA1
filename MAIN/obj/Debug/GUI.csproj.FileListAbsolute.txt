@@ -96,3 +96,4 @@ C:\Users\Admin\source\repos\BTL\DA1\DA1\MAIN\obj\Debug\DA1.exe
 C:\Users\Admin\source\repos\BTL\DA1\DA1\MAIN\obj\Debug\DA1.pdb
 C:\Users\Admin\source\repos\BTL\DA1\DA1\MAIN\obj\Debug\DA1.BanVe.resources
 C:\Users\Admin\source\repos\BTL\DA1\DA1\MAIN\obj\Debug\DA1.LichChieuPhim.resources
+C:\Users\Admin\source\repos\BTL\DA1\DA1\MAIN\obj\Debug\DA1.Ve.resources

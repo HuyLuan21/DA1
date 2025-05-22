@@ -39,14 +39,10 @@ namespace DA1
             string selectedMovie = comboBox1.SelectedItem.ToString();
             dataGridView1.DataSource = CaChieu_BLL.Instance.GetCaChieuListByMovie(selectedMovie);
         }
-        /// <summary>
-        /// sử lý sự kiện bấm đặt vé
-        /// </summary>
-        /// <param name="sender"></param>
-        /// <param name="e"></param>
+ 
         private void button1_Click(object sender, EventArgs e)
         {
-
+           
         }
     }
 }

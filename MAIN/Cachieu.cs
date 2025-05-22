@@ -91,42 +91,6 @@ namespace DA1
 
         private void edit_btn_Click(object sender, EventArgs e)
         {
-            //try
-            //{
-            //    int maCaChieu = int.Parse(Cachieu_tbx.Text);
-            //    int maPhim = int.Parse(Movies_id_cbx.Text);
-            //    int maPhong = PhongChieu_BLL.Instance.GetMaPhongByTen(Phongchieu_cbx.Text);
-            //    DateTime ngayChieu = Ngaychieu.Value.Date;
-            //    DateTime gioChieu = Giochieu.Value;
-            //    DateTime thoiGianChieu = new DateTime(ngayChieu.Year, ngayChieu.Month, ngayChieu.Day, gioChieu.Hour, gioChieu.Minute, 0);
-            //    DateTime ngayKetThuc = Ketthuc.Value.Date;
-            //    DateTime gioKetThuc = GioKT.Value;
-            //    DateTime thoiGianKetThuc = new DateTime(ngayKetThuc.Year, ngayKetThuc.Month, ngayKetThuc.Day, gioKetThuc.Hour, gioKetThuc.Minute, 0);
-            //    int giaVe = int.Parse(GiaVe.Text);
-            //    if (CaChieu_BLL.Instance.IsScheduleConflict(maPhong, thoiGianChieu, thoiGianKetThuc, maCaChieu))
-            //    {
-            //        MessageBox.Show("Trùng lịch chiếu phòng này! Thời gian chiếu phải cách phim trước đó ít nhất 30 phút.");
-            //        return;
-            //    }
-            //    int result = CaChieu_BLL.Instance.UpdateCaChieu(maCaChieu, maPhim, maPhong, thoiGianChieu, thoiGianKetThuc, giaVe);
-            //    if (result > 0)
-            //    {
-            //        MessageBox.Show("Sửa ca chiếu thành công!");
-            //        Time_grv.DataSource = CaChieu_BLL.Instance.GetCaChieuTable();
-            //    }
-            //    else
-            //    {
-            //        MessageBox.Show("Sửa ca chiếu thất bại!");
-            //    }
-            //}
-            //catch (Exception ex)
-            //{
-            //    MessageBox.Show("Lỗi: " + ex.Message);
-            //}
-        }
-
-        private void add_btn_Click(object sender, EventArgs e)
-        {
             try
             {
                 int maCaChieu = int.Parse(Cachieu_tbx.Text);
@@ -136,15 +100,67 @@ namespace DA1
                 DateTime dt_giochieu = Giochieu.Value;          
                 string giochieu = dt_giochieu.ToString("HH:mm:ss");
                 DateTime dt_ngayketthuc = Ketthuc.Value.Date;
-                string ngaykt   = dt_ngaychieu.ToString("yyyy-MM-dd");      
+                string ngaykt = dt_ngaychieu.ToString("yyyy-MM-dd");      
                 DateTime dt_giokt = GioKT.Value;
                 string giokt = dt_giokt.ToString("HH:mm:ss");
                 int giaVe = int.Parse(GiaVe.Text);
-                string thoiGianChieu = ngaychieu +" "+ giochieu;
-                string thoiGianKetThuc = ngaykt +" "+ giokt;
+                string thoiGianChieu = ngaychieu + " " + giochieu;
+                string thoiGianKetThuc = ngaykt + " " + giokt;
                 string tenphong = Phongchieu_cbx.Text;
-                int maPhong = PhongChieu_BLL.Instance.GetMaPhongByTen(tenphong);
 
+                // Kiểm tra điều kiện trước khi cập nhật
+                string validationResult = CaChieu_BLL.Instance.ValidateCaChieuInfo(tenphong, thoiGianChieu, thoiGianKetThuc, maCaChieu);
+                if (validationResult != "OK")
+                {
+                    MessageBox.Show(validationResult);
+                    return;
+                }
+
+                int maPhong = PhongChieu_BLL.Instance.GetMaPhongByTen(tenphong);
+                int result = CaChieu_BLL.Instance.UpdateCaChieu(maCaChieu, maPhim, maPhong, thoiGianChieu, thoiGianKetThuc, giaVe);
+                if (result > 0)
+                {
+                    MessageBox.Show("Cập nhật ca chiếu thành công!");
+                    Time_grv.DataSource = CaChieu_BLL.Instance.GetCaChieuTable();
+                }
+                else
+                {
+                    MessageBox.Show("Cập nhật ca chiếu thất bại!");
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Lỗi: " + ex.Message);
+            }
+        }
+
+        private void add_btn_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                int maPhim = int.Parse(Movies_id_cbx.Text);
+                DateTime dt_ngaychieu = Ngaychieu.Value.Date;
+                string ngaychieu = dt_ngaychieu.ToString("yyyy-MM-dd");
+                DateTime dt_giochieu = Giochieu.Value;          
+                string giochieu = dt_giochieu.ToString("HH:mm:ss");
+                DateTime dt_ngayketthuc = Ketthuc.Value.Date;
+                string ngaykt = dt_ngaychieu.ToString("yyyy-MM-dd");      
+                DateTime dt_giokt = GioKT.Value;
+                string giokt = dt_giokt.ToString("HH:mm:ss");
+                int giaVe = int.Parse(GiaVe.Text);
+                string thoiGianChieu = ngaychieu + " " + giochieu;
+                string thoiGianKetThuc = ngaykt + " " + giokt;
+                string tenphong = Phongchieu_cbx.Text;
+
+                // Kiểm tra điều kiện trước khi thêm mới
+                string validationResult = CaChieu_BLL.Instance.ValidateCaChieuInfo(tenphong, thoiGianChieu, thoiGianKetThuc);
+                if (validationResult != "OK")
+                {
+                    MessageBox.Show(validationResult);
+                    return;
+                }
+
+                int maPhong = PhongChieu_BLL.Instance.GetMaPhongByTen(tenphong);
                 int result = CaChieu_BLL.Instance.InsertCaChieu(maPhim, maPhong, thoiGianChieu, thoiGianKetThuc, giaVe);
                 if (result > 0)
                 {

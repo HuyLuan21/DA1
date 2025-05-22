@@ -31,8 +31,8 @@
             this.button1 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -66,15 +66,6 @@
             this.panel1.Size = new System.Drawing.Size(458, 80);
             this.panel1.TabIndex = 3;
             // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(12, 129);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(127, 22);
-            this.label2.TabIndex = 4;
-            this.label2.Text = "Tên tài khoản: ";
-            // 
             // label1
             // 
             this.label1.Font = new System.Drawing.Font("Times New Roman", 28.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -84,6 +75,15 @@
             this.label1.TabIndex = 0;
             this.label1.Text = "Welcome";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(12, 129);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(127, 22);
+            this.label2.TabIndex = 4;
+            this.label2.Text = "Tên tài khoản: ";
             // 
             // Chonchucnang
             // 

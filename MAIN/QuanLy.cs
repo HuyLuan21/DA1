@@ -108,7 +108,8 @@ namespace DA1
 
         private void Ticket_btn_Click(object sender, EventArgs e)
         {
-           
+          
+            
         }
 
         private void sidebar_Click(object sender, EventArgs e)
