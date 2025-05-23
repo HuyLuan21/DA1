@@ -19,6 +19,40 @@ namespace DAL
             }
         }
         private Datve_DAL() { }
-      
+
+        public DataTable GetDanhSachGheDaDat(int maCaChieu)
+        {
+            string query = $@"
+                SELECT 
+                    g.MaGheNgoi,
+                    g.HangGhe + CAST(g.SoGhe AS VARCHAR) as MaGhe,
+                    g.LoaiGheNgoi as LoaiGhe,
+                    CASE 
+                        WHEN v.MaVe IS NOT NULL THEN N'Đã đặt'
+                        ELSE N'Trống'
+                    END as TrangThai
+                FROM GheNgoi g
+                INNER JOIN PhongChieu pc ON g.MaPhongChieu = pc.MaPhongChieu
+                INNER JOIN CaChieu cc ON pc.MaPhongChieu = cc.MaPhongChieu
+                LEFT JOIN Ve v ON g.MaGheNgoi = v.MaGheNgoi AND v.MaCaChieu = {maCaChieu}
+                WHERE cc.MaCaChieu = {maCaChieu}
+                ORDER BY g.HangGhe, g.SoGhe";
+
+            return DataProvider.Instance.ExecuteQuery(query);
+        }
+
+        public bool DatVe(int maCaChieu, int maGheNgoi)
+        {
+            string query = $"INSERT INTO Ve (MaCaChieu, MaGheNgoi) VALUES ({maCaChieu}, {maGheNgoi})";
+            return DataProvider.Instance.ExecuteNonQuery(query) > 0;
+        }
+
+        public bool HuyVe(int maCaChieu, int maGheNgoi)
+        {
+            string query = $"DELETE FROM Ve WHERE MaCaChieu = {maCaChieu} AND MaGheNgoi = {maGheNgoi}";
+            return DataProvider.Instance.ExecuteNonQuery(query) > 0;
+        }
     }
-}
+    }
+
+

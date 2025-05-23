@@ -244,3 +244,20 @@ JOIN
 
     INSERT Into CaChieu (MaCaChieu,ThoiGianChieu,ThoiGianKetThuc,GiaVe,MaPhongChieu,MaPhim)
     VALUES (1,'2023-05-10 18:00:00','2023-05-10 20:30:00',120000,1,1)
+select * from ve 
+
+              SELECT 
+                    g.MaGheNgoi,
+                    g.HangGhe + CAST(g.SoGhe AS VARCHAR) as MaGhe,
+                    g.HangGhe,
+                    g.SoGhe,
+                    CASE 
+                        WHEN v.MaVe IS NOT NULL THEN N'Đã đặt'
+                        ELSE N'Trống'
+                    END as TrangThai
+                FROM GheNgoi g
+                INNER JOIN PhongChieu pc ON g.MaPhongChieu = pc.MaPhongChieu
+                INNER JOIN CaChieu cc ON pc.MaPhongChieu = cc.MaPhongChieu
+                LEFT JOIN Ve v ON g.MaGheNgoi = v.MaGheNgoi AND v.MaCaChieu = 1
+                WHERE cc.MaCaChieu = 1
+                ORDER BY g.HangGhe, g.SoGhe

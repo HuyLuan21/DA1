@@ -13,20 +13,24 @@ namespace DA1
 {
     public partial class LichChieuPhim : Form
     {
+       
         public LichChieuPhim()
         {
             InitializeComponent();
         }
-
+        int maCaChieu = 1 ;
+        int maPhongChieu = 1 ;
         private void Datve_Load(object sender, EventArgs e)
         {
-            comboBox1.Items.Clear();
+         
             var movieList = Phim_BLL.Instance.GetMovieListName();
             foreach (var movie in movieList)
             {
                 comboBox1.Items.Add(movie);
             }
             comboBox1.Sorted = true;
+            comboBox1.Items.Add("*");// cho caí này luôn luôn là phần tử cuối cùng
+
             comboBox1.SelectedIndex = 0;
 
 
@@ -37,12 +41,25 @@ namespace DA1
         {
             // cap nhat datagrid view theo combo box
             string selectedMovie = comboBox1.SelectedItem.ToString();
+            if (selectedMovie == "*")
+            {
+                dataGridView1.DataSource = CaChieu_BLL.Instance.GetCaChieuList();
+                return;
+            }
             dataGridView1.DataSource = CaChieu_BLL.Instance.GetCaChieuListByMovie(selectedMovie);
         }
  
         private void button1_Click(object sender, EventArgs e)
         {
-           
+            BanVe booking = new BanVe(maCaChieu, maPhongChieu);
+
+            booking.Show();
+        }
+
+        private void dataGridView1_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            int macachieu = Convert.ToInt32(dataGridView1.Rows[e.RowIndex].Cells[0].Value);
+            comboBox1.Text = dataGridView1.Rows[e.RowIndex].Cells[1].Value.ToString();
         }
     }
 }

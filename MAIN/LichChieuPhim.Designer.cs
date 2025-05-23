@@ -117,6 +117,7 @@
             this.dataGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dataGridView1.Size = new System.Drawing.Size(920, 501);
             this.dataGridView1.TabIndex = 0;
+            this.dataGridView1.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellClick);
             // 
             // sidebar
             // 
@@ -224,14 +225,14 @@
             this.label3.TabIndex = 0;
             this.label3.Text = "LỊCH CHIẾU PHIM ";
             // 
-            // Datve
+            // LichChieuPhim
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1249, 614);
             this.Controls.Add(this.background);
-            this.Name = "Datve";
-            this.Text = "Booking";
+            this.Name = "LichChieuPhim";
+            this.Text = "Lich chieu phim";
             this.Load += new System.EventHandler(this.Datve_Load);
             this.background.ResumeLayout(false);
             this.panel1.ResumeLayout(false);
