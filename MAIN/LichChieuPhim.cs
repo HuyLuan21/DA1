@@ -29,7 +29,6 @@ namespace DA1
                 comboBox1.Items.Add(movie);
             }
             comboBox1.Sorted = true;
-            comboBox1.Items.Add("*");// cho caí này luôn luôn là phần tử cuối cùng
 
             comboBox1.SelectedIndex = 0;
 
@@ -51,15 +50,14 @@ namespace DA1
  
         private void button1_Click(object sender, EventArgs e)
         {
-            BanVe booking = new BanVe(maCaChieu, maPhongChieu);
+            BanVe booking = new BanVe(maCaChieu);
 
             booking.Show();
         }
 
         private void dataGridView1_CellClick(object sender, DataGridViewCellEventArgs e)
         {
-            int macachieu = Convert.ToInt32(dataGridView1.Rows[e.RowIndex].Cells[0].Value);
-            comboBox1.Text = dataGridView1.Rows[e.RowIndex].Cells[1].Value.ToString();
+            maCaChieu = Convert.ToInt32(dataGridView1.Rows[e.RowIndex].Cells[0].Value);
         }
     }
 }

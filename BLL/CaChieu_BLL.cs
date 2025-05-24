@@ -133,5 +133,10 @@ namespace BLL
 
             return "OK";
         }
+
+        public int GetGiaVe(int maCaChieu)
+        {
+            return CaChieu_DAL.Instance.GetGiaVe(maCaChieu);
+        }
     }
 }

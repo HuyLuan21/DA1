@@ -53,5 +53,12 @@ namespace DAL
             string query = $"DELETE FROM CaChieu WHERE MaCaChieu = '{maCaChieu}'";
             return DataProvider.Instance.ExecuteNonQuery(query);
         }
+
+        public int GetGiaVe(int maCaChieu)
+        {
+            string query = $"SELECT GiaVe FROM CaChieu WHERE MaCaChieu = {maCaChieu}";
+            var result = DataProvider.Instance.ExecuteScalar(query);
+            return result != null ? Convert.ToInt32(result) : 0;
+        }
     }
 }

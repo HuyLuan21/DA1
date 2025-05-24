@@ -21,9 +21,9 @@ namespace BLL
             }
         }
             private Datve_BLL() { }
-        public DataTable GetDanhSachGheDaDat(int maCaChieu)
+        public DataTable GetDanhSachGhe(int maCaChieu)
         {
-            return Datve_DAL.Instance.GetDanhSachGheDaDat(maCaChieu);
+            return Datve_DAL.Instance.GetDanhSachGhe(maCaChieu);
         }
 
         public bool DatVe(int maCaChieu, int maGheNgoi)
@@ -31,9 +31,6 @@ namespace BLL
             return Datve_DAL.Instance.DatVe(maCaChieu, maGheNgoi);
         }
 
-        public bool HuyVe(int maCaChieu, int maGheNgoi)
-        {
-            return Datve_DAL.Instance.HuyVe(maCaChieu, maGheNgoi);
-        }
+        
     }
 }

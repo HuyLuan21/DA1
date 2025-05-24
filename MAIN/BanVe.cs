@@ -13,17 +13,18 @@ namespace DA1
 {
     public partial class BanVe : Form
     {
-        private int maCaChieu = 1;
-        private int maPhongChieu = 1;
+        private int maCaChieu;
+        private int giaVe;
         private List<Button> seatButtons;
-       
         private List<string> selectedSeats;
-        public BanVe(int maCaChieu, int maPhongChieu)
-        {
+       
+
+        public BanVe(int maCaChieu)
+        { 
             InitializeComponent();
-            setsoghe();
+            Setsoghe();
             this.maCaChieu = maCaChieu;
-            this.maPhongChieu = maPhongChieu;
+            this.giaVe = CaChieu_BLL.Instance.GetGiaVe(maCaChieu);
             this.seatButtons = new List<Button>();
             for (int i = 4; i <= 103; i++)
             {
@@ -31,14 +32,16 @@ namespace DA1
                 if (btn != null)
                 {
                     seatButtons.Add(btn);
+                    btn.Click += SeatButton_Click;
                 }
             }
 
-                this.selectedSeats = new List<string>();
+            this.selectedSeats = new List<string>();
             LoadSeatStatus();
+            UpdateTotalPrice();
         }
-
-        public void setsoghe()
+        
+        public void Setsoghe()
         {
             int soHang = 10;
             int soGhe1Hang = 10;
@@ -53,6 +56,7 @@ namespace DA1
                 var btn = this.Controls.Find($"button{i}", true).FirstOrDefault() as Button;
                 if (btn != null)
                     btn.Text = text;
+                     btn.FlatStyle = FlatStyle.Flat;
             }
         }
         private void LoadSeatStatus()
@@ -60,13 +64,17 @@ namespace DA1
             try
             {
                 // Lấy danh sách ghế đã đặt
-                var danhSachGhe = Datve_BLL.Instance.GetDanhSachGheDaDat(maCaChieu);
+                var danhSachGhe = Datve_BLL.Instance.GetDanhSachGhe(maCaChieu);
 
                 List<string> daDat = new List<string>();
 
                 foreach (DataRow row in danhSachGhe.Rows)
                 {
-                    daDat.Add(string.Join("", row["MaGhe"].ToString().Split(' ')));
+                    if(row["TrangThai"].ToString() == "Đã đặt")
+                    {
+                        daDat.Add(row["MaGhe"].ToString());
+                    }
+                      
                 }
 
                 for (int i = 0; i < this.seatButtons.Count; i++)
@@ -75,7 +83,7 @@ namespace DA1
                     if (btn != null)
                     {
                         btn.Enabled = !daDat.Contains(btn.Text.ToString().ToUpper());
-                        btn.BackColor = daDat.Contains(btn.Text.ToString().ToUpper()) ? Color.DarkGray : Color.White;
+                        btn.BackColor = daDat.Contains(btn.Text.ToString().ToUpper()) ? Color.FromArgb(189, 189, 189) : Color.White;
                     }
                 }
             }
@@ -84,7 +92,8 @@ namespace DA1
                 MessageBox.Show("Lỗi khi tải trạng thái ghế: " + ex.Message);
             }
         }
-        private void btnDatVe_Click(object sender, EventArgs e)
+    
+        private void Thanhtoan_Click(object sender, EventArgs e)
         {
             if (selectedSeats.Count == 0)
             {
@@ -94,11 +103,17 @@ namespace DA1
 
             try
             {
+                // Kiểm tra thông tin khách hàng
+                if ((textBox4, textBox5, textBox6, textBox7,numericUpDown2).(string.IsNullOrEmpty))
+                {
+                    MessageBox.Show("Vui lòng nhập đầy đủ thông tin khách hàng!");
+                    return;
+                }
                 // Thực hiện đặt vé
                 foreach (string maGhe in selectedSeats)
                 {
                     // Lấy MaGheNgoi từ MaGhe
-                    var danhSachGhe = Datve_BLL.Instance.GetDanhSachGheDaDat(maCaChieu);
+                    var danhSachGhe = Datve_BLL.Instance.GetDanhSachGhe(maCaChieu);
                     var row = danhSachGhe.Select($"MaGhe = '{maGhe}'").FirstOrDefault();
                     if (row != null)
                     {
@@ -122,5 +137,74 @@ namespace DA1
             }
         }
 
+        private void UpdateTotalPrice()
+        {
+            int totalPrice = selectedSeats.Count * giaVe;
+            textBox1.Text = $"{totalPrice:N0} VNĐ";
+        }
+
+        private void SeatButton_Click(object sender, EventArgs e)
+        {
+            Button clickedButton = sender as Button;
+            if (clickedButton != null)
+            {
+                string seatNumber = clickedButton.Text;
+                
+                if (selectedSeats.Contains(seatNumber))
+                {
+                    // Nếu ghế đã được chọn thì bỏ chọn
+                    selectedSeats.Remove(seatNumber);
+                    clickedButton.BackColor = Color.White;
+                }
+                else
+                {
+                    // Nếu ghế chưa được chọn thì thêm vào danh sách
+                    selectedSeats.Add(seatNumber);
+                    clickedButton.BackColor = Color.FromArgb(255, 152, 0);
+                }
+                UpdateTotalPrice();
+            }
+        }
+
+        private void Ismember_CheckedChanged(object sender, EventArgs e)
+        {
+            if (Ismember.Checked == true) {
+                ChonKH chonKH = new ChonKH(this);
+                chonKH.ShowDialog();
+                textBox7.Enabled = true;
+                Sudung.Enabled = true;
+                textBox4.Enabled = false;
+                textBox5.Enabled = false;
+                textBox6.Enabled = false;
+                textBox7.Enabled = false;
+                numericUpDown2.Enabled = false;
+            }
+            else
+            {
+                textBox7.Enabled = false;
+                Sudung.Enabled = false;
+                textBox4.Text = "";
+                textBox5.Text = "";
+                textBox6.Text = "";
+                textBox7.Text = "";
+             
+                textBox4.Enabled = true;
+                textBox5.Enabled = true;
+                textBox6.Enabled = true;
+                numericUpDown2.Enabled = true;
+            }
+        }
+        public void SetKhachHangInfo(int maKH, string tenKH, int namsinh, string sdt, int diemtichluy, string cccd)
+        {
+            textBox4.Text = tenKH;
+            textBox5.Text = sdt;
+            textBox6.Text = cccd;
+            textBox7.Text = diemtichluy.ToString();
+            DateTime date = DateTime.Now;
+            numericUpDown2.Maximum = date.Year;
+            numericUpDown2.Minimum = 1900;
+            numericUpDown2.Value = namsinh;
+
+        }
     }
 }
