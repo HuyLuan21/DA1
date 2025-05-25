@@ -42,7 +42,16 @@ namespace DAL
             string query = $"INSERT INTO Ve (MaCaChieu, MaGheNgoi) VALUES ({maCaChieu}, {maGheNgoi})";
             return DataProvider.Instance.ExecuteNonQuery(query) > 0;
         }
+
+        public DataTable GetVeByGheNgoi(int maGheNgoi)
+        {
+            string query = $@"SELECT TOP 1 MaVe 
+                             FROM Ve 
+                             WHERE MaGheNgoi = {maGheNgoi} 
+                             ORDER BY MaVe DESC";
+            return DataProvider.Instance.ExecuteQuery(query);
+        }
     }
-    }
+}
 
 

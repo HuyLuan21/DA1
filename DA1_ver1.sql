@@ -426,3 +426,13 @@ SELECT * from GheNgoi
 -- END
 
 -- Trigger cập nhật trạng thái ghế khi thêm vé mới
+select * from PhongChieu
+select * from GheNgoi
+select * from CaChieu
+select * from Ve
+select * from HoaDon
+select * from ChiTietHoaDon
+select * from KhachHang
+select * from NhanVien
+select * from TaiKhoan
+select * from HoaDon

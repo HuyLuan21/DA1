@@ -37,6 +37,8 @@
             this.panel7 = new System.Windows.Forms.Panel();
             this.panel4 = new System.Windows.Forms.Panel();
             this.button4 = new System.Windows.Forms.Button();
+            this.button10 = new System.Windows.Forms.Button();
+            this.button8 = new System.Windows.Forms.Button();
             this.button94 = new System.Windows.Forms.Button();
             this.button95 = new System.Windows.Forms.Button();
             this.button96 = new System.Windows.Forms.Button();
@@ -129,9 +131,7 @@
             this.button23 = new System.Windows.Forms.Button();
             this.button13 = new System.Windows.Forms.Button();
             this.button12 = new System.Windows.Forms.Button();
-            this.button8 = new System.Windows.Forms.Button();
             this.button9 = new System.Windows.Forms.Button();
-            this.button10 = new System.Windows.Forms.Button();
             this.button11 = new System.Windows.Forms.Button();
             this.button6 = new System.Windows.Forms.Button();
             this.button7 = new System.Windows.Forms.Button();
@@ -141,19 +141,19 @@
             this.panel2 = new System.Windows.Forms.Panel();
             this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.numericUpDown2 = new System.Windows.Forms.NumericUpDown();
+            this.NamSinh = new System.Windows.Forms.NumericUpDown();
             this.label13 = new System.Windows.Forms.Label();
             this.Ismember = new System.Windows.Forms.CheckBox();
             this.Sudung = new System.Windows.Forms.Button();
-            this.textBox7 = new System.Windows.Forms.TextBox();
-            this.textBox6 = new System.Windows.Forms.TextBox();
+            this.diemTichLuy = new System.Windows.Forms.TextBox();
+            this.Id = new System.Windows.Forms.TextBox();
             this.label8 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
-            this.numericUpDown1 = new System.Windows.Forms.NumericUpDown();
+            this.CongThem = new System.Windows.Forms.NumericUpDown();
             this.label6 = new System.Windows.Forms.Label();
-            this.textBox5 = new System.Windows.Forms.TextBox();
+            this.Sdt = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
-            this.textBox4 = new System.Windows.Forms.TextBox();
+            this.TenKH = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
             this.panel5 = new System.Windows.Forms.Panel();
             this.Huy = new System.Windows.Forms.Button();
@@ -171,8 +171,8 @@
             this.panel2.SuspendLayout();
             this.flowLayoutPanel1.SuspendLayout();
             this.groupBox1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.NamSinh)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.CongThem)).BeginInit();
             this.panel5.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -362,6 +362,24 @@
             this.button4.TabIndex = 102;
             this.button4.Text = "A0";
             this.button4.UseVisualStyleBackColor = true;
+            // 
+            // button10
+            // 
+            this.button10.Location = new System.Drawing.Point(273, 98);
+            this.button10.Name = "button10";
+            this.button10.Size = new System.Drawing.Size(81, 31);
+            this.button10.TabIndex = 7;
+            this.button10.Text = "A6";
+            this.button10.UseVisualStyleBackColor = true;
+            // 
+            // button8
+            // 
+            this.button8.Location = new System.Drawing.Point(447, 98);
+            this.button8.Name = "button8";
+            this.button8.Size = new System.Drawing.Size(81, 31);
+            this.button8.TabIndex = 9;
+            this.button8.Text = "A4";
+            this.button8.UseVisualStyleBackColor = true;
             // 
             // button94
             // 
@@ -1192,15 +1210,6 @@
             this.button12.Text = "A8";
             this.button12.UseVisualStyleBackColor = true;
             // 
-            // button8
-            // 
-            this.button8.Location = new System.Drawing.Point(447, 98);
-            this.button8.Name = "button8";
-            this.button8.Size = new System.Drawing.Size(81, 31);
-            this.button8.TabIndex = 9;
-            this.button8.Text = "A4";
-            this.button8.UseVisualStyleBackColor = true;
-            // 
             // button9
             // 
             this.button9.Location = new System.Drawing.Point(360, 98);
@@ -1209,15 +1218,6 @@
             this.button9.TabIndex = 8;
             this.button9.Text = "A5";
             this.button9.UseVisualStyleBackColor = true;
-            // 
-            // button10
-            // 
-            this.button10.Location = new System.Drawing.Point(273, 98);
-            this.button10.Name = "button10";
-            this.button10.Size = new System.Drawing.Size(81, 31);
-            this.button10.TabIndex = 7;
-            this.button10.Text = "A6";
-            this.button10.UseVisualStyleBackColor = true;
             // 
             // button11
             // 
@@ -1300,19 +1300,19 @@
             // 
             // groupBox1
             // 
-            this.groupBox1.Controls.Add(this.numericUpDown2);
+            this.groupBox1.Controls.Add(this.NamSinh);
             this.groupBox1.Controls.Add(this.label13);
             this.groupBox1.Controls.Add(this.Ismember);
             this.groupBox1.Controls.Add(this.Sudung);
-            this.groupBox1.Controls.Add(this.textBox7);
-            this.groupBox1.Controls.Add(this.textBox6);
+            this.groupBox1.Controls.Add(this.diemTichLuy);
+            this.groupBox1.Controls.Add(this.Id);
             this.groupBox1.Controls.Add(this.label8);
             this.groupBox1.Controls.Add(this.label7);
-            this.groupBox1.Controls.Add(this.numericUpDown1);
+            this.groupBox1.Controls.Add(this.CongThem);
             this.groupBox1.Controls.Add(this.label6);
-            this.groupBox1.Controls.Add(this.textBox5);
+            this.groupBox1.Controls.Add(this.Sdt);
             this.groupBox1.Controls.Add(this.label5);
-            this.groupBox1.Controls.Add(this.textBox4);
+            this.groupBox1.Controls.Add(this.TenKH);
             this.groupBox1.Controls.Add(this.label4);
             this.groupBox1.ForeColor = System.Drawing.Color.WhiteSmoke;
             this.groupBox1.Location = new System.Drawing.Point(3, 3);
@@ -1322,12 +1322,12 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Khách hàng";
             // 
-            // numericUpDown2
+            // NamSinh
             // 
-            this.numericUpDown2.Location = new System.Drawing.Point(590, 116);
-            this.numericUpDown2.Name = "numericUpDown2";
-            this.numericUpDown2.Size = new System.Drawing.Size(120, 30);
-            this.numericUpDown2.TabIndex = 14;
+            this.NamSinh.Location = new System.Drawing.Point(590, 116);
+            this.NamSinh.Name = "NamSinh";
+            this.NamSinh.Size = new System.Drawing.Size(120, 30);
+            this.NamSinh.TabIndex = 14;
             // 
             // label13
             // 
@@ -1353,26 +1353,27 @@
             // 
             this.Sudung.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(76)))), ((int)(((byte)(175)))), ((int)(((byte)(80)))));
             this.Sudung.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.Sudung.Location = new System.Drawing.Point(318, 185);
+            this.Sudung.Location = new System.Drawing.Point(318, 183);
             this.Sudung.Name = "Sudung";
             this.Sudung.Size = new System.Drawing.Size(112, 32);
             this.Sudung.TabIndex = 11;
             this.Sudung.Text = "Sử dụng";
             this.Sudung.UseVisualStyleBackColor = false;
+            this.Sudung.Click += new System.EventHandler(this.Sudung_Click);
             // 
-            // textBox7
+            // diemTichLuy
             // 
-            this.textBox7.Location = new System.Drawing.Point(164, 186);
-            this.textBox7.Name = "textBox7";
-            this.textBox7.Size = new System.Drawing.Size(120, 30);
-            this.textBox7.TabIndex = 10;
+            this.diemTichLuy.Location = new System.Drawing.Point(164, 185);
+            this.diemTichLuy.Name = "diemTichLuy";
+            this.diemTichLuy.Size = new System.Drawing.Size(120, 30);
+            this.diemTichLuy.TabIndex = 10;
             // 
-            // textBox6
+            // Id
             // 
-            this.textBox6.Location = new System.Drawing.Point(531, 57);
-            this.textBox6.Name = "textBox6";
-            this.textBox6.Size = new System.Drawing.Size(179, 30);
-            this.textBox6.TabIndex = 9;
+            this.Id.Location = new System.Drawing.Point(531, 57);
+            this.Id.Name = "Id";
+            this.Id.Size = new System.Drawing.Size(179, 30);
+            this.Id.TabIndex = 9;
             // 
             // label8
             // 
@@ -1386,18 +1387,18 @@
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(9, 196);
+            this.label7.Location = new System.Drawing.Point(11, 193);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(122, 22);
             this.label7.TabIndex = 7;
             this.label7.Text = "Điểm tích lũy:";
             // 
-            // numericUpDown1
+            // CongThem
             // 
-            this.numericUpDown1.Location = new System.Drawing.Point(164, 249);
-            this.numericUpDown1.Name = "numericUpDown1";
-            this.numericUpDown1.Size = new System.Drawing.Size(120, 30);
-            this.numericUpDown1.TabIndex = 6;
+            this.CongThem.Location = new System.Drawing.Point(164, 249);
+            this.CongThem.Name = "CongThem";
+            this.CongThem.Size = new System.Drawing.Size(120, 30);
+            this.CongThem.TabIndex = 6;
             // 
             // label6
             // 
@@ -1408,12 +1409,12 @@
             this.label6.TabIndex = 5;
             this.label6.Text = "CCCD:";
             // 
-            // textBox5
+            // Sdt
             // 
-            this.textBox5.Location = new System.Drawing.Point(164, 121);
-            this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(266, 30);
-            this.textBox5.TabIndex = 4;
+            this.Sdt.Location = new System.Drawing.Point(164, 121);
+            this.Sdt.Name = "Sdt";
+            this.Sdt.Size = new System.Drawing.Size(266, 30);
+            this.Sdt.TabIndex = 4;
             // 
             // label5
             // 
@@ -1424,12 +1425,12 @@
             this.label5.TabIndex = 3;
             this.label5.Text = "Số điện thoại:";
             // 
-            // textBox4
+            // TenKH
             // 
-            this.textBox4.Location = new System.Drawing.Point(164, 57);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(266, 30);
-            this.textBox4.TabIndex = 2;
+            this.TenKH.Location = new System.Drawing.Point(164, 57);
+            this.TenKH.Name = "TenKH";
+            this.TenKH.Size = new System.Drawing.Size(266, 30);
+            this.TenKH.TabIndex = 2;
             // 
             // label4
             // 
@@ -1555,8 +1556,8 @@
             this.flowLayoutPanel1.ResumeLayout(false);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.NamSinh)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.CongThem)).EndInit();
             this.panel5.ResumeLayout(false);
             this.panel5.PerformLayout();
             this.ResumeLayout(false);
@@ -1579,16 +1580,16 @@
         private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel1;
         private System.Windows.Forms.GroupBox groupBox1;
-        private System.Windows.Forms.TextBox textBox4;
+        private System.Windows.Forms.TextBox TenKH;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.TextBox textBox5;
+        private System.Windows.Forms.TextBox Sdt;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Button Sudung;
-        private System.Windows.Forms.TextBox textBox7;
-        private System.Windows.Forms.TextBox textBox6;
+        private System.Windows.Forms.TextBox diemTichLuy;
+        private System.Windows.Forms.TextBox Id;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.NumericUpDown numericUpDown1;
+        private System.Windows.Forms.NumericUpDown CongThem;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Button button14;
         private System.Windows.Forms.Button button15;
@@ -1699,7 +1700,7 @@
         private System.Windows.Forms.Label label12;
         private System.Windows.Forms.CheckBox Ismember;
         private System.Windows.Forms.Button button4;
-        private System.Windows.Forms.NumericUpDown numericUpDown2;
+        private System.Windows.Forms.NumericUpDown NamSinh;
         private System.Windows.Forms.Label label13;
     }
 }

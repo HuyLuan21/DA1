@@ -31,6 +31,9 @@ namespace BLL
             return Datve_DAL.Instance.DatVe(maCaChieu, maGheNgoi);
         }
 
-        
+        public DataTable GetVeByGheNgoi(int maGheNgoi)
+        {
+            return Datve_DAL.Instance.GetVeByGheNgoi(maGheNgoi);
+        }
     }
 }

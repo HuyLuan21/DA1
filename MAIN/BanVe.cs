@@ -15,9 +15,13 @@ namespace DA1
     {
         private int maCaChieu;
         private int giaVe;
+        private int lastPrice = 0;
+
         private List<Button> seatButtons;
         private List<string> selectedSeats;
-       
+        private int discount = 0;
+        private int usedPoints = 0;
+        private int maKH = 0; // Thêm biến để lưu mã khách hàng
 
         public BanVe(int maCaChieu)
         { 
@@ -57,10 +61,15 @@ namespace DA1
                 if (btn != null)
                     btn.Text = text;
                      btn.FlatStyle = FlatStyle.Flat;
+                diemTichLuy.Enabled = false;
+                CongThem.Enabled = false;
+                Sudung.Enabled = false;
+
             }
         }
         private void LoadSeatStatus()
         {
+          
             try
             {
                 // Lấy danh sách ghế đã đặt
@@ -77,9 +86,9 @@ namespace DA1
                       
                 }
 
-                for (int i = 0; i < this.seatButtons.Count; i++)
+                for (int i = 0; i < seatButtons.Count; i++)
                 {
-                    Button btn = this.seatButtons[i];
+                    Button btn = seatButtons[i];
                     if (btn != null)
                     {
                         btn.Enabled = !daDat.Contains(btn.Text.ToString().ToUpper());
@@ -104,15 +113,55 @@ namespace DA1
             try
             {
                 // Kiểm tra thông tin khách hàng
-                if ((textBox4, textBox5, textBox6, textBox7,numericUpDown2).(string.IsNullOrEmpty))
+                if (string.IsNullOrEmpty(TenKH.Text) || string.IsNullOrEmpty(Sdt.Text) || 
+                    string.IsNullOrEmpty(Id.Text))
                 {
                     MessageBox.Show("Vui lòng nhập đầy đủ thông tin khách hàng!");
                     return;
                 }
-                // Thực hiện đặt vé
+
+                // Xử lý thông tin khách hàng
+                if (Ismember.Checked)
+                {
+                    // Cập nhật khách hàng thành viên
+                    int diemMoi = int.Parse(diemTichLuy.Text) + (int)CongThem.Value - usedPoints;
+                    string result = KhachHang_BLL.Instance.UpdateCustomer(
+                        maKH,
+                        TenKH.Text.Trim(),
+                        (int)NamSinh.Value,
+                        Sdt.Text.Trim(),
+                        Id.Text.Trim(),
+                        diemMoi
+                    );
+
+                    if (result != "Success")
+                    {
+                        MessageBox.Show(result);
+                        return;
+                    }
+                }
+                else
+                {
+                    // Thêm khách hàng mới
+                    string result = KhachHang_BLL.Instance.InsertCustomer(
+                        TenKH.Text.Trim(),
+                        (int)NamSinh.Value,
+                        Sdt.Text.Trim(),
+                        Id.Text.Trim(),
+                        (int)CongThem.Value
+                    );
+
+                    if (result != "Success")
+                    {
+                        MessageBox.Show(result);
+                        return;
+                    }
+                }
+
+                // Thực hiện đặt vé và lưu chi tiết hóa đơn
+                //luu thong tin ve vao bang ve
                 foreach (string maGhe in selectedSeats)
                 {
-                    // Lấy MaGheNgoi từ MaGhe
                     var danhSachGhe = Datve_BLL.Instance.GetDanhSachGhe(maCaChieu);
                     var row = danhSachGhe.Select($"MaGhe = '{maGhe}'").FirstOrDefault();
                     if (row != null)
@@ -128,6 +177,20 @@ namespace DA1
                         throw new Exception($"Không tìm thấy thông tin ghế {maGhe}");
                     }
                 }
+                //viet hoa don cho khach hang
+                HoaDon_BLL.Instance.InsertHoaDon(maKH, maCaChieu, lastPrice);
+                //viet chi tiet hoa don cho khach hang
+                foreach (string maGhe in selectedSeats)
+                {
+                    var danhSachGhe = Datve_BLL.Instance.GetDanhSachGhe(maCaChieu);
+                    var row = danhSachGhe.Select($"MaGhe = '{maGhe}'").FirstOrDefault();
+                    if (row != null)
+                    {
+                        int maGheNgoi = Convert.ToInt32(row["MaGheNgoi"]);
+                        HoaDon_BLL.Instance.InsertChiTietHoaDon(maCaChieu, maGheNgoi, giaVe);
+                    }
+                }
+
                 MessageBox.Show("Đặt vé thành công!");
                 this.Close();
             }
@@ -137,10 +200,22 @@ namespace DA1
             }
         }
 
+        public void UpdateGia(int giamGia, int diemSudung)
+        {
+            discount = giamGia;
+            usedPoints = diemSudung;
+            UpdateTotalPrice();
+        }
+
         private void UpdateTotalPrice()
         {
+            int pluspoint = selectedSeats.Count * 10;
             int totalPrice = selectedSeats.Count * giaVe;
             textBox1.Text = $"{totalPrice:N0} VNĐ";
+            textBox3.Text = $"{discount:N0} VNĐ";
+            lastPrice = totalPrice - discount;
+            textBox2.Text = $"{lastPrice:N0} VNĐ";
+            CongThem.Value = pluspoint;
         }
 
         private void SeatButton_Click(object sender, EventArgs e)
@@ -171,40 +246,47 @@ namespace DA1
             if (Ismember.Checked == true) {
                 ChonKH chonKH = new ChonKH(this);
                 chonKH.ShowDialog();
-                textBox7.Enabled = true;
+                diemTichLuy.Enabled = false;
                 Sudung.Enabled = true;
-                textBox4.Enabled = false;
-                textBox5.Enabled = false;
-                textBox6.Enabled = false;
-                textBox7.Enabled = false;
-                numericUpDown2.Enabled = false;
+                TenKH.Enabled = false;
+                Sdt.Enabled = false;
+                Id.Enabled = false;
+                NamSinh.Enabled = false;
+               
             }
             else
             {
-                textBox7.Enabled = false;
+                TenKH.Text = "";
+                Sdt.Text = "";
+                Id.Text = "";
+                diemTichLuy.Text = "";
+                diemTichLuy.Enabled = false;
                 Sudung.Enabled = false;
-                textBox4.Text = "";
-                textBox5.Text = "";
-                textBox6.Text = "";
-                textBox7.Text = "";
-             
-                textBox4.Enabled = true;
-                textBox5.Enabled = true;
-                textBox6.Enabled = true;
-                numericUpDown2.Enabled = true;
+                TenKH.Enabled = true;
+                Sdt.Enabled = true;
+                Id.Enabled = true;
+                NamSinh.Enabled = true;
             }
         }
         public void SetKhachHangInfo(int maKH, string tenKH, int namsinh, string sdt, int diemtichluy, string cccd)
         {
-            textBox4.Text = tenKH;
-            textBox5.Text = sdt;
-            textBox6.Text = cccd;
-            textBox7.Text = diemtichluy.ToString();
+            this.maKH = maKH; // Lưu mã khách hàng
+            TenKH.Text = tenKH;
+            Sdt.Text = sdt;
+            Id.Text = cccd;
+            diemTichLuy.Text = diemtichluy.ToString();
             DateTime date = DateTime.Now;
-            numericUpDown2.Maximum = date.Year;
-            numericUpDown2.Minimum = 1900;
-            numericUpDown2.Value = namsinh;
+            NamSinh.Maximum = date.Year;
+            NamSinh.Minimum = 1900;
+            NamSinh.Value = namsinh;
+        }
 
+        private void Sudung_Click(object sender, EventArgs e)
+        {
+            int currentPoints = int.Parse(diemTichLuy.Text);
+
+            NhapDiem input = new NhapDiem(currentPoints, this);
+            input.ShowDialog();
         }
     }
 }

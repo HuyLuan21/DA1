@@ -43,6 +43,7 @@
   <ItemGroup>
     <Compile Include="Dangnhap_BLL.cs" />
     <Compile Include="Datve_BLL.cs" />
+    <Compile Include="HoaDon_BLL.cs" />
     <Compile Include="KhachHang_BLL.cs" />
     <Compile Include="CaChieu_BLL.cs" />
     <Compile Include="Nhanvien_BLL.cs" />

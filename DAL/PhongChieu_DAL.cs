@@ -28,6 +28,7 @@ namespace DAL
         }
         public bool InsertPhongChieu(string tenPhong, int tongSoGhe, int soHangGhe, int soGhe1Hang)
         {
+           
             string query = "INSERT INTO PhongChieu (TenPhong, TongSoGhe, SoHangGhe, SoGhe1Hang) VALUES (N'" + tenPhong + "', " + tongSoGhe + ", " + soHangGhe + ", " + soGhe1Hang + ")";
             int result = DataProvider.Instance.ExecuteNonQuery(query);
             return result > 0;

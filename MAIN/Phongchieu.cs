@@ -7,7 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-
+using BLL;
 namespace DA1
 {
     public partial class PhongChieu : Form
@@ -19,7 +19,7 @@ namespace DA1
 
         private void PhongChieu_Load(object sender, EventArgs e)
         {
-            PhongChieu_grv.DataSource = BLL.PhongChieu_BLL.Instance.GetPhongChieu();
+            PhongChieu_grv.DataSource = PhongChieu_BLL.Instance.GetPhongChieu();
         }
 
         private void add_btn_Click(object sender, EventArgs e)
@@ -37,15 +37,16 @@ namespace DA1
                 int soHangGhe = Convert.ToInt32(SoHangGhe_tbx.Text);
                 int soGhe1Hang = Convert.ToInt32(SoGhe1Hang_tbx.Text);
 
-                if (BLL.PhongChieu_BLL.Instance.InsertPhongChieu(Name_tbx.Text, tongSoGhe, soHangGhe, soGhe1Hang))
+                string message;
+                if (PhongChieu_BLL.Instance.InsertPhongChieu(Name_tbx.Text, tongSoGhe, soHangGhe, soGhe1Hang, out message))
                 {
-                    MessageBox.Show("Thêm phòng chiếu thành công!");
-                    PhongChieu_grv.DataSource = BLL.PhongChieu_BLL.Instance.GetPhongChieu();
+                    MessageBox.Show(message, "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    PhongChieu_grv.DataSource = PhongChieu_BLL.Instance.GetPhongChieu();
                     ClearInputs();
                 }
                 else
                 {
-                    MessageBox.Show("Thêm phòng chiếu thất bại! Vui lòng kiểm tra lại thông tin.");
+                    MessageBox.Show(message, "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 }
             }
             catch
@@ -76,15 +77,16 @@ namespace DA1
                 int soHangGhe = Convert.ToInt32(SoHangGhe_tbx.Text);
                 int soGhe1Hang = Convert.ToInt32(SoGhe1Hang_tbx.Text);
 
-                if (BLL.PhongChieu_BLL.Instance.UpdatePhongChieu(maPhongChieu, Name_tbx.Text, tongSoGhe, soHangGhe, soGhe1Hang))
+                string message;
+                if (PhongChieu_BLL.Instance.UpdatePhongChieu(maPhongChieu, Name_tbx.Text, tongSoGhe, soHangGhe, soGhe1Hang, out message))
                 {
-                    MessageBox.Show("Sửa phòng chiếu thành công!");
-                    PhongChieu_grv.DataSource = BLL.PhongChieu_BLL.Instance.GetPhongChieu();
+                    MessageBox.Show(message, "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    PhongChieu_grv.DataSource = PhongChieu_BLL.Instance.GetPhongChieu();
                     ClearInputs();
                 }
                 else
                 {
-                    MessageBox.Show("Sửa phòng chiếu thất bại! Vui lòng kiểm tra lại thông tin.");
+                    MessageBox.Show(message, "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 }
             }
             catch
@@ -105,10 +107,10 @@ namespace DA1
                 MessageBoxButtons.YesNo) == DialogResult.Yes)
             {
                 int maPhongChieu = Convert.ToInt32(Id_tbx.Text);
-                if (BLL.PhongChieu_BLL.Instance.DeletePhongChieu(maPhongChieu))
+                if (PhongChieu_BLL.Instance.DeletePhongChieu(maPhongChieu))
                 {
                     MessageBox.Show("Xóa phòng chiếu thành công!");
-                    PhongChieu_grv.DataSource = BLL.PhongChieu_BLL.Instance.GetPhongChieu();
+                    PhongChieu_grv.DataSource = PhongChieu_BLL.Instance.GetPhongChieu();
                     ClearInputs();
                 }
                 else
