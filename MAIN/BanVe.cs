@@ -43,6 +43,8 @@ namespace DA1
             this.selectedSeats = new List<string>();
             LoadSeatStatus();
             UpdateTotalPrice();
+            // Gán event cho nút Hủy
+            Huy.Click += Huy_Click;
         }
         
         public void Setsoghe()
@@ -159,7 +161,9 @@ namespace DA1
                 }
 
                 // Thực hiện đặt vé và lưu chi tiết hóa đơn
-                //luu thong tin ve vao bang ve
+                //viet hoa don cho khach hang
+                int maHD = HoaDon_BLL.Instance.InsertHoaDon(maKH, maCaChieu, lastPrice);
+                //luu thong tin ve vao bang ve va chi tiet hoa don
                 foreach (string maGhe in selectedSeats)
                 {
                     var danhSachGhe = Datve_BLL.Instance.GetDanhSachGhe(maCaChieu);
@@ -171,23 +175,21 @@ namespace DA1
                         {
                             throw new Exception($"Không thể đặt ghế {maGhe}");
                         }
+                        // Lấy mã vé vừa tạo
+                        var veTable = Datve_BLL.Instance.GetVeByGheNgoi(maGheNgoi);
+                        if (veTable.Rows.Count > 0)
+                        {
+                            int maVe = Convert.ToInt32(veTable.Rows[0]["MaVe"]);
+                            HoaDon_BLL.Instance.InsertChiTietHoaDon(maHD, maVe, giaVe);
+                        }
+                        else
+                        {
+                            throw new Exception($"Không tìm thấy mã vé cho ghế {maGhe}");
+                        }
                     }
                     else
                     {
                         throw new Exception($"Không tìm thấy thông tin ghế {maGhe}");
-                    }
-                }
-                //viet hoa don cho khach hang
-                HoaDon_BLL.Instance.InsertHoaDon(maKH, maCaChieu, lastPrice);
-                //viet chi tiet hoa don cho khach hang
-                foreach (string maGhe in selectedSeats)
-                {
-                    var danhSachGhe = Datve_BLL.Instance.GetDanhSachGhe(maCaChieu);
-                    var row = danhSachGhe.Select($"MaGhe = '{maGhe}'").FirstOrDefault();
-                    if (row != null)
-                    {
-                        int maGheNgoi = Convert.ToInt32(row["MaGheNgoi"]);
-                        HoaDon_BLL.Instance.InsertChiTietHoaDon(maCaChieu, maGheNgoi, giaVe);
                     }
                 }
 
@@ -287,6 +289,11 @@ namespace DA1
 
             NhapDiem input = new NhapDiem(currentPoints, this);
             input.ShowDialog();
+        }
+
+        private void Huy_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }

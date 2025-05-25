@@ -33,7 +33,7 @@ namespace DA1
             comboBox1.SelectedIndex = 0;
 
 
-            dataGridView1.DataSource = CaChieu_BLL.Instance.GetCaChieuList();
+            Cachieu.DataSource = CaChieu_BLL.Instance.GetCaChieuList();
         }
 
         private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
@@ -42,10 +42,10 @@ namespace DA1
             string selectedMovie = comboBox1.SelectedItem.ToString();
             if (selectedMovie == "*")
             {
-                dataGridView1.DataSource = CaChieu_BLL.Instance.GetCaChieuList();
+                Cachieu.DataSource = CaChieu_BLL.Instance.GetCaChieuList();
                 return;
             }
-            dataGridView1.DataSource = CaChieu_BLL.Instance.GetCaChieuListByMovie(selectedMovie);
+            Cachieu.DataSource = CaChieu_BLL.Instance.GetCaChieuListByMovie(selectedMovie);
         }
  
         private void button1_Click(object sender, EventArgs e)
@@ -57,7 +57,7 @@ namespace DA1
 
         private void dataGridView1_CellClick(object sender, DataGridViewCellEventArgs e)
         {
-            maCaChieu = Convert.ToInt32(dataGridView1.Rows[e.RowIndex].Cells[0].Value);
+            maCaChieu = Convert.ToInt32(Cachieu.Rows[e.RowIndex].Cells[0].Value);
         }
     }
 }

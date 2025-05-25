@@ -1,4 +1,5 @@
-﻿using System;
+﻿using BLL;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -15,6 +16,19 @@ namespace DA1
         public Ve()
         {
             InitializeComponent();
+           
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            Cachieu.DataSource = CaChieu_BLL.Instance.GetCaChieuList();
+        }
+
+  
+
+        private void Cachieu_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
         }
     }
 }

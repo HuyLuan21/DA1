@@ -1468,6 +1468,7 @@
             this.Huy.TabIndex = 7;
             this.Huy.Text = "Hủy";
             this.Huy.UseVisualStyleBackColor = false;
+            this.Huy.Click += new System.EventHandler(this.Huy_Click);
             // 
             // Thanhtoan
             // 

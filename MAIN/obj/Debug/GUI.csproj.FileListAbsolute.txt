@@ -99,3 +99,4 @@ C:\Users\Admin\source\repos\BTL\DA1\DA1\MAIN\obj\Debug\DA1.LichChieuPhim.resourc
 C:\Users\Admin\source\repos\BTL\DA1\DA1\MAIN\obj\Debug\DA1.Ve.resources
 C:\Users\Admin\source\repos\BTL\DA1\DA1\MAIN\obj\Debug\DA1.ChonKH.resources
 C:\Users\Admin\source\repos\BTL\DA1\DA1\MAIN\obj\Debug\DA1.NhapDiem.resources
+C:\Users\Admin\source\repos\BTL\DA1\DA1\MAIN\obj\Debug\DA1.HoaDon.resources
