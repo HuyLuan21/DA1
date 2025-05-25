@@ -26,17 +26,27 @@ namespace DA1
             bool isAdmin = Dangnhap_BLL.Instance.ismanager(username);
             if (result)
             {
-                if(isAdmin)
+                string tenDangNhap = Username_tbx.Text.Trim();
+                int maNhanVien = Dangnhap_BLL.Instance.GetMaNhanVienByTenDangNhap(tenDangNhap);
+                if (maNhanVien > 0)
                 {
-                    Chonchucnang control = new Chonchucnang(username);
-                    control.ShowDialog();
+                    if(isAdmin)
+                    {
+                        Chonchucnang control = new Chonchucnang(username,maNhanVien);
+                        control.ShowDialog();
+                        this.Close(); // Đóng form đăng nhập sau khi mở form Chonchucnang
+                    }
+                    else
+                    {
+                        LichChieuPhim bkg = new LichChieuPhim(maNhanVien);
+                        bkg.ShowDialog();
+                        this.Close(); // Đóng form đăng nhập sau khi mở form LichChieuPhim
+                    }
                 }
                 else
                 {
-                    LichChieuPhim bkg = new LichChieuPhim();
-                    bkg.ShowDialog();
+                    MessageBox.Show("Không tìm thấy mã nhân viên!");
                 }
-              
             }
             else
             {
@@ -44,20 +54,6 @@ namespace DA1
             }
         }
 
-        private void DangNhap_FormClosing(object sender, FormClosingEventArgs e)
-        {
-            if (e.CloseReason == CloseReason.UserClosing)
-            {
-                // Hiển thị hộp thoại xác nhận
-                DialogResult result = MessageBox.Show("Bạn thực sự muốn thoát?", "Xác nhận",
-                    MessageBoxButtons.YesNo,
-                    MessageBoxIcon.Question);
-                // Nếu người dùng chọn "No", hủy việc đóng form
-                if (result == DialogResult.No)
-                {
-                    e.Cancel = true;
-                }
-            }
-        }
+       
     }
 }

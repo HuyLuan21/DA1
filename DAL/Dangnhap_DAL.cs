@@ -31,5 +31,11 @@ namespace DAL
             int count = Convert.ToInt32(DataProvider.Instance.ExecuteScalar(query));
             return count > 0;
         }
+        public int GetMaNhanVienByTenDangNhap(string tenDangNhap)
+        {
+            string query = $"SELECT MaNV FROM TaiKhoan WHERE TenDangNhap = '{tenDangNhap}'";
+            var result = DataProvider.Instance.ExecuteScalar(query);
+            return result != null ? Convert.ToInt32(result) : -1;
+        }
     }
 }

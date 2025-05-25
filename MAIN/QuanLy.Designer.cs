@@ -34,11 +34,12 @@
             Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges borderEdges3 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges();
             Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges borderEdges4 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges();
             Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges borderEdges5 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges();
-            Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges borderEdges6 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges();
             Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges borderEdges7 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges();
             Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges borderEdges8 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges();
             Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges borderEdges9 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges();
             Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges borderEdges10 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges();
+            Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges borderEdges11 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges();
+            Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges borderEdges6 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges();
             this.background = new Bunifu.UI.WinForms.BunifuGradientPanel();
             this.sidebar = new Bunifu.UI.WinForms.BunifuPanel();
             this.Ticket_btn = new Bunifu.UI.WinForms.BunifuButton.BunifuButton();
@@ -53,6 +54,7 @@
             this.Staff_btn = new Bunifu.UI.WinForms.BunifuButton.BunifuButton();
             this.Database_btn = new Bunifu.UI.WinForms.BunifuButton.BunifuButton();
             this.content = new Bunifu.UI.WinForms.BunifuPanel();
+            this.HoaDon = new Bunifu.UI.WinForms.BunifuButton.BunifuButton();
             this.background.SuspendLayout();
             this.sidebar.SuspendLayout();
             this.Nav.SuspendLayout();
@@ -77,7 +79,6 @@
             this.background.Quality = 10;
             this.background.Size = new System.Drawing.Size(1212, 813);
             this.background.TabIndex = 1;
-            this.background.Click += new System.EventHandler(this.bunifuGradientPanel1_Click);
             // 
             // sidebar
             // 
@@ -98,7 +99,6 @@
             this.sidebar.ShowBorders = false;
             this.sidebar.Size = new System.Drawing.Size(147, 715);
             this.sidebar.TabIndex = 1;
-            this.sidebar.Click += new System.EventHandler(this.sidebar_Click);
             // 
             // Ticket_btn
             // 
@@ -553,6 +553,7 @@
             // Nav
             // 
             this.Nav.BackColor = System.Drawing.Color.Black;
+            this.Nav.Controls.Add(this.HoaDon);
             this.Nav.Controls.Add(this.income_btn);
             this.Nav.Controls.Add(this.Account_btn);
             this.Nav.Controls.Add(this.Customer_btn);
@@ -563,7 +564,6 @@
             this.Nav.Name = "Nav";
             this.Nav.Size = new System.Drawing.Size(1212, 98);
             this.Nav.TabIndex = 1;
-            this.Nav.Paint += new System.Windows.Forms.PaintEventHandler(this.Nav_Paint);
             // 
             // income_btn
             // 
@@ -584,11 +584,11 @@
             this.income_btn.ColorContrastOnClick = 45;
             this.income_btn.ColorContrastOnHover = 45;
             this.income_btn.Cursor = System.Windows.Forms.Cursors.Default;
-            borderEdges6.BottomLeft = true;
-            borderEdges6.BottomRight = true;
-            borderEdges6.TopLeft = true;
-            borderEdges6.TopRight = true;
-            this.income_btn.CustomizableEdges = borderEdges6;
+            borderEdges7.BottomLeft = true;
+            borderEdges7.BottomRight = true;
+            borderEdges7.TopLeft = true;
+            borderEdges7.TopRight = true;
+            this.income_btn.CustomizableEdges = borderEdges7;
             this.income_btn.DialogResult = System.Windows.Forms.DialogResult.None;
             this.income_btn.DisabledBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(191)))), ((int)(((byte)(191)))));
             this.income_btn.DisabledFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
@@ -674,11 +674,11 @@
             this.Account_btn.ColorContrastOnClick = 45;
             this.Account_btn.ColorContrastOnHover = 45;
             this.Account_btn.Cursor = System.Windows.Forms.Cursors.Default;
-            borderEdges7.BottomLeft = true;
-            borderEdges7.BottomRight = true;
-            borderEdges7.TopLeft = true;
-            borderEdges7.TopRight = true;
-            this.Account_btn.CustomizableEdges = borderEdges7;
+            borderEdges8.BottomLeft = true;
+            borderEdges8.BottomRight = true;
+            borderEdges8.TopLeft = true;
+            borderEdges8.TopRight = true;
+            this.Account_btn.CustomizableEdges = borderEdges8;
             this.Account_btn.DialogResult = System.Windows.Forms.DialogResult.None;
             this.Account_btn.DisabledBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(191)))), ((int)(((byte)(191)))));
             this.Account_btn.DisabledFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
@@ -764,11 +764,11 @@
             this.Customer_btn.ColorContrastOnClick = 45;
             this.Customer_btn.ColorContrastOnHover = 45;
             this.Customer_btn.Cursor = System.Windows.Forms.Cursors.Default;
-            borderEdges8.BottomLeft = true;
-            borderEdges8.BottomRight = true;
-            borderEdges8.TopLeft = true;
-            borderEdges8.TopRight = true;
-            this.Customer_btn.CustomizableEdges = borderEdges8;
+            borderEdges9.BottomLeft = true;
+            borderEdges9.BottomRight = true;
+            borderEdges9.TopLeft = true;
+            borderEdges9.TopRight = true;
+            this.Customer_btn.CustomizableEdges = borderEdges9;
             this.Customer_btn.DialogResult = System.Windows.Forms.DialogResult.None;
             this.Customer_btn.DisabledBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(191)))), ((int)(((byte)(191)))));
             this.Customer_btn.DisabledFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
@@ -854,11 +854,11 @@
             this.Staff_btn.ColorContrastOnClick = 45;
             this.Staff_btn.ColorContrastOnHover = 45;
             this.Staff_btn.Cursor = System.Windows.Forms.Cursors.Default;
-            borderEdges9.BottomLeft = true;
-            borderEdges9.BottomRight = true;
-            borderEdges9.TopLeft = true;
-            borderEdges9.TopRight = true;
-            this.Staff_btn.CustomizableEdges = borderEdges9;
+            borderEdges10.BottomLeft = true;
+            borderEdges10.BottomRight = true;
+            borderEdges10.TopLeft = true;
+            borderEdges10.TopRight = true;
+            this.Staff_btn.CustomizableEdges = borderEdges10;
             this.Staff_btn.DialogResult = System.Windows.Forms.DialogResult.None;
             this.Staff_btn.DisabledBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(191)))), ((int)(((byte)(191)))));
             this.Staff_btn.DisabledFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
@@ -944,11 +944,11 @@
             this.Database_btn.ColorContrastOnClick = 45;
             this.Database_btn.ColorContrastOnHover = 45;
             this.Database_btn.Cursor = System.Windows.Forms.Cursors.Default;
-            borderEdges10.BottomLeft = true;
-            borderEdges10.BottomRight = true;
-            borderEdges10.TopLeft = true;
-            borderEdges10.TopRight = true;
-            this.Database_btn.CustomizableEdges = borderEdges10;
+            borderEdges11.BottomLeft = true;
+            borderEdges11.BottomRight = true;
+            borderEdges11.TopLeft = true;
+            borderEdges11.TopRight = true;
+            this.Database_btn.CustomizableEdges = borderEdges11;
             this.Database_btn.DialogResult = System.Windows.Forms.DialogResult.None;
             this.Database_btn.DisabledBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(191)))), ((int)(((byte)(191)))));
             this.Database_btn.DisabledFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
@@ -1031,7 +1031,96 @@
             this.content.ShowBorders = true;
             this.content.Size = new System.Drawing.Size(1047, 697);
             this.content.TabIndex = 2;
-            this.content.Click += new System.EventHandler(this.content_Click);
+            // 
+            // HoaDon
+            // 
+            this.HoaDon.AllowAnimations = true;
+            this.HoaDon.AllowMouseEffects = true;
+            this.HoaDon.AllowToggling = false;
+            this.HoaDon.AnimationSpeed = 200;
+            this.HoaDon.AutoGenerateColors = false;
+            this.HoaDon.AutoRoundBorders = false;
+            this.HoaDon.AutoSizeLeftIcon = true;
+            this.HoaDon.AutoSizeRightIcon = true;
+            this.HoaDon.BackColor = System.Drawing.Color.Transparent;
+            this.HoaDon.BackColor1 = System.Drawing.Color.FromArgb(((int)(((byte)(127)))), ((int)(((byte)(140)))), ((int)(((byte)(141)))));
+            this.HoaDon.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("HoaDon.BackgroundImage")));
+            this.HoaDon.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderStyles.Solid;
+            this.HoaDon.ButtonText = "Hóa đơn";
+            this.HoaDon.ButtonTextMarginLeft = 0;
+            this.HoaDon.ColorContrastOnClick = 45;
+            this.HoaDon.ColorContrastOnHover = 45;
+            this.HoaDon.Cursor = System.Windows.Forms.Cursors.Default;
+            borderEdges6.BottomLeft = true;
+            borderEdges6.BottomRight = true;
+            borderEdges6.TopLeft = true;
+            borderEdges6.TopRight = true;
+            this.HoaDon.CustomizableEdges = borderEdges6;
+            this.HoaDon.DialogResult = System.Windows.Forms.DialogResult.None;
+            this.HoaDon.DisabledBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(191)))), ((int)(((byte)(191)))));
+            this.HoaDon.DisabledFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
+            this.HoaDon.DisabledForecolor = System.Drawing.Color.FromArgb(((int)(((byte)(168)))), ((int)(((byte)(160)))), ((int)(((byte)(168)))));
+            this.HoaDon.FocusState = Bunifu.UI.WinForms.BunifuButton.BunifuButton.ButtonStates.Disabled;
+            this.HoaDon.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.HoaDon.ForeColor = System.Drawing.Color.Transparent;
+            this.HoaDon.IconLeftAlign = System.Drawing.ContentAlignment.TopLeft;
+            this.HoaDon.IconLeftCursor = System.Windows.Forms.Cursors.Default;
+            this.HoaDon.IconLeftPadding = new System.Windows.Forms.Padding(0);
+            this.HoaDon.IconMarginLeft = 11;
+            this.HoaDon.IconPadding = 10;
+            this.HoaDon.IconRightAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.HoaDon.IconRightCursor = System.Windows.Forms.Cursors.Default;
+            this.HoaDon.IconRightPadding = new System.Windows.Forms.Padding(3, 3, 7, 3);
+            this.HoaDon.IconSize = 25;
+            this.HoaDon.IdleBorderColor = System.Drawing.Color.Transparent;
+            this.HoaDon.IdleBorderRadius = 1;
+            this.HoaDon.IdleBorderThickness = 1;
+            this.HoaDon.IdleFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(127)))), ((int)(((byte)(140)))), ((int)(((byte)(141)))));
+            this.HoaDon.IdleIconLeftImage = global::DA1.Properties.Resources.income_icon;
+            this.HoaDon.IdleIconRightImage = null;
+            this.HoaDon.IndicateFocus = false;
+            this.HoaDon.Location = new System.Drawing.Point(807, 12);
+            this.HoaDon.Name = "HoaDon";
+            this.HoaDon.OnDisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(191)))), ((int)(((byte)(191)))));
+            this.HoaDon.OnDisabledState.BorderRadius = 1;
+            this.HoaDon.OnDisabledState.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderStyles.Solid;
+            this.HoaDon.OnDisabledState.BorderThickness = 1;
+            this.HoaDon.OnDisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
+            this.HoaDon.OnDisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(168)))), ((int)(((byte)(160)))), ((int)(((byte)(168)))));
+            this.HoaDon.OnDisabledState.IconLeftImage = null;
+            this.HoaDon.OnDisabledState.IconRightImage = null;
+            this.HoaDon.onHoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(105)))), ((int)(((byte)(181)))), ((int)(((byte)(255)))));
+            this.HoaDon.onHoverState.BorderRadius = 1;
+            this.HoaDon.onHoverState.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderStyles.Solid;
+            this.HoaDon.onHoverState.BorderThickness = 1;
+            this.HoaDon.onHoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(127)))), ((int)(((byte)(140)))), ((int)(((byte)(141)))));
+            this.HoaDon.onHoverState.ForeColor = System.Drawing.Color.White;
+            this.HoaDon.onHoverState.IconLeftImage = null;
+            this.HoaDon.onHoverState.IconRightImage = null;
+            this.HoaDon.OnIdleState.BorderColor = System.Drawing.Color.Transparent;
+            this.HoaDon.OnIdleState.BorderRadius = 1;
+            this.HoaDon.OnIdleState.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderStyles.Solid;
+            this.HoaDon.OnIdleState.BorderThickness = 1;
+            this.HoaDon.OnIdleState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(127)))), ((int)(((byte)(140)))), ((int)(((byte)(141)))));
+            this.HoaDon.OnIdleState.ForeColor = System.Drawing.Color.Transparent;
+            this.HoaDon.OnIdleState.IconLeftImage = global::DA1.Properties.Resources.income_icon;
+            this.HoaDon.OnIdleState.IconRightImage = null;
+            this.HoaDon.OnPressedState.BorderColor = System.Drawing.Color.Transparent;
+            this.HoaDon.OnPressedState.BorderRadius = 1;
+            this.HoaDon.OnPressedState.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderStyles.Solid;
+            this.HoaDon.OnPressedState.BorderThickness = 1;
+            this.HoaDon.OnPressedState.FillColor = System.Drawing.Color.DimGray;
+            this.HoaDon.OnPressedState.ForeColor = System.Drawing.Color.White;
+            this.HoaDon.OnPressedState.IconLeftImage = null;
+            this.HoaDon.OnPressedState.IconRightImage = null;
+            this.HoaDon.Size = new System.Drawing.Size(135, 69);
+            this.HoaDon.TabIndex = 6;
+            this.HoaDon.TextAlign = System.Drawing.ContentAlignment.BottomLeft;
+            this.HoaDon.TextAlignment = System.Windows.Forms.HorizontalAlignment.Center;
+            this.HoaDon.TextMarginLeft = 0;
+            this.HoaDon.TextPadding = new System.Windows.Forms.Padding(5, 0, 0, 0);
+            this.HoaDon.UseDefaultRadiusAndThickness = true;
+            this.HoaDon.Click += new System.EventHandler(this.HoaDon_Click);
             // 
             // QuanLy
             // 
@@ -1066,5 +1155,6 @@
         private Bunifu.UI.WinForms.BunifuButton.BunifuButton Time_btn;
         private Bunifu.UI.WinForms.BunifuButton.BunifuButton Ticket_btn;
         private Bunifu.UI.WinForms.BunifuPanel content;
+        private Bunifu.UI.WinForms.BunifuButton.BunifuButton HoaDon;
     }
 }

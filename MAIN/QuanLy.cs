@@ -18,13 +18,6 @@ namespace DA1
             InitializeComponent();
         }
 
-     
-
-        private void bunifuGradientPanel1_Click(object sender, EventArgs e)
-        {
-
-        }
-
       
 
        
@@ -108,28 +101,21 @@ namespace DA1
 
         private void Ticket_btn_Click(object sender, EventArgs e)
         {
-          
-            
-        }
-
-        private void sidebar_Click(object sender, EventArgs e)
-        {
+            content.Visible = true;
+            load_into_panel(new Ve());
 
         }
-
-        private void Nav_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
-        private void content_Click(object sender, EventArgs e)
-        {
-
-        }
-
         private void Management_Load(object sender, EventArgs e)
         {
             content.Visible = false;
+        }
+
+        private void HoaDon_Click(object sender, EventArgs e)
+        {
+            sidebar.Visible = false;
+            content.Visible = true;
+            content.Location = new Point(12, 84);
+            load_into_panel(new HoaDon());
         }
     }
 }

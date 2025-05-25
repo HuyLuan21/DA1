@@ -22,7 +22,13 @@ namespace DAL
         private CaChieu_DAL() { }
         public DataTable GetCaChieu()
         {
-            string query = "SELECT MaCaChieu,p.TenPhim,ThoiGianChieu,MaPhongChieu FROM CaChieu cc JOIN Phim p on cc.MaPhim = p.MaPhim";
+            string query = @"SELECT
+                             MaCaChieu AS 'Mã Ca Chiếu', 
+                             p.TenPhim AS 'Tên Phim', 
+                             ThoiGianChieu AS 'Thời Gian Chiếu', 
+                             MaPhongChieu AS 'Mã Phòng Chiếu'
+                             FROM CaChieu cc
+                             JOIN Phim p ON cc.MaPhim = p.MaPhim";
             return DataProvider.Instance.ExecuteQuery(query);
 
         }

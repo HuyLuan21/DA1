@@ -147,6 +147,40 @@ BEGIN
 END
 GO
 
+-- Drop trigger if exists
+IF EXISTS (SELECT * FROM sys.triggers WHERE name = 'trg_InsertGheNgoiForNewPhong')
+    DROP TRIGGER trg_InsertGheNgoiForNewPhong
+GO
+
+-- Trigger tự động thêm ghế khi tạo phòng mới
+CREATE TRIGGER trg_InsertGheNgoiForNewPhong
+ON PhongChieu
+AFTER INSERT
+AS
+BEGIN
+    DECLARE @MaPhongChieu INT
+    DECLARE @HangGhe CHAR(1)
+    DECLARE @SoGhe INT
+
+    -- Lấy mã phòng chiếu mới được thêm
+    SELECT @MaPhongChieu = MaPhongChieu FROM inserted
+
+    -- Thêm 100 ghế cho phòng mới
+    SET @HangGhe = 'A'
+    WHILE @HangGhe <= 'J'
+    BEGIN
+        SET @SoGhe = 0
+        WHILE @SoGhe <= 9
+        BEGIN
+            INSERT INTO GheNgoi (HangGhe, SoGhe, TrangThai, MaPhongChieu)
+            VALUES (@HangGhe, @SoGhe, N'Trống', @MaPhongChieu)
+            SET @SoGhe = @SoGhe + 1
+        END
+        SET @HangGhe = CHAR(ASCII(@HangGhe) + 1)
+    END
+END
+GO
+
 -- Thêm dữ liệu mẫu
 -- Dữ liệu mẫu cho TheLoaiPhim
 INSERT INTO TheLoaiPhim (TenTLP) 
@@ -377,8 +411,8 @@ JOIN
     SELECT TenPhim FROM Phim
     SELECT TenPhong FROM PhongChieu
 
-    INSERT Into CaChieu (MaCaChieu,ThoiGianChieu,ThoiGianKetThuc,GiaVe,MaPhongChieu,MaPhim)
-    VALUES (1,'2023-05-10 18:00:00','2023-05-10 20:30:00',120000,1,1)
+    INSERT Into CaChieu (ThoiGianChieu,ThoiGianKetThuc,GiaVe,MaPhongChieu,MaPhim)
+    VALUES ('2023-05-10 18:00:00','2023-05-10 20:30:00',120000,1,1)
 
  
      SELECT 
@@ -395,7 +429,8 @@ JOIN
      WHERE cc.MaCaChieu = 1
      ORDER BY g.HangGhe, g.SoGhe
 
-     SELECT * FROM GheNgoi
+     
+SELECT * FROM GheNgoi
 SELECT * from CaChieu
 SELECT * FROM Ve
 SELECT * FROM HoaDon
@@ -404,35 +439,21 @@ SELECT * FROM KhachHang
 SELECT * FROM NhanVien
 SELECT * FROM TaiKhoan
 SELECT * from PhongChieu
-SELECT * from GheNgoi
+
+-- Giả sử bạn muốn gán các vé này cho hóa đơn số 1
+INSERT INTO ChiTietHoaDon (MaHoaDon, MaVe)
+VALUES
+(1, 7),
+(1, 8),
+(1, 9),
+(1, 10),
+(1, 11),
+(1, 12),
+(1, 13);
+SELECT v.MaVe, v.MaCaChieu, v.MaGheNgoi, h.MaKhachHang, h.TongTien as TienBanVe
+                             FROM Ve v
+                             LEFT JOIN ChiTietHoaDon cthd ON v.MaVe = cthd.MaVe
+                             LEFT JOIN HoaDon h ON cthd.MaHoaDon = h.MaHoaDon
+                             WHERE v.MaCaChieu = 5
 
 
--- Thêm ghế cho phòng 1 (100 ghế)
--- DECLARE @HangGhe CHAR(1)
--- DECLARE @SoGhe INT
--- DECLARE @MaPhongChieu INT = 1
-
--- SET @HangGhe = 'A'
--- WHILE @HangGhe <= 'J'
--- BEGIN
---     SET @SoGhe = 0
---     WHILE @SoGhe <= 9
---     BEGIN
---         INSERT INTO GheNgoi (HangGhe, SoGhe, LoaiGheNgoi, TrangThai, MaPhongChieu)
---         VALUES (@HangGhe, @SoGhe, N'Thường', N'Trống', @MaPhongChieu)
---         SET @SoGhe = @SoGhe + 1
---     END
---     SET @HangGhe = CHAR(ASCII(@HangGhe) + 1)
--- END
-
--- Trigger cập nhật trạng thái ghế khi thêm vé mới
-select * from PhongChieu
-select * from GheNgoi
-select * from CaChieu
-select * from Ve
-select * from HoaDon
-select * from ChiTietHoaDon
-select * from KhachHang
-select * from NhanVien
-select * from TaiKhoan
-select * from HoaDon

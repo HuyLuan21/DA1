@@ -13,10 +13,11 @@ namespace DA1
 {
     public partial class LichChieuPhim : Form
     {
-       
-        public LichChieuPhim()
+        private int maNhanVien;
+        public LichChieuPhim(int maNhanVien)
         {
             InitializeComponent();
+            this.maNhanVien = maNhanVien;
         }
         int maCaChieu = 1 ;
         int maPhongChieu = 1 ;
@@ -50,7 +51,7 @@ namespace DA1
  
         private void button1_Click(object sender, EventArgs e)
         {
-            BanVe booking = new BanVe(maCaChieu);
+            BanVe booking = new BanVe(maCaChieu, maNhanVien);
 
             booking.Show();
         }

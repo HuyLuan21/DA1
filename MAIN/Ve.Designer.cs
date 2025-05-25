@@ -29,16 +29,16 @@
         private void InitializeComponent()
         {
             this.panel1 = new System.Windows.Forms.Panel();
-            this.panel2 = new System.Windows.Forms.Panel();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
-            this.button2 = new System.Windows.Forms.Button();
+            this.All_ve = new System.Windows.Forms.DataGridView();
             this.Cachieu = new System.Windows.Forms.DataGridView();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.panel2 = new System.Windows.Forms.Panel();
+            this.button2 = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
-            this.panel2.SuspendLayout();
             this.tableLayoutPanel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.All_ve)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Cachieu)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            this.panel2.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel1
@@ -51,21 +51,12 @@
             this.panel1.Size = new System.Drawing.Size(1139, 822);
             this.panel1.TabIndex = 1;
             // 
-            // panel2
-            // 
-            this.panel2.Controls.Add(this.button2);
-            this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel2.Location = new System.Drawing.Point(0, 0);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(1139, 74);
-            this.panel2.TabIndex = 0;
-            // 
             // tableLayoutPanel1
             // 
             this.tableLayoutPanel1.ColumnCount = 2;
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel1.Controls.Add(this.dataGridView1, 0, 0);
+            this.tableLayoutPanel1.Controls.Add(this.All_ve, 0, 0);
             this.tableLayoutPanel1.Controls.Add(this.Cachieu, 1, 0);
             this.tableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel1.Location = new System.Drawing.Point(0, 74);
@@ -75,16 +66,25 @@
             this.tableLayoutPanel1.Size = new System.Drawing.Size(1139, 748);
             this.tableLayoutPanel1.TabIndex = 1;
             // 
-            // button2
+            // All_ve
             // 
-            this.button2.AutoSize = true;
-            this.button2.Location = new System.Drawing.Point(12, 12);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(186, 51);
-            this.button2.TabIndex = 1;
-            this.button2.Text = "Xem tất cả lịch chiếu";
-            this.button2.UseVisualStyleBackColor = true;
-            this.button2.Click += new System.EventHandler(this.button2_Click);
+            this.All_ve.AllowUserToAddRows = false;
+            this.All_ve.AllowUserToDeleteRows = false;
+            this.All_ve.AllowUserToOrderColumns = true;
+            this.All_ve.AllowUserToResizeColumns = false;
+            this.All_ve.AllowUserToResizeRows = false;
+            this.All_ve.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.All_ve.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.All_ve.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.All_ve.Location = new System.Drawing.Point(3, 3);
+            this.All_ve.Name = "All_ve";
+            this.All_ve.ReadOnly = true;
+            this.All_ve.RowHeadersVisible = false;
+            this.All_ve.RowHeadersWidth = 51;
+            this.All_ve.RowTemplate.Height = 24;
+            this.All_ve.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.All_ve.Size = new System.Drawing.Size(563, 742);
+            this.All_ve.TabIndex = 2;
             // 
             // Cachieu
             // 
@@ -105,27 +105,27 @@
             this.Cachieu.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.Cachieu.Size = new System.Drawing.Size(564, 742);
             this.Cachieu.TabIndex = 1;
-            this.Cachieu.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.Cachieu_CellContentClick);
+            this.Cachieu.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.Cachieu_CellClick);
             // 
-            // dataGridView1
+            // panel2
             // 
-            this.dataGridView1.AllowUserToAddRows = false;
-            this.dataGridView1.AllowUserToDeleteRows = false;
-            this.dataGridView1.AllowUserToOrderColumns = true;
-            this.dataGridView1.AllowUserToResizeColumns = false;
-            this.dataGridView1.AllowUserToResizeRows = false;
-            this.dataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.dataGridView1.Location = new System.Drawing.Point(3, 3);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.ReadOnly = true;
-            this.dataGridView1.RowHeadersVisible = false;
-            this.dataGridView1.RowHeadersWidth = 51;
-            this.dataGridView1.RowTemplate.Height = 24;
-            this.dataGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dataGridView1.Size = new System.Drawing.Size(563, 742);
-            this.dataGridView1.TabIndex = 2;
+            this.panel2.Controls.Add(this.button2);
+            this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel2.Location = new System.Drawing.Point(0, 0);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(1139, 74);
+            this.panel2.TabIndex = 0;
+            // 
+            // button2
+            // 
+            this.button2.AutoSize = true;
+            this.button2.Location = new System.Drawing.Point(12, 12);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(186, 51);
+            this.button2.TabIndex = 1;
+            this.button2.Text = "Xem tất cả lịch chiếu";
+            this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // Ve
             // 
@@ -139,11 +139,11 @@
             this.Name = "Ve";
             this.Text = "Ve";
             this.panel1.ResumeLayout(false);
+            this.tableLayoutPanel1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.All_ve)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Cachieu)).EndInit();
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
-            this.tableLayoutPanel1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.Cachieu)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -154,7 +154,7 @@
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridView All_ve;
         private System.Windows.Forms.DataGridView Cachieu;
     }
 }

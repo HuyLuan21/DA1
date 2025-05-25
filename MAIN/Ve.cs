@@ -18,6 +18,7 @@ namespace DA1
             InitializeComponent();
            
         }
+        int macachieu;
 
         private void button2_Click(object sender, EventArgs e)
         {
@@ -26,9 +27,11 @@ namespace DA1
 
   
 
-        private void Cachieu_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        private void Cachieu_CellClick(object sender, DataGridViewCellEventArgs e)
         {
-
+            if (e.RowIndex < 0) return;
+            macachieu = Convert.ToInt32(Cachieu.Rows[e.RowIndex].Cells["Mã ca chiếu"].Value);
+            All_ve.DataSource = Ve_BLL.Instance.GetVeByMaCaChieu(macachieu);
         }
     }
 }

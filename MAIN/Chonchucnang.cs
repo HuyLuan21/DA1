@@ -13,10 +13,12 @@ namespace DA1
     public partial class Chonchucnang : Form
     {
         private string username;
-        public Chonchucnang(string username)
+        private int maNhanVien;
+        public Chonchucnang(string username, int maNhanVien)
         {
             InitializeComponent();
             this.username = username;
+            this.maNhanVien = maNhanVien;
             label2.Text = "Tên tài khoản: " + username;
         }
 
@@ -40,7 +42,7 @@ namespace DA1
 
         private void button2_Click(object sender, EventArgs e)
         {
-            LichChieuPhim bkg = new LichChieuPhim();
+            LichChieuPhim bkg = new LichChieuPhim(maNhanVien);
             bkg.ShowDialog();
         }
     }

@@ -1,9 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using DAL;
+﻿using DAL;
 
 
 namespace BLL
@@ -28,6 +23,10 @@ namespace BLL
         public bool ismanager(string username)
         {
             return DAL.DangNhap_DAL.Instance.ismanager(username);
+        }
+        public int GetMaNhanVienByTenDangNhap(string tenDangNhap)
+        {
+            return DangNhap_DAL.Instance.GetMaNhanVienByTenDangNhap(tenDangNhap);
         }
     }
 }

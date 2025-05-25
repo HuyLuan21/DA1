@@ -16,6 +16,7 @@ namespace DA1
         private int maCaChieu;
         private int giaVe;
         private int lastPrice = 0;
+        private int maNhanVien;
 
         private List<Button> seatButtons;
         private List<string> selectedSeats;
@@ -23,12 +24,13 @@ namespace DA1
         private int usedPoints = 0;
         private int maKH = 0; // Thêm biến để lưu mã khách hàng
 
-        public BanVe(int maCaChieu)
+        public BanVe(int maCaChieu, int maNhanVien)
         { 
             InitializeComponent();
             Setsoghe();
             this.maCaChieu = maCaChieu;
             this.giaVe = CaChieu_BLL.Instance.GetGiaVe(maCaChieu);
+            this.maNhanVien = maNhanVien;
             this.seatButtons = new List<Button>();
             for (int i = 4; i <= 103; i++)
             {
@@ -158,12 +160,30 @@ namespace DA1
                         MessageBox.Show(result);
                         return;
                     }
+
+                    // Lấy lại mã khách hàng vừa thêm
+                    var dt = KhachHang_BLL.Instance.GetCustomer();
+                    var found = dt.AsEnumerable().FirstOrDefault(r => r.Field<string>("Số điện thoại") == Sdt.Text.Trim());
+                    if (found != null)
+                    {
+                        maKH = found.Field<int>("Mã KH");
+                    }
+                    else
+                    {
+                        MessageBox.Show("Không lấy được mã khách hàng vừa thêm!");
+                        return;
+                    }
                 }
 
-                // Thực hiện đặt vé và lưu chi tiết hóa đơn
-                //viet hoa don cho khach hang
-                int maHD = HoaDon_BLL.Instance.InsertHoaDon(maKH, maCaChieu, lastPrice);
-                //luu thong tin ve vao bang ve va chi tiet hoa don
+                // Ghi hóa đơn
+                int maHD = HoaDon_BLL.Instance.InsertHoaDon(maKH, maNhanVien, lastPrice);
+                if (maHD <= 0)
+                {
+                    MessageBox.Show("Không tạo được hóa đơn!");
+                    return;
+                }
+
+                // Đặt vé và ghi chi tiết hóa đơn
                 foreach (string maGhe in selectedSeats)
                 {
                     var danhSachGhe = Datve_BLL.Instance.GetDanhSachGhe(maCaChieu);
@@ -173,23 +193,30 @@ namespace DA1
                         int maGheNgoi = Convert.ToInt32(row["MaGheNgoi"]);
                         if (!Datve_BLL.Instance.DatVe(maCaChieu, maGheNgoi))
                         {
-                            throw new Exception($"Không thể đặt ghế {maGhe}");
+                            MessageBox.Show($"Không thể đặt ghế {maGhe}");
+                            return;
                         }
                         // Lấy mã vé vừa tạo
                         var veTable = Datve_BLL.Instance.GetVeByGheNgoi(maGheNgoi);
                         if (veTable.Rows.Count > 0)
                         {
                             int maVe = Convert.ToInt32(veTable.Rows[0]["MaVe"]);
-                            HoaDon_BLL.Instance.InsertChiTietHoaDon(maHD, maVe, giaVe);
+                            if (!HoaDon_BLL.Instance.InsertChiTietHoaDon(maHD, maVe, giaVe))
+                            {
+                                MessageBox.Show($"Không thể ghi chi tiết hóa đơn cho vé {maVe}");
+                                return;
+                            }
                         }
                         else
                         {
-                            throw new Exception($"Không tìm thấy mã vé cho ghế {maGhe}");
+                            MessageBox.Show($"Không tìm thấy mã vé cho ghế {maGhe}");
+                            return;
                         }
                     }
                     else
                     {
-                        throw new Exception($"Không tìm thấy thông tin ghế {maGhe}");
+                        MessageBox.Show($"Không tìm thấy thông tin ghế {maGhe}");
+                        return;
                     }
                 }
 
