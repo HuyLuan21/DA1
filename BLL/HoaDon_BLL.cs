@@ -36,5 +36,9 @@ namespace BLL
         {
             return HoaDon_DAL.Instance.GetHoaDonByMaKH(maKhachHang);
         }
+        public DataTable GetTable()
+        {
+            return HoaDon_DAL.Instance.GetTable();
+        }
     }
 }

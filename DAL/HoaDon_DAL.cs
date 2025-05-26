@@ -52,5 +52,11 @@ namespace DAL
 
             return DataProvider.Instance.ExecuteQuery(query);
         }
+        public DataTable GetTable()
+        {
+            string query = @"SELECT MaHoaDon AS ""Mã hóa đơn"",NgayBan AS ""Ngày bán"",TongTien AS ""Tổng tiền"",MaNhanVien AS ""Mã nhân viên"",MaKhachHang AS ""Mã khách hàng"" FROM HoaDon";
+            return DataProvider.Instance.ExecuteQuery(query);
+
+        }
     }
 }
