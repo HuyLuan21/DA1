@@ -40,5 +40,15 @@ namespace BLL
         {
             return HoaDon_DAL.Instance.GetTable();
         }
+
+        public DataTable GetChiTietHoaDon(int maHoaDon)
+        {
+            return HoaDon_DAL.Instance.GetChiTietHoaDon(maHoaDon);
+        }
+
+        public DataTable GetTenNhanVienVaKhachHang(int maNhanVien, int maKhachHang)
+        {
+            return HoaDon_DAL.Instance.GetTenNhanVienVaKhachHang(maNhanVien, maKhachHang);
+        }
     }
 }

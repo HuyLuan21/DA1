@@ -278,15 +278,16 @@ VALUES
 ('staff1', 'staff123', 0, 3),
 ('staff2', 'staff123', 0, 4);
 
+Select * from GheNgoi join PhongChieu on GheNgoi.MaPhongChieu = PhongChieu.MaPhongChieu JOIN CaChieu on PhongChieu.MaPhongChieu = CaChieu.MaPhongChieu JOIN Phim on CaChieu.MaPhim = Phim.MaPhim
 -- Dữ liệu mẫu cho Ve
 INSERT INTO Ve (MaCaChieu, MaGheNgoi)
 VALUES
-(1, 1), -- Phòng 1, Ghế A1
-(1, 2), -- Phòng 1, Ghế A2
-(2, 21), -- Phòng 2, Ghế A1
-(2, 22), -- Phòng 2, Ghế A2
-(3, 41), -- Phòng 3, Ghế A1
-(3, 42); -- Phòng 3, Ghế A2
+(1, 1), -- Phòng 1, Ghế A0
+(1, 2), -- Phòng 1, Ghế A1
+(2, 21), -- Phòng 2, C0
+(2, 22), -- Phòng 2, C1
+(3, 201), -- Phòng 3, Ghế A0
+(3, 202); -- Phòng 3, Ghế A1
 
 -- Dữ liệu mẫu cho HoaDon
 INSERT INTO HoaDon (NgayBan, TongTien, MaNhanVien, MaKhachHang)
@@ -295,6 +296,7 @@ VALUES
 ('2024-04-26 13:30:00', 240000, 2, 2),
 ('2024-04-26 18:30:00', 300000, 3, 3);
 
+SELECT * FROM Ve
 -- Dữ liệu mẫu cho ChiTietHoaDon
 INSERT INTO ChiTietHoaDon (MaHoaDon, MaVe)
 VALUES
@@ -411,8 +413,7 @@ JOIN
     SELECT TenPhim FROM Phim
     SELECT TenPhong FROM PhongChieu
 
-    INSERT Into CaChieu (ThoiGianChieu,ThoiGianKetThuc,GiaVe,MaPhongChieu,MaPhim)
-    VALUES ('2023-05-10 18:00:00','2023-05-10 20:30:00',120000,1,1)
+
 
  
      SELECT 
@@ -440,20 +441,43 @@ SELECT * FROM NhanVien
 SELECT * FROM TaiKhoan
 SELECT * from PhongChieu
 
--- Giả sử bạn muốn gán các vé này cho hóa đơn số 1
-INSERT INTO ChiTietHoaDon (MaHoaDon, MaVe)
-VALUES
-(1, 7),
-(1, 8),
-(1, 9),
-(1, 10),
-(1, 11),
-(1, 12),
-(1, 13);
+-- -- Giả sử bạn muốn gán các vé này cho hóa đơn số 1
+-- INSERT INTO ChiTietHoaDon (MaHoaDon, MaVe)
+-- VALUES
+-- (1, 7),
+-- (1, 8),
+-- (1, 9),
+-- (1, 10),
+-- (1, 11),
+-- (1, 12),
+-- (1, 13);
 SELECT v.MaVe, v.MaCaChieu, v.MaGheNgoi, h.MaKhachHang, h.TongTien as TienBanVe
                              FROM Ve v
                              LEFT JOIN ChiTietHoaDon cthd ON v.MaVe = cthd.MaVe
                              LEFT JOIN HoaDon h ON cthd.MaHoaDon = h.MaHoaDon
                              WHERE v.MaCaChieu = 5
 
+
+
+
+
+SELECT MaHoaDon AS "Mã hóa đơn",NgayBan AS "Ngày bán",TongTien AS "Tổng tiền",MaNhanVien AS "Mã nhân viên",MaKhachHang AS "Mã khách hàng" FROM HoaDon
+
+-- Truy vấn chi tiết hóa đơn theo mã hóa đơn cụ thể
+SELECT 
+    ROW_NUMBER() OVER (ORDER BY cc.ThoiGianChieu) AS "STT",
+    p.TenPhim AS "Tên phim",
+    pc.TenPhong AS "Phòng",
+    CONVERT(VARCHAR(5), cc.ThoiGianChieu, 108) AS "Ca",
+    g.HangGhe + CAST(g.SoGhe AS VARCHAR) AS "Ghế",
+    cc.GiaVe AS "Giá"
+FROM ChiTietHoaDon cthd
+INNER JOIN HoaDon h ON cthd.MaHoaDon = h.MaHoaDon
+INNER JOIN Ve v ON cthd.MaVe = v.MaVe
+INNER JOIN CaChieu cc ON v.MaCaChieu = cc.MaCaChieu
+INNER JOIN Phim p ON cc.MaPhim = p.MaPhim
+INNER JOIN PhongChieu pc ON cc.MaPhongChieu = pc.MaPhongChieu
+INNER JOIN GheNgoi g ON v.MaGheNgoi = g.MaGheNgoi
+WHERE h.MaHoaDon = 1  -- Thay đổi số 1 thành mã hóa đơn cần xem
+ORDER BY cc.ThoiGianChieu;
 

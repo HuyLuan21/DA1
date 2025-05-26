@@ -12,9 +12,47 @@ namespace DA1
 {
     public partial class CTHoaDon : Form
     {
-        public CTHoaDon()
+        private int maHoaDon;
+        private int maNhanVien;
+        private int maKhachHang;
+
+        public CTHoaDon(int maHoaDon, DateTime NgayBan, decimal TongTien, int maNhanVien, int maKhachHang)
         {
             InitializeComponent();
+            this.maHoaDon = maHoaDon;
+            this.maNhanVien = maNhanVien;
+            this.maKhachHang = maKhachHang;
+            MaHD.Text = maHoaDon.ToString();
+            NgayLap.Value = NgayBan;
+            this.TongTien.Text = TongTien.ToString();
+            LoadTenNhanVienVaKhachHang();
+            LoadChiTietHoaDon();
+        }
+
+        private void LoadChiTietHoaDon()
+        {
+            Chitiet.DataSource =BLL.HoaDon_BLL.Instance.GetChiTietHoaDon(maHoaDon);
+           
+        }
+
+        private void LoadTenNhanVienVaKhachHang()
+        {
+            var dt = BLL.HoaDon_BLL.Instance.GetTenNhanVienVaKhachHang(maNhanVien, maKhachHang);
+            if (dt.Rows.Count > 0)
+            {
+                textBox3.Text = dt.Rows[0]["TenNhanVien"].ToString();
+                textBox2.Text = dt.Rows[0]["TenKhachHang"].ToString();
+            }
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            // In hóa đơn
         }
     }
 }

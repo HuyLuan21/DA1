@@ -31,25 +31,25 @@
             this.panel1 = new System.Windows.Forms.Panel();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
-            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
-            this.textBox4 = new System.Windows.Forms.TextBox();
+            this.themve = new System.Windows.Forms.Button();
+            this.inhoadon = new System.Windows.Forms.Button();
+            this.NgayLap = new System.Windows.Forms.DateTimePicker();
+            this.MaHD = new System.Windows.Forms.TextBox();
             this.textBox3 = new System.Windows.Forms.TextBox();
             this.textBox2 = new System.Windows.Forms.TextBox();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.TongTien = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
+            this.Chitiet = new System.Windows.Forms.DataGridView();
             this.panel1.SuspendLayout();
             this.tableLayoutPanel1.SuspendLayout();
             this.groupBox1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.panel2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.Chitiet)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
@@ -80,7 +80,7 @@
             // 
             // groupBox1
             // 
-            this.groupBox1.Controls.Add(this.dataGridView1);
+            this.groupBox1.Controls.Add(this.Chitiet);
             this.groupBox1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.groupBox1.Location = new System.Drawing.Point(4, 180);
             this.groupBox1.Margin = new System.Windows.Forms.Padding(4);
@@ -91,27 +91,15 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Danh sách vé";
             // 
-            // dataGridView1
-            // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.dataGridView1.Location = new System.Drawing.Point(4, 24);
-            this.dataGridView1.Margin = new System.Windows.Forms.Padding(4);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.RowHeadersWidth = 51;
-            this.dataGridView1.RowTemplate.Height = 24;
-            this.dataGridView1.Size = new System.Drawing.Size(949, 637);
-            this.dataGridView1.TabIndex = 0;
-            // 
             // panel2
             // 
-            this.panel2.Controls.Add(this.button2);
-            this.panel2.Controls.Add(this.button1);
-            this.panel2.Controls.Add(this.dateTimePicker1);
-            this.panel2.Controls.Add(this.textBox4);
+            this.panel2.Controls.Add(this.themve);
+            this.panel2.Controls.Add(this.inhoadon);
+            this.panel2.Controls.Add(this.NgayLap);
+            this.panel2.Controls.Add(this.MaHD);
             this.panel2.Controls.Add(this.textBox3);
             this.panel2.Controls.Add(this.textBox2);
-            this.panel2.Controls.Add(this.textBox1);
+            this.panel2.Controls.Add(this.TongTien);
             this.panel2.Controls.Add(this.label5);
             this.panel2.Controls.Add(this.label4);
             this.panel2.Controls.Add(this.label3);
@@ -124,38 +112,38 @@
             this.panel2.Size = new System.Drawing.Size(957, 168);
             this.panel2.TabIndex = 1;
             // 
-            // button2
+            // themve
             // 
-            this.button2.Location = new System.Drawing.Point(157, 102);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(105, 38);
-            this.button2.TabIndex = 11;
-            this.button2.Text = "Thêm vé";
-            this.button2.UseVisualStyleBackColor = true;
+            this.themve.Location = new System.Drawing.Point(157, 102);
+            this.themve.Name = "themve";
+            this.themve.Size = new System.Drawing.Size(105, 38);
+            this.themve.TabIndex = 11;
+            this.themve.Text = "Thêm vé";
+            this.themve.UseVisualStyleBackColor = true;
             // 
-            // button1
+            // inhoadon
             // 
-            this.button1.Location = new System.Drawing.Point(24, 102);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(105, 40);
-            this.button1.TabIndex = 10;
-            this.button1.Text = "In hóa đơn";
-            this.button1.UseVisualStyleBackColor = true;
+            this.inhoadon.Location = new System.Drawing.Point(24, 102);
+            this.inhoadon.Name = "inhoadon";
+            this.inhoadon.Size = new System.Drawing.Size(105, 38);
+            this.inhoadon.TabIndex = 10;
+            this.inhoadon.Text = "In hóa đơn";
+            this.inhoadon.UseVisualStyleBackColor = true;
             // 
-            // dateTimePicker1
+            // NgayLap
             // 
-            this.dateTimePicker1.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dateTimePicker1.Location = new System.Drawing.Point(129, 57);
-            this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(133, 27);
-            this.dateTimePicker1.TabIndex = 9;
+            this.NgayLap.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.NgayLap.Location = new System.Drawing.Point(129, 57);
+            this.NgayLap.Name = "NgayLap";
+            this.NgayLap.Size = new System.Drawing.Size(133, 27);
+            this.NgayLap.TabIndex = 9;
             // 
-            // textBox4
+            // MaHD
             // 
-            this.textBox4.Location = new System.Drawing.Point(130, 17);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(132, 27);
-            this.textBox4.TabIndex = 8;
+            this.MaHD.Location = new System.Drawing.Point(130, 17);
+            this.MaHD.Name = "MaHD";
+            this.MaHD.Size = new System.Drawing.Size(132, 27);
+            this.MaHD.TabIndex = 8;
             // 
             // textBox3
             // 
@@ -171,12 +159,12 @@
             this.textBox2.Size = new System.Drawing.Size(133, 27);
             this.textBox2.TabIndex = 6;
             // 
-            // textBox1
+            // TongTien
             // 
-            this.textBox1.Location = new System.Drawing.Point(448, 109);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(132, 27);
-            this.textBox1.TabIndex = 5;
+            this.TongTien.Location = new System.Drawing.Point(448, 109);
+            this.TongTien.Name = "TongTien";
+            this.TongTien.Size = new System.Drawing.Size(132, 27);
+            this.TongTien.TabIndex = 5;
             // 
             // label5
             // 
@@ -228,6 +216,26 @@
             this.label1.TabIndex = 0;
             this.label1.Text = "Mã hóa đơn:";
             // 
+            // Chitiet
+            // 
+            this.Chitiet.AllowUserToAddRows = false;
+            this.Chitiet.AllowUserToDeleteRows = false;
+            this.Chitiet.AllowUserToResizeColumns = false;
+            this.Chitiet.AllowUserToResizeRows = false;
+            this.Chitiet.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.Chitiet.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.Chitiet.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.Chitiet.Location = new System.Drawing.Point(4, 24);
+            this.Chitiet.MultiSelect = false;
+            this.Chitiet.Name = "Chitiet";
+            this.Chitiet.ReadOnly = true;
+            this.Chitiet.RowHeadersVisible = false;
+            this.Chitiet.RowHeadersWidth = 51;
+            this.Chitiet.RowTemplate.Height = 24;
+            this.Chitiet.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.Chitiet.Size = new System.Drawing.Size(949, 637);
+            this.Chitiet.TabIndex = 1;
+            // 
             // CTHoaDon
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 20F);
@@ -241,9 +249,9 @@
             this.panel1.ResumeLayout(false);
             this.tableLayoutPanel1.ResumeLayout(false);
             this.groupBox1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.Chitiet)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -253,19 +261,19 @@
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
         private System.Windows.Forms.GroupBox groupBox1;
-        private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.Panel panel2;
-        private System.Windows.Forms.DateTimePicker dateTimePicker1;
-        private System.Windows.Forms.TextBox textBox4;
+        private System.Windows.Forms.DateTimePicker NgayLap;
+        private System.Windows.Forms.TextBox MaHD;
         private System.Windows.Forms.TextBox textBox3;
         private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox TongTien;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button inhoadon;
+        private System.Windows.Forms.Button themve;
+        private System.Windows.Forms.DataGridView Chitiet;
     }
 }

@@ -58,5 +58,38 @@ namespace DAL
             return DataProvider.Instance.ExecuteQuery(query);
 
         }
+       
+
+        public DataTable GetChiTietHoaDon(int maHoaDon)
+        {
+            string query = $@"SELECT 
+    ROW_NUMBER() OVER (ORDER BY cc.ThoiGianChieu) AS ""STT"",
+    p.TenPhim AS ""Tên phim"",
+    pc.TenPhong AS ""Phòng"",
+    CONVERT(VARCHAR(5), cc.ThoiGianChieu, 108) AS ""Ca"",
+    g.HangGhe + CAST(g.SoGhe AS VARCHAR) AS ""Ghế"",
+    cc.GiaVe AS ""Giá""
+FROM ChiTietHoaDon cthd
+INNER JOIN HoaDon h ON cthd.MaHoaDon = h.MaHoaDon
+INNER JOIN Ve v ON cthd.MaVe = v.MaVe
+INNER JOIN CaChieu cc ON v.MaCaChieu = cc.MaCaChieu
+INNER JOIN Phim p ON cc.MaPhim = p.MaPhim
+INNER JOIN PhongChieu pc ON cc.MaPhongChieu = pc.MaPhongChieu
+INNER JOIN GheNgoi g ON v.MaGheNgoi = g.MaGheNgoi
+WHERE h.MaHoaDon = {maHoaDon} 
+ORDER BY cc.ThoiGianChieu;";
+
+            return DataProvider.Instance.ExecuteQuery(query);
+        }
+
+        public DataTable GetTenNhanVienVaKhachHang(int maNhanVien, int maKhachHang)
+        {
+            string query = $@"
+                SELECT 
+                    (SELECT HoTen FROM NhanVien WHERE MaNhanVien = {maNhanVien}) AS TenNhanVien,
+                    (SELECT HoTen FROM KhachHang WHERE MaKhachHang = {maKhachHang}) AS TenKhachHang
+            ";
+            return DataProvider.Instance.ExecuteQuery(query);
+        }
     }
 }

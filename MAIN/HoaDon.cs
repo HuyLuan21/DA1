@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 
 namespace DA1
 {
@@ -33,12 +34,17 @@ namespace DA1
             NgayLap.Value = DateTime.Parse(HoaDon_grv.Rows[e.RowIndex].Cells["Ngày bán"].Value.ToString());
             button1.Enabled = true; 
 
-
         }
 
         private void button1_Click(object sender, EventArgs e)
         {
-            CTHoaDon cthd = new CTHoaDon();
+            int maHoaDon = int.Parse(MaHD_tbx.Text);
+            DateTime ngayBan = NgayLap.Value;
+            decimal tongTien = decimal.Parse(TongTien_tbx.Text);
+            int maNhanVien = int.Parse(MaNV_tbx.Text);
+            int maKhachHang = int.Parse(MaKH_tbx.Text);
+
+            CTHoaDon cthd = new CTHoaDon(maHoaDon, ngayBan, tongTien, maNhanVien, maKhachHang);
             cthd.ShowDialog();
         }
     }
