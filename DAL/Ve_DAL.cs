@@ -1,9 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Data;
+﻿using System.Data;
 
 namespace DAL
 {
@@ -22,16 +17,17 @@ namespace DAL
         private Ve_DAL() { }
         public DataTable GetVeByMaCaChieu(int maCaChieu)
         {
-            string query = $@"SELECT v.MaVe, v.MaCaChieu, v.MaGheNgoi, h.MaKhachHang, h.TongTien as TienBanVe
-                             FROM Ve v
-                             LEFT JOIN ChiTietHoaDon cthd ON v.MaVe = cthd.MaVe
-                             LEFT JOIN HoaDon h ON cthd.MaHoaDon = h.MaHoaDon
-                             WHERE v.MaCaChieu = {maCaChieu}";
+            string query = $@"SELECT v.MaVe, v.MaCaChieu, v.MaGheNgoi, h.MaKhachHang, cc.GiaVe as TienBanVe
+                            FROM Ve v
+                            LEFT JOIN ChiTietHoaDon cthd ON v.MaVe = cthd.MaVe
+                            LEFT JOIN HoaDon h ON cthd.MaHoaDon = h.MaHoaDon
+                            LEFT JOIN CaChieu cc ON v.MaCaChieu = cc.MaCaChieu
+                            WHERE v.MaCaChieu = {maCaChieu}";
 
             return DataProvider.Instance.ExecuteQuery(query);
         }
-        
-        
-        
+
+
+
     }
 }

@@ -1,4 +1,5 @@
 -- Tạo và sử dụng database
+
 CREATE DATABASE DA1_ver1
 GO
 USE DA1_ver1
@@ -75,6 +76,10 @@ CREATE TABLE Ve(
     FOREIGN KEY (MaCaChieu) REFERENCES CaChieu(MaCaChieu),
     FOREIGN KEY (MaGheNgoi) REFERENCES GheNgoi(MaGheNgoi)
 );
+
+-- Thêm ràng buộc UNIQUE để ngăn chặn trùng lặp trong tương lai
+ALTER TABLE Ve
+ADD CONSTRAINT UQ_Ve_CaChieu_GheNgoi UNIQUE (MaCaChieu, MaGheNgoi);
 
 -- Tạo bảng KhachHang
 CREATE TABLE KhachHang (
@@ -165,7 +170,7 @@ BEGIN
     -- Lấy mã phòng chiếu mới được thêm
     SELECT @MaPhongChieu = MaPhongChieu FROM inserted
 
-    -- Thêm 100 ghế cho phòng mới
+    -- Thêm 100 ghế cho phòng mới (10 hàng x 10 ghế)
     SET @HangGhe = 'A'
     WHILE @HangGhe <= 'J'
     BEGIN
@@ -180,6 +185,22 @@ BEGIN
     END
 END
 GO
+
+-- Test trigger bằng cách thêm phòng mới
+-- Dữ liệu mẫu cho PhongChieu
+
+select * from GheNgoi
+-- Kiểm tra ghế đã được tạo
+INSERT INTO PhongChieu (TenPhong)
+VALUES (N'Phòng 1');
+INSERT INTO PhongChieu (TenPhong)
+VALUES (N'Phòng 2');
+INSERT INTO PhongChieu (TenPhong)
+VALUES (N'Phòng 3');
+INSERT INTO PhongChieu (TenPhong)
+VALUES (N'Phòng 4');
+
+
 
 -- Thêm dữ liệu mẫu
 -- Dữ liệu mẫu cho TheLoaiPhim
@@ -214,36 +235,8 @@ VALUES
 (4, 4), -- The Notebook - Lãng mạn
 (5, 5); -- Inception - Viễn tưởng
 
--- Dữ liệu mẫu cho PhongChieu
-INSERT INTO PhongChieu (TenPhong)
-VALUES 
-(N'Phòng 1'),
-(N'Phòng 2'),
-(N'Phòng 3'),
-(N'Phòng 4');
 
--- Dữ liệu mẫu cho GheNgoi
--- Thêm ghế cho tất cả các phòng
-DECLARE @HangGhe CHAR(1)
-DECLARE @SoGhe INT
-DECLARE @MaPhongChieu INT = 1
 
-WHILE @MaPhongChieu <= 4
-BEGIN
-    SET @HangGhe = 'A'
-    WHILE @HangGhe <= 'J'
-    BEGIN
-        SET @SoGhe = 0
-        WHILE @SoGhe <= 9
-        BEGIN
-            INSERT INTO GheNgoi (HangGhe, SoGhe, TrangThai, MaPhongChieu)
-            VALUES (@HangGhe, @SoGhe, N'Trống', @MaPhongChieu)
-            SET @SoGhe = @SoGhe + 1
-        END
-        SET @HangGhe = CHAR(ASCII(@HangGhe) + 1)
-    END
-    SET @MaPhongChieu = @MaPhongChieu + 1
-END
 
 -- Dữ liệu mẫu cho CaChieu
 INSERT INTO CaChieu (ThoiGianChieu, ThoiGianKetThuc, GiaVe, MaPhongChieu, MaPhim)
@@ -278,61 +271,53 @@ VALUES
 ('staff1', 'staff123', 0, 3),
 ('staff2', 'staff123', 0, 4);
 
-Select * from GheNgoi join PhongChieu on GheNgoi.MaPhongChieu = PhongChieu.MaPhongChieu JOIN CaChieu on PhongChieu.MaPhongChieu = CaChieu.MaPhongChieu JOIN Phim on CaChieu.MaPhim = Phim.MaPhim
--- Dữ liệu mẫu cho Ve
-INSERT INTO Ve (MaCaChieu, MaGheNgoi)
-VALUES
-(1, 1), -- Phòng 1, Ghế A0
-(1, 2), -- Phòng 1, Ghế A1
-(2, 21), -- Phòng 2, C0
-(2, 22), -- Phòng 2, C1
-(3, 201), -- Phòng 3, Ghế A0
-(3, 202); -- Phòng 3, Ghế A1
+
+
+-- Ca chiếu 1 (Phòng 1, phim 1)
+INSERT INTO Ve (MaCaChieu, MaGheNgoi) VALUES (1, 1);   -- Ghế A0
+INSERT INTO Ve (MaCaChieu, MaGheNgoi) VALUES (1, 2);   -- Ghế A1
+
+-- Ca chiếu 2 (Phòng 1, phim 2, khác giờ)
+INSERT INTO Ve (MaCaChieu, MaGheNgoi) VALUES (2, 3);   -- Ghế A2
+INSERT INTO Ve (MaCaChieu, MaGheNgoi) VALUES (2, 4);   -- Ghế A3
+
+-- Ca chiếu 3 (Phòng 2, phim 3)
+INSERT INTO Ve (MaCaChieu, MaGheNgoi) VALUES (3, 21);  -- Ghế C0
+INSERT INTO Ve (MaCaChieu, MaGheNgoi) VALUES (3, 22);  -- Ghế C1
+
+-- Ca chiếu 4 (Phòng 2, phim 4, khác giờ)
+INSERT INTO Ve (MaCaChieu, MaGheNgoi) VALUES (4, 23);  -- Ghế C2
+INSERT INTO Ve (MaCaChieu, MaGheNgoi) VALUES (4, 24);  -- Ghế C3
+
+-- Ca chiếu 5 (Phòng 3, phim 5)
+INSERT INTO Ve (MaCaChieu, MaGheNgoi) VALUES (5, 31);  -- Ghế D0
+INSERT INTO Ve (MaCaChieu, MaGheNgoi) VALUES (5, 32);  -- Ghế D1
+
+
 
 -- Dữ liệu mẫu cho HoaDon
 INSERT INTO HoaDon (NgayBan, TongTien, MaNhanVien, MaKhachHang)
-VALUES
-('2024-04-26 08:30:00', 240000, 1, 1),
-('2024-04-26 13:30:00', 240000, 2, 2),
-('2024-04-26 18:30:00', 300000, 3, 3);
+VALUES 
+('2024-04-26 10:00:00', 240000, 1, 1),  -- Hóa đơn 1: 2 vé x 120000
+('2024-04-26 14:00:00', 240000, 2, 2),  -- Hóa đơn 2: 2 vé x 120000
+('2024-04-26 19:00:00', 300000, 3, 3),  -- Hóa đơn 3: 2 vé x 150000
+('2024-04-26 21:00:00', 300000, 4, 4),  -- Hóa đơn 4: 2 vé x 150000
+('2024-04-26 10:30:00', 240000, 1, 1);  -- Hóa đơn 5: 2 vé x 120000
 
-SELECT * FROM Ve
--- Dữ liệu mẫu cho ChiTietHoaDon
-INSERT INTO ChiTietHoaDon (MaHoaDon, MaVe)
-VALUES
-(1, 1),
-(1, 2),
-(2, 3),
-(2, 4),
-(3, 5),
-(3, 6);
+Select * from GheNgoi join PhongChieu on GheNgoi.MaPhongChieu = PhongChieu.MaPhongChieu JOIN CaChieu on PhongChieu.MaPhongChieu = CaChieu.MaPhongChieu JOIN Phim on CaChieu.MaPhim = Phim.MaPhim
 
--- Các câu truy vấn mẫu
-SELECT 
-    g.MaGheNgoi,
-    g.HangGhe + CAST(g.SoGhe AS VARCHAR) as MaGhe,
-    CASE 
-        WHEN v.MaVe IS NOT NULL THEN N'Đã đặt'
-        ELSE N'Trống'
-    END as TrangThai
-FROM GheNgoi g
-INNER JOIN PhongChieu pc ON g.MaPhongChieu = pc.MaPhongChieu
-INNER JOIN CaChieu cc ON pc.MaPhongChieu = cc.MaPhongChieu
-LEFT JOIN Ve v ON g.MaGheNgoi = v.MaGheNgoi AND v.MaCaChieu = 2
-WHERE cc.MaCaChieu = 2
-ORDER BY g.HangGhe, g.SoGhe;
-
-SELECT g.MaGheNgoi,g.HangGhe + CAST(g.SoGhe AS VARCHAR) as MaGhe,
-                            CASE 
-                            WHEN v.MaVe IS NOT NULL THEN N'Đã đặt'
-                            ELSE N'Trống'
-                            END as TrangThai
-                            FROM GheNgoi g
-                            INNER JOIN PhongChieu pc ON g.MaPhongChieu = pc.MaPhongChieu
-                            INNER JOIN CaChieu cc ON pc.MaPhongChieu = cc.MaPhongChieu
-                            LEFT JOIN Ve v ON g.MaGheNgoi = v.MaGheNgoi AND v.MaCaChieu = 2
-                            WHERE cc.MaCaChieu = 2
-                            ORDER BY g.HangGhe, g.SoGhe
+-- Dữ liệu mẫu cho ChiTietHoaDon (mỗi vé đều có hóa đơn, tương ứng với các MaVe vừa insert)
+DELETE FROM ChiTietHoaDon;
+INSERT INTO ChiTietHoaDon (MaHoaDon, MaVe) VALUES (1, 1);
+INSERT INTO ChiTietHoaDon (MaHoaDon, MaVe) VALUES (1, 2);
+INSERT INTO ChiTietHoaDon (MaHoaDon, MaVe) VALUES (2, 3);
+INSERT INTO ChiTietHoaDon (MaHoaDon, MaVe) VALUES (2, 4);
+INSERT INTO ChiTietHoaDon (MaHoaDon, MaVe) VALUES (3, 5);
+INSERT INTO ChiTietHoaDon (MaHoaDon, MaVe) VALUES (3, 6);
+INSERT INTO ChiTietHoaDon (MaHoaDon, MaVe) VALUES (4, 7);
+INSERT INTO ChiTietHoaDon (MaHoaDon, MaVe) VALUES (4, 8);
+INSERT INTO ChiTietHoaDon (MaHoaDon, MaVe) VALUES (5, 9);
+INSERT INTO ChiTietHoaDon (MaHoaDon, MaVe) VALUES (5, 10);
 -- Kiểm tra dữ liệu
 --toan bo ghe dat dat
 SELECT 
@@ -356,16 +341,6 @@ SELECT * FROM GheNgoi;
 -- Test trigger bằng cách thêm vé mới
 INSERT INTO Ve (MaCaChieu, MaGheNgoi) VALUES (1, 1);
 
--- Thêm vé cho ghế đã đặt
-INSERT INTO Ve (MaCaChieu, MaGheNgoi)
-SELECT 1, MaGheNgoi
-FROM GheNgoi 
-WHERE MaPhongChieu = 1 AND TrangThai = N'Đã đặt';
-
-INSERT INTO Ve (MaCaChieu, MaGheNgoi)
-SELECT 2, MaGheNgoi
-FROM GheNgoi 
-WHERE MaPhongChieu = 2 AND TrangThai = N'Đã đặt';
 
 -- Kiểm tra vé đã tạo
 SELECT v.MaVe, v.MaCaChieu, g.HangGhe + CAST(g.SoGhe AS VARCHAR) as MaGhe, g.MaPhongChieu
@@ -388,7 +363,7 @@ SELECT MaCaChieu,p.TenPhim,ThoiGianChieu,MaPhongChieu FROM CaChieu cc JOIN Phim 
 SELECT tlp.TenTLP FROM Phim p INNER JOIN Phim_theloai pt ON p.MaPhim = pt.MaPhim 
 INNER JOIN TheLoaiPhim tlp ON pt.MaTLP = tlp.MaTLP WHERE p.MaPhim = 2
 SELECT MaPhim AS "Mã phim", TenPhim AS "Tên phim", Mota AS "Mô tả", ThoiLuong AS "Thời lượng", NgayKhoiChieu AS "Ngày khởi chiếu", NgayKetThuc AS "Ngày kết thúc", QuocGia AS "Quốc gia",DaoDien AS"Đạo diễn",GioiHanTuoi AS"Giới hạn tuổi", NamSX AS "Năm sản xuất" FROM phim;
-SELECT * FROM TaiKhoan
+
 SELECT TenDangNhap AS " Tên đăng nhập",MatKhau AS "Mật khẩu",LoaiTK AS "Loại TK",MaNV AS "Mã nhân viên" FROM TaiKhoan
 
 SELECT * from PhongChieu
@@ -412,10 +387,6 @@ JOIN
 
     SELECT TenPhim FROM Phim
     SELECT TenPhong FROM PhongChieu
-
-
-
- 
      SELECT 
          g.MaGheNgoi,
          g.HangGhe + CAST(g.SoGhe AS VARCHAR) as MaGhe,
@@ -426,8 +397,8 @@ JOIN
      FROM GheNgoi g
      INNER JOIN PhongChieu pc ON g.MaPhongChieu = pc.MaPhongChieu
      INNER JOIN CaChieu cc ON pc.MaPhongChieu = cc.MaPhongChieu
-     LEFT JOIN Ve v ON g.MaGheNgoi = v.MaGheNgoi AND v.MaCaChieu = 1
-     WHERE cc.MaCaChieu = 1
+     LEFT JOIN Ve v ON g.MaGheNgoi = v.MaGheNgoi AND v.MaCaChieu = 2
+     WHERE cc.MaCaChieu = 2
      ORDER BY g.HangGhe, g.SoGhe
 
      
@@ -456,21 +427,19 @@ SELECT v.MaVe, v.MaCaChieu, v.MaGheNgoi, h.MaKhachHang, h.TongTien as TienBanVe
                              LEFT JOIN ChiTietHoaDon cthd ON v.MaVe = cthd.MaVe
                              LEFT JOIN HoaDon h ON cthd.MaHoaDon = h.MaHoaDon
                              WHERE v.MaCaChieu = 5
-
-
-
+SELECT * FROM HoaDon
 
 
 SELECT MaHoaDon AS "Mã hóa đơn",NgayBan AS "Ngày bán",TongTien AS "Tổng tiền",MaNhanVien AS "Mã nhân viên",MaKhachHang AS "Mã khách hàng" FROM HoaDon
 
 -- Truy vấn chi tiết hóa đơn theo mã hóa đơn cụ thể
 SELECT 
-    ROW_NUMBER() OVER (ORDER BY cc.ThoiGianChieu) AS "STT",
-    p.TenPhim AS "Tên phim",
-    pc.TenPhong AS "Phòng",
-    CONVERT(VARCHAR(5), cc.ThoiGianChieu, 108) AS "Ca",
-    g.HangGhe + CAST(g.SoGhe AS VARCHAR) AS "Ghế",
-    cc.GiaVe AS "Giá"
+    ROW_NUMBER() OVER (ORDER BY cc.ThoiGianChieu) AS STT,
+    p.TenPhim AS TenPhim,
+    pc.TenPhong AS Phong,
+    CONVERT(VARCHAR(5), cc.ThoiGianChieu, 108) AS Ca,
+    g.HangGhe + CAST(g.SoGhe AS VARCHAR) AS Ghe,
+    cc.GiaVe AS Gia
 FROM ChiTietHoaDon cthd
 INNER JOIN HoaDon h ON cthd.MaHoaDon = h.MaHoaDon
 INNER JOIN Ve v ON cthd.MaVe = v.MaVe
@@ -478,6 +447,45 @@ INNER JOIN CaChieu cc ON v.MaCaChieu = cc.MaCaChieu
 INNER JOIN Phim p ON cc.MaPhim = p.MaPhim
 INNER JOIN PhongChieu pc ON cc.MaPhongChieu = pc.MaPhongChieu
 INNER JOIN GheNgoi g ON v.MaGheNgoi = g.MaGheNgoi
-WHERE h.MaHoaDon = 1  -- Thay đổi số 1 thành mã hóa đơn cần xem
+WHERE h.MaHoaDon = 1 
 ORDER BY cc.ThoiGianChieu;
 
+SELECT v.MaVe, v.MaCaChieu, v.MaGheNgoi, h.MaKhachHang, h.TongTien as TienBanVe
+                             FROM Ve v
+                             LEFT JOIN ChiTietHoaDon cthd ON v.MaVe = cthd.MaVe
+                             LEFT JOIN HoaDon h ON cthd.MaHoaDon = h.MaHoaDon
+                             WHERE v.MaCaChieu = 1
+
+
+SELECT v.MaVe, v.MaCaChieu, v.MaGheNgoi, h.MaKhachHang, cc.GiaVe as TienBanVe
+FROM Ve v
+LEFT JOIN ChiTietHoaDon cthd ON v.MaVe = cthd.MaVe
+LEFT JOIN HoaDon h ON cthd.MaHoaDon = h.MaHoaDon
+LEFT JOIN CaChieu cc ON v.MaCaChieu = cc.MaCaChieu
+WHERE v.MaCaChieu = 1
+SELECT 
+    MaHoaDon AS [Mã hóa đơn],
+    NgayBan AS [Ngày bán],
+    TongTien AS [Tổng tiền],
+    MaNhanVien AS [Mã nhân viên],
+    MaKhachHang AS [Mã khách hàng]
+FROM HoaDon
+
+--ham lay chitiet hoa don
+
+SELECT 
+    ROW_NUMBER() OVER (ORDER BY cc.ThoiGianChieu) AS STT,
+    p.TenPhim AS TenPhim,
+    pc.TenPhong AS Phong,
+    CONVERT(VARCHAR(5), cc.ThoiGianChieu, 108) AS Ca,
+    g.HangGhe + CAST(g.SoGhe AS VARCHAR) AS Ghe,
+    cc.GiaVe AS Gia
+FROM ChiTietHoaDon cthd
+INNER JOIN HoaDon h ON cthd.MaHoaDon = h.MaHoaDon
+INNER JOIN Ve v ON cthd.MaVe = v.MaVe
+INNER JOIN CaChieu cc ON v.MaCaChieu = cc.MaCaChieu
+INNER JOIN Phim p ON cc.MaPhim = p.MaPhim
+INNER JOIN PhongChieu pc ON cc.MaPhongChieu = pc.MaPhongChieu
+INNER JOIN GheNgoi g ON v.MaGheNgoi = g.MaGheNgoi
+WHERE h.MaHoaDon = 1 
+ORDER BY cc.ThoiGianChieu;

@@ -38,9 +38,9 @@
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(123, 196);
+            this.button1.Location = new System.Drawing.Point(135, 192);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(205, 75);
+            this.button1.Size = new System.Drawing.Size(188, 70);
             this.button1.TabIndex = 0;
             this.button1.Text = "Quản lý";
             this.button1.UseVisualStyleBackColor = true;
@@ -48,9 +48,9 @@
             // 
             // button2
             // 
-            this.button2.Location = new System.Drawing.Point(123, 306);
+            this.button2.Location = new System.Drawing.Point(135, 311);
             this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(205, 75);
+            this.button2.Size = new System.Drawing.Size(188, 70);
             this.button2.TabIndex = 2;
             this.button2.Text = "Bán vé";
             this.button2.UseVisualStyleBackColor = true;
@@ -89,7 +89,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(11F, 22F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(458, 470);
+            this.ClientSize = new System.Drawing.Size(458, 465);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.button2);

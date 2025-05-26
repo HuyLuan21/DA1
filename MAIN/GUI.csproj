@@ -109,6 +109,14 @@
     <Compile Include="HoaDon.Designer.cs">
       <DependentUpon>HoaDon.cs</DependentUpon>
     </Compile>
+    <Compile Include="HoaDon_CTHoaDon.cs">
+      <DependentUpon>HoaDon_CTHoaDon.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="HoaDon_CTHoaDon.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>HoaDon_CTHoaDon.xsd</DependentUpon>
+    </Compile>
     <Compile Include="KhachHang.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -265,6 +273,17 @@
     <EmbeddedResource Include="Ve.resx">
       <DependentUpon>Ve.cs</DependentUpon>
     </EmbeddedResource>
+    <None Include="HoaDon_CTHoaDon.xsc">
+      <DependentUpon>HoaDon_CTHoaDon.xsd</DependentUpon>
+    </None>
+    <None Include="HoaDon_CTHoaDon.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>HoaDon_CTHoaDon.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="HoaDon_CTHoaDon.xss">
+      <DependentUpon>HoaDon_CTHoaDon.xsd</DependentUpon>
+    </None>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>

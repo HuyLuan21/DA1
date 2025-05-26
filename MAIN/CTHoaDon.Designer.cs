@@ -31,8 +31,8 @@
             this.panel1 = new System.Windows.Forms.Panel();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.Chitiet = new System.Windows.Forms.DataGridView();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.themve = new System.Windows.Forms.Button();
             this.inhoadon = new System.Windows.Forms.Button();
             this.NgayLap = new System.Windows.Forms.DateTimePicker();
             this.MaHD = new System.Windows.Forms.TextBox();
@@ -44,12 +44,11 @@
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.Chitiet = new System.Windows.Forms.DataGridView();
             this.panel1.SuspendLayout();
             this.tableLayoutPanel1.SuspendLayout();
             this.groupBox1.SuspendLayout();
-            this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.Chitiet)).BeginInit();
+            this.panel2.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel1
@@ -91,9 +90,28 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Danh sách vé";
             // 
+            // Chitiet
+            // 
+            this.Chitiet.AllowUserToAddRows = false;
+            this.Chitiet.AllowUserToDeleteRows = false;
+            this.Chitiet.AllowUserToResizeColumns = false;
+            this.Chitiet.AllowUserToResizeRows = false;
+            this.Chitiet.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.Chitiet.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.Chitiet.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.Chitiet.Location = new System.Drawing.Point(4, 24);
+            this.Chitiet.MultiSelect = false;
+            this.Chitiet.Name = "Chitiet";
+            this.Chitiet.ReadOnly = true;
+            this.Chitiet.RowHeadersVisible = false;
+            this.Chitiet.RowHeadersWidth = 51;
+            this.Chitiet.RowTemplate.Height = 24;
+            this.Chitiet.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.Chitiet.Size = new System.Drawing.Size(949, 637);
+            this.Chitiet.TabIndex = 1;
+            // 
             // panel2
             // 
-            this.panel2.Controls.Add(this.themve);
             this.panel2.Controls.Add(this.inhoadon);
             this.panel2.Controls.Add(this.NgayLap);
             this.panel2.Controls.Add(this.MaHD);
@@ -112,23 +130,15 @@
             this.panel2.Size = new System.Drawing.Size(957, 168);
             this.panel2.TabIndex = 1;
             // 
-            // themve
-            // 
-            this.themve.Location = new System.Drawing.Point(157, 102);
-            this.themve.Name = "themve";
-            this.themve.Size = new System.Drawing.Size(105, 38);
-            this.themve.TabIndex = 11;
-            this.themve.Text = "Thêm vé";
-            this.themve.UseVisualStyleBackColor = true;
-            // 
             // inhoadon
             // 
-            this.inhoadon.Location = new System.Drawing.Point(24, 102);
+            this.inhoadon.Location = new System.Drawing.Point(130, 104);
             this.inhoadon.Name = "inhoadon";
-            this.inhoadon.Size = new System.Drawing.Size(105, 38);
+            this.inhoadon.Size = new System.Drawing.Size(132, 38);
             this.inhoadon.TabIndex = 10;
             this.inhoadon.Text = "In hóa đơn";
             this.inhoadon.UseVisualStyleBackColor = true;
+            this.inhoadon.Click += new System.EventHandler(this.inhoadon_Click);
             // 
             // NgayLap
             // 
@@ -216,26 +226,6 @@
             this.label1.TabIndex = 0;
             this.label1.Text = "Mã hóa đơn:";
             // 
-            // Chitiet
-            // 
-            this.Chitiet.AllowUserToAddRows = false;
-            this.Chitiet.AllowUserToDeleteRows = false;
-            this.Chitiet.AllowUserToResizeColumns = false;
-            this.Chitiet.AllowUserToResizeRows = false;
-            this.Chitiet.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.Chitiet.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.Chitiet.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.Chitiet.Location = new System.Drawing.Point(4, 24);
-            this.Chitiet.MultiSelect = false;
-            this.Chitiet.Name = "Chitiet";
-            this.Chitiet.ReadOnly = true;
-            this.Chitiet.RowHeadersVisible = false;
-            this.Chitiet.RowHeadersWidth = 51;
-            this.Chitiet.RowTemplate.Height = 24;
-            this.Chitiet.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.Chitiet.Size = new System.Drawing.Size(949, 637);
-            this.Chitiet.TabIndex = 1;
-            // 
             // CTHoaDon
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 20F);
@@ -249,9 +239,9 @@
             this.panel1.ResumeLayout(false);
             this.tableLayoutPanel1.ResumeLayout(false);
             this.groupBox1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.Chitiet)).EndInit();
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.Chitiet)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -273,7 +263,6 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button inhoadon;
-        private System.Windows.Forms.Button themve;
         private System.Windows.Forms.DataGridView Chitiet;
     }
 }

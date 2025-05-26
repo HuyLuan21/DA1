@@ -336,8 +336,8 @@
             // 
             this.checkedListBox1.BackColor = System.Drawing.SystemColors.Window;
             this.checkedListBox1.FormattingEnabled = true;
+            this.checkedListBox1.HorizontalScrollbar = true;
             this.checkedListBox1.Location = new System.Drawing.Point(12, 176);
-            this.checkedListBox1.MultiColumn = true;
             this.checkedListBox1.Name = "checkedListBox1";
             this.checkedListBox1.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.checkedListBox1.Size = new System.Drawing.Size(346, 104);

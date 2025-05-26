@@ -32,7 +32,6 @@ namespace DA1
         private void LoadChiTietHoaDon()
         {
             Chitiet.DataSource =BLL.HoaDon_BLL.Instance.GetChiTietHoaDon(maHoaDon);
-           
         }
 
         private void LoadTenNhanVienVaKhachHang()
@@ -44,15 +43,9 @@ namespace DA1
                 textBox2.Text = dt.Rows[0]["TenKhachHang"].ToString();
             }
         }
-
-        private void button2_Click(object sender, EventArgs e)
+        private void inhoadon_Click(object sender, EventArgs e)
         {
-            this.Close();
-        }
 
-        private void button1_Click(object sender, EventArgs e)
-        {
-            // In hóa đơn
         }
     }
 }
