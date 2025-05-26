@@ -7,28 +7,50 @@
       "RelativeMoniker": "D:0:0:{10964D9B-BBD4-420F-BA3E-C297066A8D94}|GUI.csproj|solutionrelative:rpthoadon.rpt||{C0EF7560-990E-4D61-B970-65A6096B6866}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{10964D9B-BBD4-420F-BA3E-C297066A8D94}|GUI.csproj|c:\\users\\admin\\source\\repos\\btl\\da1\\da1\\main\\cthoadon.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{10964D9B-BBD4-420F-BA3E-C297066A8D94}|GUI.csproj|solutionrelative:cthoadon.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+      "AbsoluteMoniker": "D:0:0:{4D7262EF-B154-4756-8029-063943F5E18A}|..\\DAL\\DAL.csproj|c:\\users\\admin\\source\\repos\\btl\\da1\\da1\\dal\\ve_dal.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{10964D9B-BBD4-420F-BA3E-C297066A8D94}|GUI.csproj|C:\\Users\\Admin\\source\\repos\\BTL\\DA1\\DA1\\MAIN\\rpthoadon.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{10964D9B-BBD4-420F-BA3E-C297066A8D94}|GUI.csproj|solutionrelative:rpthoadon.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+      "AbsoluteMoniker": "D:0:0:{4D7262EF-B154-4756-8029-063943F5E18A}|..\\DAL\\DAL.csproj|c:\\users\\admin\\source\\repos\\btl\\da1\\da1\\dal\\datve_dal.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{10964D9B-BBD4-420F-BA3E-C297066A8D94}|GUI.csproj|C:\\Users\\Admin\\source\\repos\\BTL\\DA1\\DA1\\MAIN\\chonchucnang.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{10964D9B-BBD4-420F-BA3E-C297066A8D94}|GUI.csproj|solutionrelative:chonchucnang.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+      "AbsoluteMoniker": "D:0:0:{4D7262EF-B154-4756-8029-063943F5E18A}|..\\DAL\\DAL.csproj|c:\\users\\admin\\source\\repos\\btl\\da1\\da1\\dal\\theloai_dal.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4D7262EF-B154-4756-8029-063943F5E18A}|..\\DAL\\DAL.csproj|c:\\users\\admin\\source\\repos\\btl\\da1\\da1\\dal\\dataprovider.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{10964D9B-BBD4-420F-BA3E-C297066A8D94}|GUI.csproj|c:\\users\\admin\\source\\repos\\btl\\da1\\da1\\main\\gui_report.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{10964D9B-BBD4-420F-BA3E-C297066A8D94}|GUI.csproj|solutionrelative:gui_report.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
       "AbsoluteMoniker": "D:0:0:{10964D9B-BBD4-420F-BA3E-C297066A8D94}|GUI.csproj|C:\\Users\\Admin\\source\\repos\\BTL\\DA1\\DA1\\MAIN\\hoadon.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
       "RelativeMoniker": "D:0:0:{10964D9B-BBD4-420F-BA3E-C297066A8D94}|GUI.csproj|solutionrelative:hoadon.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
+      "AbsoluteMoniker": "D:0:0:{10964D9B-BBD4-420F-BA3E-C297066A8D94}|GUI.csproj|C:\\Users\\Admin\\source\\repos\\BTL\\DA1\\DA1\\MAIN\\cthoadon.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{10964D9B-BBD4-420F-BA3E-C297066A8D94}|GUI.csproj|solutionrelative:cthoadon.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{10964D9B-BBD4-420F-BA3E-C297066A8D94}|GUI.csproj|C:\\Users\\Admin\\source\\repos\\BTL\\DA1\\DA1\\MAIN\\cthoadon.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{10964D9B-BBD4-420F-BA3E-C297066A8D94}|GUI.csproj|solutionrelative:cthoadon.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F037F1CF-F11D-4CF3-B889-471C94D1C5D2}|..\\BLL\\BLL.csproj|c:\\users\\admin\\source\\repos\\btl\\da1\\da1\\bll\\hoadon_bll.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4D7262EF-B154-4756-8029-063943F5E18A}|..\\DAL\\DAL.csproj|c:\\users\\admin\\source\\repos\\btl\\da1\\da1\\dal\\hoadon_dal.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{10964D9B-BBD4-420F-BA3E-C297066A8D94}|GUI.csproj|c:\\users\\admin\\source\\repos\\btl\\da1\\da1\\main\\hoadon_cthoadon.xsd||{07AC752B-D2B0-4DCD-AD9C-237BF561A30A}",
+      "RelativeMoniker": "D:0:0:{10964D9B-BBD4-420F-BA3E-C297066A8D94}|GUI.csproj|solutionrelative:hoadon_cthoadon.xsd||{07AC752B-D2B0-4DCD-AD9C-237BF561A30A}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{10964D9B-BBD4-420F-BA3E-C297066A8D94}|GUI.csproj|C:\\Users\\Admin\\source\\repos\\BTL\\DA1\\DA1\\MAIN\\banve.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
       "RelativeMoniker": "D:0:0:{10964D9B-BBD4-420F-BA3E-C297066A8D94}|GUI.csproj|solutionrelative:banve.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{10964D9B-BBD4-420F-BA3E-C297066A8D94}|GUI.csproj|C:\\Users\\Admin\\source\\repos\\BTL\\DA1\\DA1\\MAIN\\cthoadon.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{10964D9B-BBD4-420F-BA3E-C297066A8D94}|GUI.csproj|solutionrelative:cthoadon.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{10964D9B-BBD4-420F-BA3E-C297066A8D94}|GUI.csproj|C:\\Users\\Admin\\source\\repos\\BTL\\DA1\\DA1\\MAIN\\chonchucnang.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{10964D9B-BBD4-420F-BA3E-C297066A8D94}|GUI.csproj|solutionrelative:chonchucnang.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
       "AbsoluteMoniker": "D:0:0:{10964D9B-BBD4-420F-BA3E-C297066A8D94}|GUI.csproj|C:\\Users\\Admin\\source\\repos\\BTL\\DA1\\DA1\\MAIN\\chonkh.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
@@ -50,17 +72,8 @@
       "RelativeMoniker": "D:0:0:{10964D9B-BBD4-420F-BA3E-C297066A8D94}|GUI.csproj|solutionrelative:phim.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{4D7262EF-B154-4756-8029-063943F5E18A}|..\\DAL\\DAL.csproj|c:\\users\\admin\\source\\repos\\btl\\da1\\da1\\dal\\hoadon_dal.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{F037F1CF-F11D-4CF3-B889-471C94D1C5D2}|..\\BLL\\BLL.csproj|c:\\users\\admin\\source\\repos\\btl\\da1\\da1\\bll\\hoadon_bll.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{10964D9B-BBD4-420F-BA3E-C297066A8D94}|GUI.csproj|C:\\Users\\Admin\\source\\repos\\BTL\\DA1\\DA1\\MAIN\\hoadon.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{10964D9B-BBD4-420F-BA3E-C297066A8D94}|GUI.csproj|solutionrelative:hoadon.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{4D7262EF-B154-4756-8029-063943F5E18A}|..\\DAL\\DAL.csproj|c:\\users\\admin\\source\\repos\\btl\\da1\\da1\\dal\\ve_dal.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{10964D9B-BBD4-420F-BA3E-C297066A8D94}|GUI.csproj|C:\\Users\\Admin\\source\\repos\\BTL\\DA1\\DA1\\MAIN\\ve.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -73,9 +86,6 @@
     {
       "AbsoluteMoniker": "D:0:0:{10964D9B-BBD4-420F-BA3E-C297066A8D94}|GUI.csproj|C:\\Users\\Admin\\source\\repos\\BTL\\DA1\\DA1\\MAIN\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{10964D9B-BBD4-420F-BA3E-C297066A8D94}|GUI.csproj|solutionrelative:program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{4D7262EF-B154-4756-8029-063943F5E18A}|..\\DAL\\DAL.csproj|c:\\users\\admin\\source\\repos\\btl\\da1\\da1\\dal\\datve_dal.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{F037F1CF-F11D-4CF3-B889-471C94D1C5D2}|..\\BLL\\BLL.csproj|c:\\users\\admin\\source\\repos\\btl\\da1\\da1\\bll\\datve_bll.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
@@ -196,9 +206,6 @@
       "AbsoluteMoniker": "D:0:0:{4D7262EF-B154-4756-8029-063943F5E18A}|..\\DAL\\DAL.csproj|c:\\users\\admin\\source\\repos\\btl\\da1\\da1\\dal\\phim_dal.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{4D7262EF-B154-4756-8029-063943F5E18A}|..\\DAL\\DAL.csproj|c:\\users\\admin\\source\\repos\\btl\\da1\\da1\\dal\\theloai_dal.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{10964D9B-BBD4-420F-BA3E-C297066A8D94}|GUI.csproj|C:\\Users\\Admin\\source\\repos\\BTL\\DA1\\DA1\\MAIN\\cachieu.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{10964D9B-BBD4-420F-BA3E-C297066A8D94}|GUI.csproj|solutionrelative:cachieu.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
@@ -228,24 +235,29 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 5,
+          "SelectedChildIndex": 6,
           "Children": [
             {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{eefa5220-e298-11d0-8f78-00a0c9110057}"
+            },
+            {
               "$type": "Document",
-              "DocumentIndex": 19,
+              "DocumentIndex": 2,
               "Title": "Datve_DAL.cs",
               "DocumentMoniker": "C:\\Users\\Admin\\source\\repos\\BTL\\DA1\\DA1\\DAL\\Datve_DAL.cs",
               "RelativeDocumentMoniker": "..\\DAL\\Datve_DAL.cs",
               "ToolTip": "C:\\Users\\Admin\\source\\repos\\BTL\\DA1\\DA1\\DAL\\Datve_DAL.cs",
               "RelativeToolTip": "..\\DAL\\Datve_DAL.cs",
-              "ViewState": "AgIAABkAAAAAAAAAAAAAACcAAAAUAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAQAAAAdAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-05-22T16:05:22.9Z",
-              "IsPinned": true
+              "IsPinned": true,
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 20,
+              "DocumentIndex": 23,
               "Title": "Datve_BLL.cs",
               "DocumentMoniker": "C:\\Users\\Admin\\source\\repos\\BTL\\DA1\\DA1\\BLL\\Datve_BLL.cs",
               "RelativeDocumentMoniker": "..\\BLL\\Datve_BLL.cs",
@@ -258,7 +270,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 9,
+              "DocumentIndex": 16,
               "Title": "BanVe.cs",
               "DocumentMoniker": "C:\\Users\\Admin\\source\\repos\\BTL\\DA1\\DA1\\MAIN\\BanVe.cs",
               "RelativeDocumentMoniker": "BanVe.cs",
@@ -267,11 +279,100 @@
               "ViewState": "AgIAAC4BAAAAAAAAAAAuwEIBAAAMAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-05-22T11:17:04.293Z",
-              "IsPinned": true
+              "IsPinned": true,
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 1,
+              "Title": "Ve_DAL.cs",
+              "DocumentMoniker": "C:\\Users\\Admin\\source\\repos\\BTL\\DA1\\DA1\\DAL\\Ve_DAL.cs",
+              "RelativeDocumentMoniker": "..\\DAL\\Ve_DAL.cs",
+              "ToolTip": "C:\\Users\\Admin\\source\\repos\\BTL\\DA1\\DA1\\DAL\\Ve_DAL.cs",
+              "RelativeToolTip": "..\\DAL\\Ve_DAL.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAAlAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-25T11:16:31.052Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "DataProvider.cs",
+              "DocumentMoniker": "C:\\Users\\Admin\\source\\repos\\BTL\\DA1\\DA1\\DAL\\DataProvider.cs",
+              "RelativeDocumentMoniker": "..\\DAL\\DataProvider.cs",
+              "ToolTip": "C:\\Users\\Admin\\source\\repos\\BTL\\DA1\\DA1\\DAL\\DataProvider.cs",
+              "RelativeToolTip": "..\\DAL\\DataProvider.cs",
+              "ViewState": "AgIAAEEAAAAAAAAAAAAgwAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-26T14:33:50.142Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "rptHoaDon.rpt",
+              "DocumentMoniker": "C:\\Users\\Admin\\source\\repos\\BTL\\DA1\\DA1\\MAIN\\rptHoaDon.rpt",
+              "RelativeDocumentMoniker": "rptHoaDon.rpt",
+              "ToolTip": "C:\\Users\\Admin\\source\\repos\\BTL\\DA1\\DA1\\MAIN\\rptHoaDon.rpt",
+              "RelativeToolTip": "rptHoaDon.rpt",
+              "Icon": "00000000-0000-0000-0000-000000000000.000000|iVBORw0KGgoAAAANSUhEUgAAABQAAAAUCAYAAACNiR0NAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAPESURBVDhPrZRLaFxVHMZ/59w7k8lkJpmZTDJ5m1pJ2iY0JoWA0aKFUK1dtF2I2ampoggiSHAjaHFVRBA3FXSjuJFaqDbFCl1Z00JNMkmahGIe5lHznplM7rxn7sNFHp1JuvQPH/f\u002Bz\u002BX73fP4OPB/lmVZIr9v6XjhzKs9736WP/akWpieHLz63eUP9o8DqPmNq9TjP9r6bGfbYT\u002BKIhEU/A\u002BAfzdijHgrqvVcNn37\u002BvdfxrYia/nflfymrrGp7flTr1w42VaL112Mx1WEz\u002B3Am6dYMkvWspWdfK6zfT0ciW6GNlaSCW1zlyHzgQACkEKQSOXYjKWJ7FMyo\u002BN22jlxrK645\u002BJHl9u7ul9zl/kCu/4DwL0SIJ4kYD2a5MbALFoyy9me9z7tPv9G367tAHB31xQhUOS2sjLN71Y/q2KJ\u002BoCbrpYaOo9W0dVaw6G68uKSkmLHrr8AKIRASoFg\u002BymlJC5jPLDGuBm/zg9b3zIpBgn4SqjakcthQ5GPMfuAIHemKIQgYoSYNv5mSjzkYXKCX\u002BPX\u002BCX\u002BMxO5UeTO7IUoTIJUnJUOxVlZqjgrPcJe5jQtiWFapK0EwXSQgdQAhpKlyCzCMAxua7e4Ev6KSC6EJYwDQLX63NWXwGwD/KLS0Ta9YhGJ5ehP3GQmM4OOQTQVJbapoRs6mBAMD/H\u002BSi9fH7\u002BCoLgQ\u002BM2Hx52ZXM4T1nLVsysZ7\u002Bh8lks/hVA9TYQDc0QDQSyXiTQU0mMZMktpGqob6Xv9YyodFUREvAAo9djClBlf/LPOHbvTeVidaWlwsBzOMjvl59FYK\u002BH5p0mqcaQuMZZ02tUOLh57mxcrTuGyuQ4sWYnqZRvB0cl5IVhorPVWHGkoOe2wq8yuGYRXKxBZP3ZviOTWMk\u002Bl63mzs5e3unsRYvtAVsNxgsPDg2N/3bkFoMxO3GV24p6ZzNkSamnVM7XV5RdOd/hY2zLZ0EySIS/WP0ewe4J8/vInnGs7jyrlXrzWIilGgkODI/e3gXuxGb//G\u002BN3b2C3qZQU22muKaLBb8PpUPAWldN36BJNzlYsQMidiElQ5OOoFQDTCY1UYgshBaYliabAEJIyl4q3xI7fFkA17ZimubfcfB0AAugGbCZgcCbNUsRCURTq/ZLmgE5US7IcirO0EWNxXdtTKqsj84AF96GQiqZb9rnxxXSlXcXRWCFwq3rSXxQLLS5HE\u002BFNLYuRMjIpzcr3hdaXF3bfC4A1PsfI2RO\u002BLzI5/Z14It28Fc\u002BytBYfnZze\u002BHFqbm0opxuPHtzr14b/uJbL9\u002BXXf8LCnE6KaQGDAAAAAElFTkSuQmCC",
+              "WhenOpened": "2025-05-26T14:10:28.978Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "TheLoai_DAL.cs",
+              "DocumentMoniker": "C:\\Users\\Admin\\source\\repos\\BTL\\DA1\\DA1\\DAL\\TheLoai_DAL.cs",
+              "RelativeDocumentMoniker": "..\\DAL\\TheLoai_DAL.cs",
+              "ToolTip": "C:\\Users\\Admin\\source\\repos\\BTL\\DA1\\DA1\\DAL\\TheLoai_DAL.cs",
+              "RelativeToolTip": "..\\DAL\\TheLoai_DAL.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-22T16:05:16.613Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "HoaDon.cs [Design]",
+              "DocumentMoniker": "C:\\Users\\Admin\\source\\repos\\BTL\\DA1\\DA1\\MAIN\\HoaDon.cs",
+              "RelativeDocumentMoniker": "HoaDon.cs",
+              "ToolTip": "C:\\Users\\Admin\\source\\repos\\BTL\\DA1\\DA1\\MAIN\\HoaDon.cs [Design]",
+              "RelativeToolTip": "HoaDon.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-25T16:56:22.053Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "GUI_Report.cs [Design]",
+              "DocumentMoniker": "C:\\Users\\Admin\\source\\repos\\BTL\\DA1\\DA1\\MAIN\\GUI_Report.cs",
+              "RelativeDocumentMoniker": "GUI_Report.cs",
+              "ToolTip": "C:\\Users\\Admin\\source\\repos\\BTL\\DA1\\DA1\\MAIN\\GUI_Report.cs [Design]",
+              "RelativeToolTip": "GUI_Report.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-26T14:29:46.139Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "CTHoaDon.cs",
+              "DocumentMoniker": "C:\\Users\\Admin\\source\\repos\\BTL\\DA1\\DA1\\MAIN\\CTHoaDon.cs",
+              "RelativeDocumentMoniker": "CTHoaDon.cs",
+              "ToolTip": "C:\\Users\\Admin\\source\\repos\\BTL\\DA1\\DA1\\MAIN\\CTHoaDon.cs",
+              "RelativeToolTip": "CTHoaDon.cs",
+              "ViewState": "AgIAACMAAAAAAAAAAAAmwDUAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-25T15:42:38.212Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
               "Title": "CTHoaDon.cs [Design]",
               "DocumentMoniker": "C:\\Users\\Admin\\source\\repos\\BTL\\DA1\\DA1\\MAIN\\CTHoaDon.cs",
               "RelativeDocumentMoniker": "CTHoaDon.cs",
@@ -282,35 +383,58 @@
               "EditorCaption": " [Design]"
             },
             {
-              "$type": "Bookmark",
-              "Name": "ST:0:0:{eefa5220-e298-11d0-8f78-00a0c9110057}"
-            },
-            {
               "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "rptHoaDon.rpt",
-              "DocumentMoniker": "C:\\Users\\Admin\\source\\repos\\BTL\\DA1\\DA1\\MAIN\\rptHoaDon.rpt",
-              "RelativeDocumentMoniker": "rptHoaDon.rpt",
-              "ToolTip": "C:\\Users\\Admin\\source\\repos\\BTL\\DA1\\DA1\\MAIN\\rptHoaDon.rpt*",
-              "RelativeToolTip": "rptHoaDon.rpt*",
-              "Icon": "00000000-0000-0000-0000-000000000000.000000|iVBORw0KGgoAAAANSUhEUgAAABQAAAAUCAYAAACNiR0NAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAPESURBVDhPrZRLaFxVHMZ/59w7k8lkJpmZTDJ5m1pJ2iY0JoWA0aKFUK1dtF2I2ampoggiSHAjaHFVRBA3FXSjuJFaqDbFCl1Z00JNMkmahGIe5lHznplM7rxn7sNFHp1JuvQPH/f\u002Bz\u002BX73fP4OPB/lmVZIr9v6XjhzKs9736WP/akWpieHLz63eUP9o8DqPmNq9TjP9r6bGfbYT\u002BKIhEU/A\u002BAfzdijHgrqvVcNn37\u002BvdfxrYia/nflfymrrGp7flTr1w42VaL112Mx1WEz\u002B3Am6dYMkvWspWdfK6zfT0ciW6GNlaSCW1zlyHzgQACkEKQSOXYjKWJ7FMyo\u002BN22jlxrK645\u002BJHl9u7ul9zl/kCu/4DwL0SIJ4kYD2a5MbALFoyy9me9z7tPv9G367tAHB31xQhUOS2sjLN71Y/q2KJ\u002BoCbrpYaOo9W0dVaw6G68uKSkmLHrr8AKIRASoFg\u002BymlJC5jPLDGuBm/zg9b3zIpBgn4SqjakcthQ5GPMfuAIHemKIQgYoSYNv5mSjzkYXKCX\u002BPX\u002BCX\u002BMxO5UeTO7IUoTIJUnJUOxVlZqjgrPcJe5jQtiWFapK0EwXSQgdQAhpKlyCzCMAxua7e4Ev6KSC6EJYwDQLX63NWXwGwD/KLS0Ta9YhGJ5ehP3GQmM4OOQTQVJbapoRs6mBAMD/H\u002BSi9fH7\u002BCoLgQ\u002BM2Hx52ZXM4T1nLVsysZ7\u002Bh8lks/hVA9TYQDc0QDQSyXiTQU0mMZMktpGqob6Xv9YyodFUREvAAo9djClBlf/LPOHbvTeVidaWlwsBzOMjvl59FYK\u002BH5p0mqcaQuMZZ02tUOLh57mxcrTuGyuQ4sWYnqZRvB0cl5IVhorPVWHGkoOe2wq8yuGYRXKxBZP3ZviOTWMk\u002Bl63mzs5e3unsRYvtAVsNxgsPDg2N/3bkFoMxO3GV24p6ZzNkSamnVM7XV5RdOd/hY2zLZ0EySIS/WP0ewe4J8/vInnGs7jyrlXrzWIilGgkODI/e3gXuxGb//G\u002BN3b2C3qZQU22muKaLBb8PpUPAWldN36BJNzlYsQMidiElQ5OOoFQDTCY1UYgshBaYliabAEJIyl4q3xI7fFkA17ZimubfcfB0AAugGbCZgcCbNUsRCURTq/ZLmgE5US7IcirO0EWNxXdtTKqsj84AF96GQiqZb9rnxxXSlXcXRWCFwq3rSXxQLLS5HE\u002BFNLYuRMjIpzcr3hdaXF3bfC4A1PsfI2RO\u002BLzI5/Z14It28Fc\u002BytBYfnZze\u002BHFqbm0opxuPHtzr14b/uJbL9\u002BXXf8LCnE6KaQGDAAAAAElFTkSuQmCC",
-              "WhenOpened": "2025-05-25T15:23:13.409Z",
+              "DocumentIndex": 9,
+              "Title": "HoaDon_BLL.cs",
+              "DocumentMoniker": "C:\\Users\\Admin\\source\\repos\\BTL\\DA1\\DA1\\BLL\\HoaDon_BLL.cs",
+              "RelativeDocumentMoniker": "..\\BLL\\HoaDon_BLL.cs",
+              "ToolTip": "C:\\Users\\Admin\\source\\repos\\BTL\\DA1\\DA1\\BLL\\HoaDon_BLL.cs",
+              "RelativeToolTip": "..\\BLL\\HoaDon_BLL.cs",
+              "ViewState": "AgIAACgAAAAAAAAAAAAUwD8AAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-24T15:00:40.795Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 10,
+              "Title": "HoaDon_DAL.cs",
+              "DocumentMoniker": "C:\\Users\\Admin\\source\\repos\\BTL\\DA1\\DA1\\DAL\\HoaDon_DAL.cs",
+              "RelativeDocumentMoniker": "..\\DAL\\HoaDon_DAL.cs",
+              "ToolTip": "C:\\Users\\Admin\\source\\repos\\BTL\\DA1\\DA1\\DAL\\HoaDon_DAL.cs",
+              "RelativeToolTip": "..\\DAL\\HoaDon_DAL.cs",
+              "ViewState": "AgIAAFIAAADAzMzMzEwkwGoAAAANAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-24T15:00:28.375Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "HoaDon_CTHoaDon.xsd",
+              "DocumentMoniker": "C:\\Users\\Admin\\source\\repos\\BTL\\DA1\\DA1\\MAIN\\HoaDon_CTHoaDon.xsd",
+              "RelativeDocumentMoniker": "HoaDon_CTHoaDon.xsd",
+              "ToolTip": "C:\\Users\\Admin\\source\\repos\\BTL\\DA1\\DA1\\MAIN\\HoaDon_CTHoaDon.xsd",
+              "RelativeToolTip": "HoaDon_CTHoaDon.xsd",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003579|",
+              "WhenOpened": "2025-05-26T14:09:53.766Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
               "Title": "BanVe.cs [Design]",
               "DocumentMoniker": "C:\\Users\\Admin\\source\\repos\\BTL\\DA1\\DA1\\MAIN\\BanVe.cs",
               "RelativeDocumentMoniker": "BanVe.cs",
               "ToolTip": "C:\\Users\\Admin\\source\\repos\\BTL\\DA1\\DA1\\MAIN\\BanVe.cs [Design]",
               "RelativeToolTip": "BanVe.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-22T09:12:54.157Z"
+              "WhenOpened": "2025-05-22T09:12:54.157Z",
+              "EditorCaption": " [Design]"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 13,
               "Title": "Chonchucnang.cs [Design]",
               "DocumentMoniker": "C:\\Users\\Admin\\source\\repos\\BTL\\DA1\\DA1\\MAIN\\Chonchucnang.cs",
               "RelativeDocumentMoniker": "Chonchucnang.cs",
@@ -321,43 +445,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "rptHoaDon.cs [Design]",
-              "DocumentMoniker": "C:\\Users\\Admin\\source\\repos\\BTL\\DA1\\DA1\\MAIN\\rptHoaDon.cs",
-              "RelativeDocumentMoniker": "rptHoaDon.cs",
-              "ToolTip": "C:\\Users\\Admin\\source\\repos\\BTL\\DA1\\DA1\\MAIN\\rptHoaDon.cs [Design]",
-              "RelativeToolTip": "rptHoaDon.cs [Design]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-26T10:58:32.833Z",
-              "EditorCaption": " [Design]"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "HoaDon.cs [Design]",
-              "DocumentMoniker": "C:\\Users\\Admin\\source\\repos\\BTL\\DA1\\DA1\\MAIN\\HoaDon.cs",
-              "RelativeDocumentMoniker": "HoaDon.cs",
-              "ToolTip": "C:\\Users\\Admin\\source\\repos\\BTL\\DA1\\DA1\\MAIN\\HoaDon.cs [Design]",
-              "RelativeToolTip": "HoaDon.cs [Design]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-25T16:56:22.053Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "CTHoaDon.cs",
-              "DocumentMoniker": "C:\\Users\\Admin\\source\\repos\\BTL\\DA1\\DA1\\MAIN\\CTHoaDon.cs",
-              "RelativeDocumentMoniker": "CTHoaDon.cs",
-              "ToolTip": "C:\\Users\\Admin\\source\\repos\\BTL\\DA1\\DA1\\MAIN\\CTHoaDon.cs",
-              "RelativeToolTip": "CTHoaDon.cs",
-              "ViewState": "AgIAACEAAAAAAAAAAAAuwC8AAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-25T15:42:38.212Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 14,
               "Title": "ChonKH.cs [Design]",
               "DocumentMoniker": "C:\\Users\\Admin\\source\\repos\\BTL\\DA1\\DA1\\MAIN\\ChonKH.cs",
               "RelativeDocumentMoniker": "ChonKH.cs",
@@ -368,7 +456,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
+              "DocumentIndex": 15,
               "Title": "CTHoaDon.Designer.cs",
               "DocumentMoniker": "C:\\Users\\Admin\\source\\repos\\BTL\\DA1\\DA1\\MAIN\\CTHoaDon.Designer.cs",
               "RelativeDocumentMoniker": "CTHoaDon.Designer.cs",
@@ -381,7 +469,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 10,
+              "DocumentIndex": 17,
               "Title": "Ve_BLL.cs",
               "DocumentMoniker": "C:\\Users\\Admin\\source\\repos\\BTL\\DA1\\DA1\\BLL\\Ve_BLL.cs",
               "RelativeDocumentMoniker": "..\\BLL\\Ve_BLL.cs",
@@ -393,7 +481,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 11,
+              "DocumentIndex": 18,
               "Title": "Phim.cs [Design]",
               "DocumentMoniker": "C:\\Users\\Admin\\source\\repos\\BTL\\DA1\\DA1\\MAIN\\Phim.cs",
               "RelativeDocumentMoniker": "Phim.cs",
@@ -404,31 +492,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 13,
-              "Title": "HoaDon_BLL.cs",
-              "DocumentMoniker": "C:\\Users\\Admin\\source\\repos\\BTL\\DA1\\DA1\\BLL\\HoaDon_BLL.cs",
-              "RelativeDocumentMoniker": "..\\BLL\\HoaDon_BLL.cs",
-              "ToolTip": "C:\\Users\\Admin\\source\\repos\\BTL\\DA1\\DA1\\BLL\\HoaDon_BLL.cs",
-              "RelativeToolTip": "..\\BLL\\HoaDon_BLL.cs",
-              "ViewState": "AgIAABkAAAAAAAAAAAAqwCgAAAAoAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-24T15:00:40.795Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 12,
-              "Title": "HoaDon_DAL.cs",
-              "DocumentMoniker": "C:\\Users\\Admin\\source\\repos\\BTL\\DA1\\DA1\\DAL\\HoaDon_DAL.cs",
-              "RelativeDocumentMoniker": "..\\DAL\\HoaDon_DAL.cs",
-              "ToolTip": "C:\\Users\\Admin\\source\\repos\\BTL\\DA1\\DA1\\DAL\\HoaDon_DAL.cs",
-              "RelativeToolTip": "..\\DAL\\HoaDon_DAL.cs",
-              "ViewState": "AgIAACgAAAAAAAAAAAAuwCkAAAA5AAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-24T15:00:28.375Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 14,
+              "DocumentIndex": 19,
               "Title": "HoaDon.cs",
               "DocumentMoniker": "C:\\Users\\Admin\\source\\repos\\BTL\\DA1\\DA1\\MAIN\\HoaDon.cs",
               "RelativeDocumentMoniker": "HoaDon.cs",
@@ -436,23 +500,12 @@
               "RelativeToolTip": "HoaDon.cs",
               "ViewState": "AgIAAA0AAAAAAAAAAAAEwBIAAAA/AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-25T17:22:24.912Z"
+              "WhenOpened": "2025-05-25T17:22:24.912Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 15,
-              "Title": "Ve_DAL.cs",
-              "DocumentMoniker": "C:\\Users\\Admin\\source\\repos\\BTL\\DA1\\DA1\\DAL\\Ve_DAL.cs",
-              "RelativeDocumentMoniker": "..\\DAL\\Ve_DAL.cs",
-              "ToolTip": "C:\\Users\\Admin\\source\\repos\\BTL\\DA1\\DA1\\DAL\\Ve_DAL.cs",
-              "RelativeToolTip": "..\\DAL\\Ve_DAL.cs",
-              "ViewState": "AgIAAAQAAAAAAAAAAAA8wBkAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-25T11:16:31.052Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 16,
+              "DocumentIndex": 20,
               "Title": "Ve.cs",
               "DocumentMoniker": "C:\\Users\\Admin\\source\\repos\\BTL\\DA1\\DA1\\MAIN\\Ve.cs",
               "RelativeDocumentMoniker": "Ve.cs",
@@ -464,7 +517,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 17,
+              "DocumentIndex": 21,
               "Title": "Ve.cs [Design]",
               "DocumentMoniker": "C:\\Users\\Admin\\source\\repos\\BTL\\DA1\\DA1\\MAIN\\Ve.cs",
               "RelativeDocumentMoniker": "Ve.cs",
@@ -475,7 +528,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 18,
+              "DocumentIndex": 22,
               "Title": "Program.cs",
               "DocumentMoniker": "C:\\Users\\Admin\\source\\repos\\BTL\\DA1\\DA1\\MAIN\\Program.cs",
               "RelativeDocumentMoniker": "Program.cs",
@@ -487,7 +540,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 21,
+              "DocumentIndex": 24,
               "Title": "DangNhap.cs [Design]",
               "DocumentMoniker": "C:\\Users\\Admin\\source\\repos\\BTL\\DA1\\DA1\\MAIN\\DangNhap.cs",
               "RelativeDocumentMoniker": "DangNhap.cs",
@@ -498,7 +551,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 22,
+              "DocumentIndex": 25,
               "Title": "LichChieuPhim.cs",
               "DocumentMoniker": "C:\\Users\\Admin\\source\\repos\\BTL\\DA1\\DA1\\MAIN\\LichChieuPhim.cs",
               "RelativeDocumentMoniker": "LichChieuPhim.cs",
@@ -510,7 +563,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 23,
+              "DocumentIndex": 26,
               "Title": "LichChieuPhim.cs [Design]",
               "DocumentMoniker": "C:\\Users\\Admin\\source\\repos\\BTL\\DA1\\DA1\\MAIN\\LichChieuPhim.cs",
               "RelativeDocumentMoniker": "LichChieuPhim.cs",
@@ -521,7 +574,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 24,
+              "DocumentIndex": 27,
               "Title": "DangNhap.cs",
               "DocumentMoniker": "C:\\Users\\Admin\\source\\repos\\BTL\\DA1\\DA1\\MAIN\\DangNhap.cs",
               "RelativeDocumentMoniker": "DangNhap.cs",
@@ -533,7 +586,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 26,
+              "DocumentIndex": 29,
               "Title": "QuanLy.cs",
               "DocumentMoniker": "C:\\Users\\Admin\\source\\repos\\BTL\\DA1\\DA1\\MAIN\\QuanLy.cs",
               "RelativeDocumentMoniker": "QuanLy.cs",
@@ -545,7 +598,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 25,
+              "DocumentIndex": 28,
               "Title": "QuanLy.cs [Design]",
               "DocumentMoniker": "C:\\Users\\Admin\\source\\repos\\BTL\\DA1\\DA1\\MAIN\\QuanLy.cs",
               "RelativeDocumentMoniker": "QuanLy.cs",
@@ -556,7 +609,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 27,
+              "DocumentIndex": 30,
               "Title": "NhanVien.cs [Design]",
               "DocumentMoniker": "C:\\Users\\Admin\\source\\repos\\BTL\\DA1\\DA1\\MAIN\\NhanVien.cs",
               "RelativeDocumentMoniker": "NhanVien.cs",
@@ -567,7 +620,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 29,
+              "DocumentIndex": 32,
               "Title": "PhongChieu_BLL.cs",
               "DocumentMoniker": "C:\\Users\\Admin\\source\\repos\\BTL\\DA1\\DA1\\BLL\\PhongChieu_BLL.cs",
               "RelativeDocumentMoniker": "..\\BLL\\PhongChieu_BLL.cs",
@@ -579,7 +632,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 30,
+              "DocumentIndex": 33,
               "Title": "DangNhap_DAL.cs",
               "DocumentMoniker": "C:\\Users\\Admin\\source\\repos\\BTL\\DA1\\DA1\\DAL\\Dangnhap_DAL.cs",
               "RelativeDocumentMoniker": "..\\DAL\\Dangnhap_DAL.cs",
@@ -591,7 +644,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 28,
+              "DocumentIndex": 31,
               "Title": "Dangnhap_BLL.cs",
               "DocumentMoniker": "C:\\Users\\Admin\\source\\repos\\BTL\\DA1\\DA1\\BLL\\Dangnhap_BLL.cs",
               "RelativeDocumentMoniker": "..\\BLL\\Dangnhap_BLL.cs",
@@ -603,7 +656,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 31,
+              "DocumentIndex": 34,
               "Title": "TaiKhoan_DAL.cs",
               "DocumentMoniker": "C:\\Users\\Admin\\source\\repos\\BTL\\DA1\\DA1\\DAL\\TaiKhoan_DAL.cs",
               "RelativeDocumentMoniker": "..\\DAL\\TaiKhoan_DAL.cs",
@@ -615,7 +668,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 32,
+              "DocumentIndex": 35,
               "Title": "TaiKhoan_BLL.cs",
               "DocumentMoniker": "C:\\Users\\Admin\\source\\repos\\BTL\\DA1\\DA1\\BLL\\TaiKhoan_BLL.cs",
               "RelativeDocumentMoniker": "..\\BLL\\TaiKhoan_BLL.cs",
@@ -627,7 +680,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 33,
+              "DocumentIndex": 36,
               "Title": "Chonchucnang.cs",
               "DocumentMoniker": "C:\\Users\\Admin\\source\\repos\\BTL\\DA1\\DA1\\MAIN\\Chonchucnang.cs",
               "RelativeDocumentMoniker": "Chonchucnang.cs",
@@ -639,7 +692,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 34,
+              "DocumentIndex": 37,
               "Title": "CaChieu_DAL.cs",
               "DocumentMoniker": "C:\\Users\\Admin\\source\\repos\\BTL\\DA1\\DA1\\DAL\\CaChieu_DAL.cs",
               "RelativeDocumentMoniker": "..\\DAL\\CaChieu_DAL.cs",
@@ -651,7 +704,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 35,
+              "DocumentIndex": 38,
               "Title": "CaChieu_BLL.cs",
               "DocumentMoniker": "C:\\Users\\Admin\\source\\repos\\BTL\\DA1\\DA1\\BLL\\CaChieu_BLL.cs",
               "RelativeDocumentMoniker": "..\\BLL\\CaChieu_BLL.cs",
@@ -663,7 +716,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 36,
+              "DocumentIndex": 39,
               "Title": "BanVe.Designer.cs",
               "DocumentMoniker": "C:\\Users\\Admin\\source\\repos\\BTL\\DA1\\DA1\\MAIN\\BanVe.Designer.cs",
               "RelativeDocumentMoniker": "BanVe.Designer.cs",
@@ -671,11 +724,12 @@
               "RelativeToolTip": "BanVe.Designer.cs",
               "ViewState": "AgIAAK4FAAAAAAAAAAAlwLsFAAAiAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-22T11:09:51.827Z"
+              "WhenOpened": "2025-05-22T11:09:51.827Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 38,
+              "DocumentIndex": 41,
               "Title": "KhachHang.cs [Design]",
               "DocumentMoniker": "C:\\Users\\Admin\\source\\repos\\BTL\\DA1\\DA1\\MAIN\\KhachHang.cs",
               "RelativeDocumentMoniker": "KhachHang.cs",
@@ -686,7 +740,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 39,
+              "DocumentIndex": 42,
               "Title": "NhapDiem.cs",
               "DocumentMoniker": "C:\\Users\\Admin\\source\\repos\\BTL\\DA1\\DA1\\MAIN\\NhapDiem.cs",
               "RelativeDocumentMoniker": "NhapDiem.cs",
@@ -698,7 +752,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 37,
+              "DocumentIndex": 40,
               "Title": "KhachHang.cs",
               "DocumentMoniker": "C:\\Users\\Admin\\source\\repos\\BTL\\DA1\\DA1\\MAIN\\KhachHang.cs",
               "RelativeDocumentMoniker": "KhachHang.cs",
@@ -710,7 +764,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 41,
+              "DocumentIndex": 44,
               "Title": "KhachHang_DAL.cs",
               "DocumentMoniker": "C:\\Users\\Admin\\source\\repos\\BTL\\DA1\\DA1\\DAL\\KhachHang_DAL.cs",
               "RelativeDocumentMoniker": "..\\DAL\\KhachHang_DAL.cs",
@@ -722,7 +776,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 40,
+              "DocumentIndex": 43,
               "Title": "NhapDiem.cs [Design]",
               "DocumentMoniker": "C:\\Users\\Admin\\source\\repos\\BTL\\DA1\\DA1\\MAIN\\NhapDiem.cs",
               "RelativeDocumentMoniker": "NhapDiem.cs",
@@ -733,7 +787,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 43,
+              "DocumentIndex": 46,
               "Title": "PhongChieu_DAL.cs",
               "DocumentMoniker": "C:\\Users\\Admin\\source\\repos\\BTL\\DA1\\DA1\\DAL\\PhongChieu_DAL.cs",
               "RelativeDocumentMoniker": "..\\DAL\\PhongChieu_DAL.cs",
@@ -745,7 +799,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 42,
+              "DocumentIndex": 45,
               "Title": "Phongchieu.cs",
               "DocumentMoniker": "C:\\Users\\Admin\\source\\repos\\BTL\\DA1\\DA1\\MAIN\\Phongchieu.cs",
               "RelativeDocumentMoniker": "Phongchieu.cs",
@@ -757,7 +811,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 44,
+              "DocumentIndex": 47,
               "Title": "Phongchieu.cs [Design]",
               "DocumentMoniker": "C:\\Users\\Admin\\source\\repos\\BTL\\DA1\\DA1\\MAIN\\Phongchieu.cs",
               "RelativeDocumentMoniker": "Phongchieu.cs",
@@ -768,7 +822,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 45,
+              "DocumentIndex": 48,
               "Title": "ChonKH.cs",
               "DocumentMoniker": "C:\\Users\\Admin\\source\\repos\\BTL\\DA1\\DA1\\MAIN\\ChonKH.cs",
               "RelativeDocumentMoniker": "ChonKH.cs",
@@ -780,7 +834,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 46,
+              "DocumentIndex": 49,
               "Title": "Cachieu.cs [Design]",
               "DocumentMoniker": "C:\\Users\\Admin\\source\\repos\\BTL\\DA1\\DA1\\MAIN\\Cachieu.cs",
               "RelativeDocumentMoniker": "Cachieu.cs",
@@ -791,7 +845,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 47,
+              "DocumentIndex": 50,
               "Title": "Thongke.cs [Design]",
               "DocumentMoniker": "C:\\Users\\Admin\\source\\repos\\BTL\\DA1\\DA1\\MAIN\\Thongke.cs",
               "RelativeDocumentMoniker": "Thongke.cs",
@@ -802,7 +856,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 48,
+              "DocumentIndex": 51,
               "Title": "KhachHang_BLL.cs",
               "DocumentMoniker": "C:\\Users\\Admin\\source\\repos\\BTL\\DA1\\DA1\\BLL\\Khachhang_BLL.cs",
               "RelativeDocumentMoniker": "..\\BLL\\Khachhang_BLL.cs",
@@ -814,7 +868,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 49,
+              "DocumentIndex": 52,
               "Title": "App.config",
               "DocumentMoniker": "C:\\Users\\Admin\\source\\repos\\BTL\\DA1\\DA1\\MAIN\\App.config",
               "RelativeDocumentMoniker": "App.config",
@@ -822,11 +876,12 @@
               "RelativeToolTip": "App.config",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000601|",
-              "WhenOpened": "2025-05-23T15:33:52.017Z"
+              "WhenOpened": "2025-05-23T15:33:52.017Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 50,
+              "DocumentIndex": 53,
               "Title": "Nhanvien_BLL.cs",
               "DocumentMoniker": "C:\\Users\\Admin\\source\\repos\\BTL\\DA1\\DA1\\BLL\\Nhanvien_BLL.cs",
               "RelativeDocumentMoniker": "..\\BLL\\Nhanvien_BLL.cs",
@@ -838,7 +893,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 51,
+              "DocumentIndex": 54,
               "Title": "NhanVien_DAL.cs",
               "DocumentMoniker": "C:\\Users\\Admin\\source\\repos\\BTL\\DA1\\DA1\\DAL\\Nhanvien_DAL.cs",
               "RelativeDocumentMoniker": "..\\DAL\\Nhanvien_DAL.cs",
@@ -850,19 +905,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 53,
-              "Title": "TheLoai_DAL.cs",
-              "DocumentMoniker": "C:\\Users\\Admin\\source\\repos\\BTL\\DA1\\DA1\\DAL\\TheLoai_DAL.cs",
-              "RelativeDocumentMoniker": "..\\DAL\\TheLoai_DAL.cs",
-              "ToolTip": "C:\\Users\\Admin\\source\\repos\\BTL\\DA1\\DA1\\DAL\\TheLoai_DAL.cs",
-              "RelativeToolTip": "..\\DAL\\TheLoai_DAL.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-22T16:05:16.613Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 52,
+              "DocumentIndex": 55,
               "Title": "Phim_DAL.cs",
               "DocumentMoniker": "C:\\Users\\Admin\\source\\repos\\BTL\\DA1\\DA1\\DAL\\Phim_DAL.cs",
               "RelativeDocumentMoniker": "..\\DAL\\Phim_DAL.cs",
@@ -874,7 +917,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 54,
+              "DocumentIndex": 56,
               "Title": "Cachieu.cs",
               "DocumentMoniker": "C:\\Users\\Admin\\source\\repos\\BTL\\DA1\\DA1\\MAIN\\Cachieu.cs",
               "RelativeDocumentMoniker": "Cachieu.cs",
@@ -886,7 +929,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 55,
+              "DocumentIndex": 57,
               "Title": "TheLoai.cs [Design]",
               "DocumentMoniker": "C:\\Users\\Admin\\source\\repos\\BTL\\DA1\\DA1\\MAIN\\TheLoai.cs",
               "RelativeDocumentMoniker": "TheLoai.cs",
@@ -897,7 +940,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 59,
+              "DocumentIndex": 61,
               "Title": "Phim.cs",
               "DocumentMoniker": "C:\\Users\\Admin\\source\\repos\\BTL\\DA1\\DA1\\MAIN\\Phim.cs",
               "RelativeDocumentMoniker": "Phim.cs",
@@ -909,7 +952,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 56,
+              "DocumentIndex": 58,
               "Title": "Cachieu.Designer.cs",
               "DocumentMoniker": "C:\\Users\\Admin\\source\\repos\\BTL\\DA1\\DA1\\MAIN\\Cachieu.Designer.cs",
               "RelativeDocumentMoniker": "Cachieu.Designer.cs",
@@ -921,7 +964,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 58,
+              "DocumentIndex": 60,
               "Title": "Phim_BLL.cs",
               "DocumentMoniker": "C:\\Users\\Admin\\source\\repos\\BTL\\DA1\\DA1\\BLL\\Phim_BLL.cs",
               "RelativeDocumentMoniker": "..\\BLL\\Phim_BLL.cs",
@@ -933,7 +976,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 57,
+              "DocumentIndex": 59,
               "Title": "TheLoai_BLL.cs",
               "DocumentMoniker": "C:\\Users\\Admin\\source\\repos\\BTL\\DA1\\DA1\\BLL\\TheLoai_BLL.cs",
               "RelativeDocumentMoniker": "..\\BLL\\TheLoai_BLL.cs",

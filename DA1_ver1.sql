@@ -489,3 +489,21 @@ INNER JOIN PhongChieu pc ON cc.MaPhongChieu = pc.MaPhongChieu
 INNER JOIN GheNgoi g ON v.MaGheNgoi = g.MaGheNgoi
 WHERE h.MaHoaDon = 1 
 ORDER BY cc.ThoiGianChieu;
+
+
+GO
+CREATE PROC sp_GetOrderChartData
+    @MaHoaDon INT
+AS
+BEGIN
+    SELECT * 
+    FROM HoaDon hd 
+    INNER JOIN ChiTietHoaDon cthd ON hd.MaHoaDon = cthd.MaHoaDon
+    INNER JOIN Ve v ON cthd.MaVe = v.MaVe
+    INNER JOIN CaChieu cc ON v.MaCaChieu = cc.MaCaChieu
+    INNER JOIN Phim p ON cc.MaPhim = p.MaPhim
+    INNER JOIN PhongChieu pc ON cc.MaPhongChieu = pc.MaPhongChieu
+    INNER JOIN GheNgoi g ON v.MaGheNgoi = g.MaGheNgoi
+    WHERE hd.MaHoaDon = @MaHoaDon
+END
+GO

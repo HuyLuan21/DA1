@@ -50,5 +50,17 @@ namespace BLL
         {
             return HoaDon_DAL.Instance.GetTenNhanVienVaKhachHang(maNhanVien, maKhachHang);
         }
+
+        public DataTable GetHoaDonChartData(int maHoaDon)
+        {
+            try
+            {
+                return HoaDon_DAL.Instance.GetHoaDonChartData(maHoaDon);
+            }
+            catch (Exception ex)
+            {
+                throw new Exception(ex.Message);
+            }
+        }
     }
 }

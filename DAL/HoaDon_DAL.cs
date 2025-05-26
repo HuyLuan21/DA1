@@ -91,5 +91,20 @@ ORDER BY cc.ThoiGianChieu;";
             ";
             return DataProvider.Instance.ExecuteQuery(query);
         }
+
+        public DataTable GetHoaDonChartData(int maHoaDon)
+        {
+            string query = $"EXEC sp_GetOrderChartData @MaHoaDon = {maHoaDon}";
+            DataTable result = new DataTable();
+            try
+            {
+                result = DataProvider.Instance.ExecuteQuery(query);
+                return result;
+            }
+            catch (Exception ex)
+            {
+                throw new Exception("Error retrieving chart data: " + ex.Message);
+            }
+        }
     }
 }

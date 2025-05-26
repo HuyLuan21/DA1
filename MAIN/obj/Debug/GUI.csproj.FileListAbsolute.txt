@@ -117,3 +117,5 @@ C:\Users\Admin\source\repos\BTL\DA1\DA1\MAIN\bin\Debug\CrystalDecisions.ReportAp
 C:\Users\Admin\source\repos\BTL\DA1\DA1\MAIN\bin\Debug\stdole.dll
 C:\Users\Admin\source\repos\BTL\DA1\DA1\MAIN\obj\Debug\DA1.CTHoaDon.resources
 C:\Users\Admin\source\repos\BTL\DA1\DA1\MAIN\obj\Debug\DA1.HoaDon.resources
+C:\Users\Admin\source\repos\BTL\DA1\DA1\MAIN\obj\Debug\DA1.GUI_Report.resources
+C:\Users\Admin\source\repos\BTL\DA1\DA1\MAIN\bin\Debug\CrystalDecisions.Windows.Forms.dll

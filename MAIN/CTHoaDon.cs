@@ -45,7 +45,21 @@ namespace DA1
         }
         private void inhoadon_Click(object sender, EventArgs e)
         {
+            try
+            {
+                DataTable chartData = BLL.HoaDon_BLL.Instance.GetHoaDonChartData(maHoaDon);
 
+                rptHoaDon rpt = new rptHoaDon();
+                rpt.SetDataSource(chartData);
+
+                GUI_Report reportForm = new GUI_Report();
+                reportForm.crv_ReportViewer.ReportSource = rpt;
+                reportForm.ShowDialog();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Lỗi khi in hóa đơn: " + ex.Message, "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
     }
 }
