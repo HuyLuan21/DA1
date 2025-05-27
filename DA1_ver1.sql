@@ -490,15 +490,27 @@ INNER JOIN GheNgoi g ON v.MaGheNgoi = g.MaGheNgoi
 WHERE h.MaHoaDon = 1 
 ORDER BY cc.ThoiGianChieu;
 
-
+DROP PROC IF EXISTS sp_GetOrderChartData
 GO
 CREATE PROC sp_GetOrderChartData
     @MaHoaDon INT
 AS
 BEGIN
-    SELECT * 
+    SELECT 
+        hd.MaHoaDon,
+        hd.NgayBan,
+        nv.HoTen AS HoTenNV,
+        kh.HoTen AS HoTenKH,
+        p.TenPhim AS TenPhim,
+        pc.TenPhong AS TenPhong,
+        CONVERT(VARCHAR(5), cc.ThoiGianChieu, 108) AS ThoiGianChieu,
+        g.HangGhe + CAST(g.SoGhe AS VARCHAR) AS TenGhe,
+        cc.GiaVe AS GiaVe,
+        hd.TongTien AS TongTien
     FROM HoaDon hd 
     INNER JOIN ChiTietHoaDon cthd ON hd.MaHoaDon = cthd.MaHoaDon
+    INNER JOIN KhachHang kh ON hd.MaKhachHang = kh.MaKhachHang
+    INNER JOIN NhanVien nv ON hd.MaNhanVien = nv.MaNhanVien
     INNER JOIN Ve v ON cthd.MaVe = v.MaVe
     INNER JOIN CaChieu cc ON v.MaCaChieu = cc.MaCaChieu
     INNER JOIN Phim p ON cc.MaPhim = p.MaPhim
@@ -507,3 +519,70 @@ BEGIN
     WHERE hd.MaHoaDon = @MaHoaDon
 END
 GO
+
+EXEC sp_GetOrderChartData @MaHoaDon = 1
+GO 
+CREATE PROCEDURE sp_ThongKeDoanhThu_TheoTenPhim_TheoNgay
+    @TenPhim NVARCHAR(200),
+    @TuNgay DATE,
+    @DenNgay DATE
+AS
+BEGIN
+    SELECT 
+        CONVERT(DATE, hd.NgayBan) AS Ngay,
+        SUM(hd.TongTien) AS DoanhThu
+    FROM HoaDon hd
+    INNER JOIN ChiTietHoaDon cthd ON hd.MaHoaDon = cthd.MaHoaDon
+    INNER JOIN Ve v ON cthd.MaVe = v.MaVe
+    INNER JOIN CaChieu cc ON v.MaCaChieu = cc.MaCaChieu
+    INNER JOIN Phim p ON cc.MaPhim = p.MaPhim
+    WHERE p.TenPhim = @TenPhim
+      AND hd.NgayBan BETWEEN @TuNgay AND @DenNgay
+    GROUP BY CONVERT(DATE, hd.NgayBan)
+    ORDER BY Ngay
+END
+EXEC sp_ThongKeDoanhThu_TheoTenPhim_TheoNgay N'Avengers: Endgame', '2024-04-01', '2024-04-30'
+GO 
+CREATE PROCEDURE sp_ThongKeDoanhThu_TheoDaoDien_TheoNgay
+    @DaoDien NVARCHAR(100),
+    @TuNgay DATE,
+    @DenNgay DATE
+AS
+BEGIN
+    SELECT 
+        CONVERT(DATE, hd.NgayBan) AS Ngay,
+        SUM(hd.TongTien) AS DoanhThu
+    FROM HoaDon hd
+    INNER JOIN ChiTietHoaDon cthd ON hd.MaHoaDon = cthd.MaHoaDon
+    INNER JOIN Ve v ON cthd.MaVe = v.MaVe
+    INNER JOIN CaChieu cc ON v.MaCaChieu = cc.MaCaChieu
+    INNER JOIN Phim p ON cc.MaPhim = p.MaPhim
+    WHERE p.DaoDien = @DaoDien
+      AND hd.NgayBan BETWEEN @TuNgay AND @DenNgay
+    GROUP BY CONVERT(DATE, hd.NgayBan)
+    ORDER BY Ngay
+END
+GO 
+EXEC sp_ThongKeDoanhThu_TheoDaoDien_TheoNgay N'Anthony Russo, Joe Russo', '2024-04-01', '2024-04-30'
+
+GO 
+CREATE PROCEDURE sp_ThongKeDoanhThu_TrongNgay
+    @Ngay DATE
+AS
+BEGIN
+    SELECT 
+        p.TenPhim,
+        SUM(hd.TongTien) AS DoanhThu
+    FROM HoaDon hd
+    INNER JOIN ChiTietHoaDon cthd ON hd.MaHoaDon = cthd.MaHoaDon
+    INNER JOIN Ve v ON cthd.MaVe = v.MaVe
+    INNER JOIN CaChieu cc ON v.MaCaChieu = cc.MaCaChieu
+    INNER JOIN Phim p ON cc.MaPhim = p.MaPhim
+    WHERE CONVERT(DATE, hd.NgayBan) = @Ngay
+    GROUP BY p.TenPhim
+    ORDER BY DoanhThu DESC
+END
+GO 
+EXEC sp_ThongKeDoanhThu_TrongNgay '2024-04-26'
+
+

@@ -104,11 +104,15 @@ namespace BLL
 
         public List<string> GetPhimId()
         {
-            return DAL.Phim_DAL.Instance.GetPhimId();
+            return Phim_DAL.Instance.GetPhimId();
         }
         public string GetPhimbyId(int maphim)
         {
-            return DAL.Phim_DAL.Instance.GetPhimbyID(maphim);
+            return Phim_DAL.Instance.GetPhimbyID(maphim);
+        }
+        public List<string> GetDirectorName()
+        {
+            return Phim_DAL.Instance.GetDirectorName();
         }
     }
 }

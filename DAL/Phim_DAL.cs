@@ -113,5 +113,15 @@ namespace DAL
             }
             return result;
         }
+        public List<string> GetDirectorName()
+        {
+            string query = $"SELECT DaoDien FROM Phim";
+            List<string> result = new List<string>();
+            foreach (DataRow row in DataProvider.Instance.ExecuteQuery(query).Rows)
+            {
+                result.Add(row["DaoDien"].ToString());
+            }
+            return result;
+        }
     }
 }
