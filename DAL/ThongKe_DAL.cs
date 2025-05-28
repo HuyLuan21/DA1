@@ -21,20 +21,23 @@ namespace DAL
             }
         }
         private ThongKe_DAL() { }
-        public DataTable GetStaticByMovie(string movieName,DateTime begin_day,DateTime End_day)
+        public DataTable GetStaticByMovie(string movieName, string begin_day, string End_day)
         {
             string query = $@"sp_ThongKeDoanhThu_TheoTenPhim_TheoNgay N'{movieName}', '{begin_day}', '{End_day}'";
-           
+            //throw new Exception("Query: " + query);
+           //sp_ThongKeDoanhThu_TheoTenPhim_TheoNgay N'Avengers: Endgame', '2024-04-01', '2024-04-30'
             return DataProvider.Instance.ExecuteQuery(query);
         }
-        public DataTable GetStaticByDirector(string Director, DateTime begin_day, DateTime End_day)
+        public DataTable GetStaticByDirector(string Director, string begin_day, string End_day)
         {
             string query = $"sp_ThongKeDoanhThu_TheoDaoDien_TheoNgay N'{Director}', '{begin_day}', '{End_day}'";
+            //sp_ThongKeDoanhThu_TheoDaoDien_TheoNgay N'Anthony Russo, Joe Russo', '2024-04-01', '2024-04-30'
             return DataProvider.Instance.ExecuteQuery(query);
         }
-        public DataTable GetStaticByDay(DateTime begin_day)
+        public DataTable GetStaticByDay(string begin_day)
         {
             string query = $"sp_ThongKeDoanhThu_TrongNgay '{begin_day}'";
+            //sp_ThongKeDoanhThu_TrongNgay '2024-04-26'
             return DataProvider.Instance.ExecuteQuery(query);
         }
     }

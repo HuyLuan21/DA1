@@ -21,15 +21,15 @@ namespace BLL
         }
         private ThongKe_BLL() { }
 
-        public DataTable GetStaticByMovie(string movieName, DateTime begin_day, DateTime End_day)
+        public DataTable GetStaticByMovie(string movieName, string begin_day, string End_day)
         {
             return DAL.ThongKe_DAL.Instance.GetStaticByMovie(movieName, begin_day, End_day);
         }
-        public DataTable GetStaticByDirector(string Director, DateTime begin_day, DateTime End_day)
+        public DataTable GetStaticByDirector(string Director, string begin_day, string End_day)
         {
             return DAL.ThongKe_DAL.Instance.GetStaticByDirector(Director, begin_day, End_day);
         }
-        public DataTable GetStaticByDay(DateTime begin_day)
+        public DataTable GetStaticByDay(string begin_day)
         {
             return DAL.ThongKe_DAL.Instance.GetStaticByDay(begin_day);
         }

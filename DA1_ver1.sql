@@ -586,3 +586,6 @@ GO
 EXEC sp_ThongKeDoanhThu_TrongNgay '2024-04-26'
 
 
+select * from hoadon
+
+

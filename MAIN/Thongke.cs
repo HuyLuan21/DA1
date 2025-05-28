@@ -12,6 +12,7 @@ namespace DA1
         {
             InitializeComponent();
             radioButton1.Checked = true;
+       
 
 
         }
@@ -91,24 +92,36 @@ namespace DA1
             if (radioButton1.Checked)
             {
                 string tenPhim = comboBox1.SelectedItem.ToString();
-                DateTime tuNgay = dateTimePicker1.Value.Date;
-                DateTime denNgay = dateTimePicker2.Value.Date;
+                string tuNgay = dateTimePicker1.Value.Date.ToString("yyyy-MM-dd");
+                string denNgay = dateTimePicker2.Value.Date.ToString("yyyy-MM-dd");
                 dt = ThongKe_BLL.Instance.GetStaticByMovie(tenPhim, tuNgay, denNgay);
-
-
+                MessageBox.Show("GetStaticByMovie: " + (dt != null ? dt.Rows.Count.ToString() : "null"));
             }
             else if (radioButton2.Checked)
             {
                 string TenTG = comboBox1.SelectedItem.ToString();
-                DateTime tuNgay = dateTimePicker1.Value.Date;
-                DateTime denNgay = dateTimePicker2.Value.Date;
+                string tuNgay = dateTimePicker1.Value.Date.ToString("yyyy-MM-dd");
+                string denNgay = dateTimePicker2.Value.Date.ToString("yyyy-MM-dd");
                 dt = ThongKe_BLL.Instance.GetStaticByDirector(TenTG, tuNgay, denNgay);
+                MessageBox.Show("GetStaticByDirector: " + (dt != null ? dt.Rows.Count.ToString() : "null"));
             }
             else if (radioButton3.Checked)
             {
-                DateTime Ngay = dateTimePicker1.Value.Date;
+                string Ngay = dateTimePicker1.Value.Date.ToString("yyyy-MM-dd");
                 dt = ThongKe_BLL.Instance.GetStaticByDay(Ngay);
+                MessageBox.Show("GetStaticByDay: " + (dt != null ? dt.Rows.Count.ToString() : "null"));
             }
+
+            // Tính tổng doanh thu
+            decimal tongDoanhThu = 0;
+            if (dt != null && dt.Rows.Count > 0)
+            {
+                foreach (DataRow row in dt.Rows)
+                {
+                    tongDoanhThu += Convert.ToDecimal(row["DoanhThu"]);
+                }
+            }
+            labelTongDoanhThu.Text = "Tổng doanh thu: " + tongDoanhThu.ToString("N0");
 
             chart1.Series[0].Points.Clear();
             if (dt != null && dt.Rows.Count > 0)
