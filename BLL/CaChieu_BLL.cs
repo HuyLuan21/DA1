@@ -138,5 +138,12 @@ namespace BLL
         {
             return CaChieu_DAL.Instance.GetGiaVe(maCaChieu);
         }
+
+        public DataTable SearchCaChieu(string keyword)
+        {
+            if (string.IsNullOrWhiteSpace(keyword))
+                return GetCaChieuTable();
+            return CaChieu_DAL.Instance.SearchCaChieu(keyword);
+        }
     }
 }

@@ -106,5 +106,24 @@ ORDER BY cc.ThoiGianChieu;";
                 throw new Exception("Error retrieving chart data: " + ex.Message);
             }
         }
+
+        public DataTable SearchHoaDon(string keyword)
+        {
+            string query = @"SELECT MaHoaDon AS ""Mã hóa đơn"", 
+                            NgayBan AS ""Ngày bán"", 
+                            TongTien AS ""Tổng tiền"", 
+                            MaNhanVien AS ""Mã nhân viên"", 
+                            MaKhachHang AS ""Mã khách hàng"" 
+                     FROM HoaDon 
+                     WHERE CAST(MaHoaDon AS VARCHAR) LIKE N'%" + keyword + "%' " +
+                     "OR CAST(MaNhanVien AS VARCHAR) LIKE N'%" + keyword + "%' " +
+                     "OR CAST(MaKhachHang AS VARCHAR) LIKE N'%" + keyword + "%' " +
+                     "OR CAST(TongTien AS VARCHAR) LIKE N'%" + keyword + "%' " +
+                     "OR CONVERT(VARCHAR, NgayBan, 120) LIKE N'%" + keyword + "%'";
+
+            return DataProvider.Instance.ExecuteQuery(query);
+        }
+
+       
     }
 }

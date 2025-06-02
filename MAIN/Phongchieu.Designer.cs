@@ -42,6 +42,8 @@
             this.edit_btn = new System.Windows.Forms.Button();
             this.remove_btn = new System.Windows.Forms.Button();
             this.PhongChieu_grv = new System.Windows.Forms.DataGridView();
+            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.button1 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.PhongChieu_grv)).BeginInit();
             this.SuspendLayout();
             // 
@@ -148,7 +150,7 @@
             // 
             // edit_btn
             // 
-            this.edit_btn.Location = new System.Drawing.Point(587, 446);
+            this.edit_btn.Location = new System.Drawing.Point(587, 438);
             this.edit_btn.Margin = new System.Windows.Forms.Padding(5, 6, 5, 6);
             this.edit_btn.Name = "edit_btn";
             this.edit_btn.Size = new System.Drawing.Size(137, 38);
@@ -159,7 +161,7 @@
             // 
             // remove_btn
             // 
-            this.remove_btn.Location = new System.Drawing.Point(587, 514);
+            this.remove_btn.Location = new System.Drawing.Point(587, 494);
             this.remove_btn.Margin = new System.Windows.Forms.Padding(5, 6, 5, 6);
             this.remove_btn.Name = "remove_btn";
             this.remove_btn.Size = new System.Drawing.Size(137, 38);
@@ -191,11 +193,32 @@
             this.PhongChieu_grv.TabIndex = 14;
             this.PhongChieu_grv.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.PhongChieu_grv_CellClick_1);
             // 
+            // textBox1
+            // 
+            this.textBox1.Location = new System.Drawing.Point(587, 548);
+            this.textBox1.Margin = new System.Windows.Forms.Padding(5, 6, 5, 6);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(137, 30);
+            this.textBox1.TabIndex = 15;
+            // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(587, 590);
+            this.button1.Margin = new System.Windows.Forms.Padding(5, 6, 5, 6);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(137, 30);
+            this.button1.TabIndex = 16;
+            this.button1.Text = "Tìm";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
             // PhongChieu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(11F, 22F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1437, 645);
+            this.Controls.Add(this.button1);
+            this.Controls.Add(this.textBox1);
             this.Controls.Add(this.PhongChieu_grv);
             this.Controls.Add(this.remove_btn);
             this.Controls.Add(this.edit_btn);
@@ -238,5 +261,7 @@
         private System.Windows.Forms.Button edit_btn;
         private System.Windows.Forms.Button remove_btn;
         private System.Windows.Forms.DataGridView PhongChieu_grv;
+        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.Button button1;
     }
 }

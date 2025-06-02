@@ -123,5 +123,28 @@ namespace DAL
             }
             return result;
         }
+        public int GetLastInsertedMovieId()
+        {
+            string query = "SELECT IDENT_CURRENT('phim')";
+            return Convert.ToInt32(DataProvider.Instance.ExecuteScalar(query));
+        }
+        public bool InsertMovieGenre(int maPhim, int maTheLoai)
+        {
+            string query = $"INSERT INTO Phim_theloai (MaPhim, MaTLP) VALUES ({maPhim}, {maTheLoai})";
+            int result = DataProvider.Instance.ExecuteNonQuery(query);
+            return result > 0;
+        }
+        public bool DeleteMovieGenres(int maPhim)
+        {
+            string query = $"DELETE FROM Phim_theloai WHERE MaPhim = {maPhim}";
+            int result = DataProvider.Instance.ExecuteNonQuery(query);
+            return result > 0;
+        }
+        public int GetTheLoaiIdByName(string tenTheLoai)
+        {
+            string query = $"SELECT MaTLP FROM TheLoaiPhim WHERE TenTLP = N'{tenTheLoai}'";
+            var result = DataProvider.Instance.ExecuteScalar(query);
+            return result != null ? Convert.ToInt32(result) : -1;
+        }
     }
 }

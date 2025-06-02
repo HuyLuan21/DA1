@@ -66,5 +66,28 @@ namespace DAL
             var result = DataProvider.Instance.ExecuteScalar(query);
             return result != null ? Convert.ToInt32(result) : 0;
         }
+
+        public DataTable SearchCaChieu(string keyword)
+        {
+            string query = @"SELECT 
+                cc.MaCaChieu AS 'Mã ca chiếu',
+                p.MaPhim AS 'Mã Phim',
+                p.TenPhim AS 'Tên Phim',
+                pc.TenPhong AS 'Phòng chiếu',
+                cc.ThoiGianChieu AS 'Thời gian chiếu',
+                cc.ThoiGianKetThuc AS 'Thời gian kết thúc',
+                cc.GiaVe AS 'Giá'
+            FROM CaChieu cc
+            JOIN Phim p ON cc.MaPhim = p.MaPhim
+            JOIN PhongChieu pc ON cc.MaPhongChieu = pc.MaPhongChieu
+            WHERE CAST(cc.MaCaChieu AS VARCHAR) LIKE N'%" + keyword + "%' " +
+            "OR CAST(p.MaPhim AS VARCHAR) LIKE N'%" + keyword + "%' " +
+            "OR p.TenPhim LIKE N'%" + keyword + "%' " +
+            "OR pc.TenPhong LIKE N'%" + keyword + "%' " +
+            "OR CONVERT(VARCHAR, cc.ThoiGianChieu, 103) LIKE N'%" + keyword + "%' " +
+            "OR CONVERT(VARCHAR, cc.ThoiGianKetThuc, 103) LIKE N'%" + keyword + "%' " +
+            "OR CAST(cc.GiaVe AS VARCHAR) LIKE N'%" + keyword + "%'";
+            return DataProvider.Instance.ExecuteQuery(query);
+        }
     }
 }

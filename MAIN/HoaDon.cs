@@ -1,4 +1,5 @@
-﻿using System;
+﻿using BLL;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -45,6 +46,18 @@ namespace DA1
 
             CTHoaDon cthd = new CTHoaDon(maHoaDon, ngayBan, tongTien, maNhanVien, maKhachHang);
             cthd.ShowDialog();
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                HoaDon_grv.DataSource = HoaDon_BLL.Instance.SearchHoaDon(textBox1.Text.Trim());
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Lỗi khi tìm kiếm: " + ex.Message, "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
     }
 }

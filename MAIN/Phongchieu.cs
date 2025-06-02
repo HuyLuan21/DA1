@@ -138,5 +138,18 @@ namespace DA1
             SoHangGhe_tbx.Text = PhongChieu_grv.Rows[e.RowIndex].Cells[3].Value.ToString();
             SoGhe1Hang_tbx.Text = PhongChieu_grv.Rows[e.RowIndex].Cells[4].Value.ToString();
         }
+
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                PhongChieu_grv.DataSource = PhongChieu_BLL.Instance.SearchPhongChieu(textBox1.Text.Trim());
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Lỗi khi tìm kiếm: " + ex.Message, "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
     }
 }

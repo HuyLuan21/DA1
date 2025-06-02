@@ -67,30 +67,34 @@ namespace DA1
         {
             try
             {
-               
-                    string result = Phim_BLL.Instance.InsertPhim(
-                        Name_tbx.Text.Trim(),
-                       richTextBox1.Text.Trim(),
-                        int.Parse(lenght_tbx.Text),
-                        dateTimePicker1.Value,
-                        dateTimePicker2.Value,
-                        nation_tbx.Text.Trim(),
-                        director_tbx.Text.Trim(),
-                        int.Parse(age_tbx.Text),
-                        int.Parse(proc_tbx.Text)
-                    );
-
-                    if (result == "Success")
-                    {
-                        MessageBox.Show("Thêm phim thành công!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                        Phim_Load(sender, e); // Refresh the movie list
+                List<string> selectedGenres = new List<string>();
+                foreach (object item in checkedListBox1.CheckedItems)
+                {
+                    selectedGenres.Add(item.ToString());
                 }
-                    else
-                    {
-                        MessageBox.Show(result, "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                    }
-                
-               
+
+                string result = Phim_BLL.Instance.InsertPhim(
+                    Name_tbx.Text.Trim(),
+                    richTextBox1.Text.Trim(),
+                    int.Parse(lenght_tbx.Text),
+                    dateTimePicker1.Value,
+                    dateTimePicker2.Value,
+                    nation_tbx.Text.Trim(),
+                    director_tbx.Text.Trim(),
+                    int.Parse(age_tbx.Text),
+                    int.Parse(proc_tbx.Text),
+                    selectedGenres
+                );
+
+                if (result == "Success")
+                {
+                    MessageBox.Show("Thêm phim thành công!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    Phim_Load(sender, e); // Refresh the movie list
+                }
+                else
+                {
+                    MessageBox.Show(result, "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
             }
             catch (Exception ex)
             {
@@ -104,6 +108,12 @@ namespace DA1
             {
                 if (!string.IsNullOrEmpty(Id_tbx.Text))
                 {
+                    List<string> selectedGenres = new List<string>();
+                    foreach (object item in checkedListBox1.CheckedItems)
+                    {
+                        selectedGenres.Add(item.ToString());
+                    }
+
                     string result = Phim_BLL.Instance.UpdatePhim(
                         int.Parse(Id_tbx.Text),
                         Name_tbx.Text.Trim(),
@@ -114,7 +124,8 @@ namespace DA1
                         nation_tbx.Text.Trim(),
                         director_tbx.Text.Trim(),
                         int.Parse(age_tbx.Text),
-                        int.Parse(proc_tbx.Text)
+                        int.Parse(proc_tbx.Text),
+                        selectedGenres
                     );
 
                     if (result == "Success")

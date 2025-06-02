@@ -61,5 +61,11 @@ namespace DAL
             int result = DataProvider.Instance.ExecuteNonQuery(query);
             return result > 0;
         }
+    
+        public DataTable SearchTheLoai(string keyword)
+        {
+            string query = "SELECT MaTLP AS 'Mã thể loại', TenTLP AS 'Tên thể loại' FROM TheLoaiPhim WHERE TenTLP LIKE N'%" + keyword + "%'";
+            return DataProvider.Instance.ExecuteQuery(query);
+        }
     }
 }

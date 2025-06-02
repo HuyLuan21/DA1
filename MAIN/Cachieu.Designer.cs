@@ -55,6 +55,8 @@
             this.remove_btn = new System.Windows.Forms.Button();
             this.edit_btn = new System.Windows.Forms.Button();
             this.add_btn = new System.Windows.Forms.Button();
+            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.button1 = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.groupBox1.SuspendLayout();
@@ -313,6 +315,8 @@
             // 
             // panel2
             // 
+            this.panel2.Controls.Add(this.button1);
+            this.panel2.Controls.Add(this.textBox1);
             this.panel2.Controls.Add(this.Time_grv);
             this.panel2.Controls.Add(this.remove_btn);
             this.panel2.Controls.Add(this.edit_btn);
@@ -378,6 +382,24 @@
             this.add_btn.UseVisualStyleBackColor = true;
             this.add_btn.Click += new System.EventHandler(this.add_btn_Click);
             // 
+            // textBox1
+            // 
+            this.textBox1.Location = new System.Drawing.Point(610, 22);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(100, 22);
+            this.textBox1.TabIndex = 22;
+            // 
+            // button1
+            // 
+            this.button1.Font = new System.Drawing.Font("Times New Roman", 12F);
+            this.button1.Location = new System.Drawing.Point(730, 12);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(78, 41);
+            this.button1.TabIndex = 23;
+            this.button1.Text = "Tìm";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
             // Movies_time
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -395,6 +417,7 @@
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             this.panel2.ResumeLayout(false);
+            this.panel2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.Time_grv)).EndInit();
             this.ResumeLayout(false);
 
@@ -427,5 +450,7 @@
         private System.Windows.Forms.Button add_btn;
         private System.Windows.Forms.ComboBox Movies_id_cbx;
         private System.Windows.Forms.DataGridView Time_grv;
+        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.TextBox textBox1;
     }
 }

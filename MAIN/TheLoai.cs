@@ -101,5 +101,17 @@ namespace DA1
                 MessageBox.Show("Thêm thể loại thất bại!");
             }
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                Theloai_grv.DataSource = BLL.TheLoai_BLL.Instance.SearchTheLoai(textBox1.Text.Trim());
+            }
+            catch
+            {
+                MessageBox.Show("Lỗi tìm kiếm thể loại. Vui lòng thử lại sau.", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
     }
 }

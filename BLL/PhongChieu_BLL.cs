@@ -80,5 +80,11 @@ namespace BLL
             return PhongChieu_DAL.Instance.GetMaPhongByTen(tenPhong);
         }
 
+        public DataTable SearchPhongChieu(string keyword)
+        {
+            if (string.IsNullOrWhiteSpace(keyword))
+                return GetPhongChieu();
+            return PhongChieu_DAL.Instance.SearchPhongChieu(keyword);
+        }
     }
 }

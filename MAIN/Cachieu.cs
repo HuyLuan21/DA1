@@ -1,12 +1,5 @@
 ﻿using BLL;
 using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace DA1
@@ -17,7 +10,7 @@ namespace DA1
         {
             InitializeComponent();
         }
-       
+
 
         private void Movie_id_Click(object sender, EventArgs e)
         {
@@ -46,7 +39,7 @@ namespace DA1
             Phongchieu_cbx.DataSource = PhongChieu_BLL.Instance.GetPhongChieuNames();
         }
 
-     
+
 
         private void Movies_id_cbx_SelectedValueChanged(object sender, EventArgs e)
         {
@@ -55,8 +48,8 @@ namespace DA1
 
         private void Time_grv_CellClick(object sender, DataGridViewCellEventArgs e)
         {
-          
-            if(e.RowIndex <0) return;
+
+            if (e.RowIndex < 0) return;
             Cachieu_tbx.Text = Time_grv.Rows[e.RowIndex].Cells[0].Value.ToString();
             Movies_id_cbx.Text = Time_grv.Rows[e.RowIndex].Cells[1].Value.ToString();
             Ngaychieu.Text = Time_grv.Rows[e.RowIndex].Cells[4].Value.ToString();
@@ -97,10 +90,10 @@ namespace DA1
                 int maPhim = int.Parse(Movies_id_cbx.Text);
                 DateTime dt_ngaychieu = Ngaychieu.Value.Date;
                 string ngaychieu = dt_ngaychieu.ToString("yyyy-MM-dd");
-                DateTime dt_giochieu = Giochieu.Value;          
+                DateTime dt_giochieu = Giochieu.Value;
                 string giochieu = dt_giochieu.ToString("HH:mm:ss");
                 DateTime dt_ngayketthuc = Ketthuc.Value.Date;
-                string ngaykt = dt_ngaychieu.ToString("yyyy-MM-dd");      
+                string ngaykt = dt_ngaychieu.ToString("yyyy-MM-dd");
                 DateTime dt_giokt = GioKT.Value;
                 string giokt = dt_giokt.ToString("HH:mm:ss");
                 int giaVe = int.Parse(GiaVe.Text);
@@ -141,10 +134,10 @@ namespace DA1
                 int maPhim = int.Parse(Movies_id_cbx.Text);
                 DateTime dt_ngaychieu = Ngaychieu.Value.Date;
                 string ngaychieu = dt_ngaychieu.ToString("yyyy-MM-dd");
-                DateTime dt_giochieu = Giochieu.Value;          
+                DateTime dt_giochieu = Giochieu.Value;
                 string giochieu = dt_giochieu.ToString("HH:mm:ss");
                 DateTime dt_ngayketthuc = Ketthuc.Value.Date;
-                string ngaykt = dt_ngaychieu.ToString("yyyy-MM-dd");      
+                string ngaykt = dt_ngaychieu.ToString("yyyy-MM-dd");
                 DateTime dt_giokt = GioKT.Value;
                 string giokt = dt_giokt.ToString("HH:mm:ss");
                 int giaVe = int.Parse(GiaVe.Text);
@@ -182,6 +175,18 @@ namespace DA1
         {
             string ngaychieu = Ngaychieu.Text;
             Ketthuc.Text = ngaychieu;
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                Time_grv.DataSource = CaChieu_BLL.Instance.SearchCaChieu(textBox1.Text.Trim());
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Lỗi khi tìm kiếm: " + ex.Message, "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
     }
 }

@@ -62,5 +62,19 @@ namespace BLL
                 throw new Exception(ex.Message);
             }
         }
+
+        public DataTable SearchHoaDon(string keyword)
+        {
+            try
+            {
+                return HoaDon_DAL.Instance.SearchHoaDon(keyword);
+            }
+            catch (Exception ex)
+            {
+                throw new Exception("Lỗi tìm kiếm hóa đơn: " + ex.Message);
+            }
+        }
+
+      
     }
 }

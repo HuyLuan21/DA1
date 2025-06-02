@@ -16,8 +16,8 @@ namespace DA1
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            //Application.Run( new DangNhap());
-            Application.Run(new Thongke());
+            Application.Run( new DangNhap());
+            //Application.Run(new Thongke());
 
         }
     }

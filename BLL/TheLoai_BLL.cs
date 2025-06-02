@@ -49,5 +49,11 @@ namespace BLL
         {
             return TheLoai_DAL.Instance.DeleteTheLoai(maTheLoai);
         }
+        public DataTable SearchTheLoai(string keyword)
+        {
+            if (string.IsNullOrWhiteSpace(keyword))
+                return GetTheLoai();
+            return TheLoai_DAL.Instance.SearchTheLoai(keyword);
+        }
     }
 }

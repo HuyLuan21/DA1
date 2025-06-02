@@ -61,5 +61,20 @@ namespace DAL
             var result = DataProvider.Instance.ExecuteScalar(query);
             return int.Parse(result);
         }
+        public DataTable SearchPhongChieu(string keyword)
+        {
+            string query = @"SELECT MaPhongChieu AS 'Mã phòng chiếu', 
+                           TenPhong AS 'Tên phòng', 
+                           TongSoGhe AS 'Tổng số ghế', 
+                           SoHangGhe AS 'Số hàng ghế', 
+                           SoGhe1Hang AS 'Số ghế 1 hàng' 
+                           FROM PhongChieu 
+                           WHERE CAST(MaPhongChieu AS VARCHAR) LIKE N'%" + keyword + "%' " +
+                           "OR TenPhong LIKE N'%" + keyword + "%' " +
+                           "OR CAST(TongSoGhe AS VARCHAR) LIKE N'%" + keyword + "%' " +
+                           "OR CAST(SoHangGhe AS VARCHAR) LIKE N'%" + keyword + "%' " +
+                           "OR CAST(SoGhe1Hang AS VARCHAR) LIKE N'%" + keyword + "%'";
+            return DataProvider.Instance.ExecuteQuery(query);
+        }
     }
 }
